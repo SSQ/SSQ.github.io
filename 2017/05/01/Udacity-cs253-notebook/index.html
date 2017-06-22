@@ -1,11 +1,96 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>Udacity-cs253-notebook | SSQ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://classroom.udacity.com/courses/cs253 Components of the Web updated in 2017-05-01 https://classroom.udacity.com/courses/cs253/lessons/48737165/concepts/483298540923 https://www.udacity.com/wiki/">
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Udacity," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="https://classroom.udacity.com/courses/cs253 Components of the Web updated in 2017-05-01 https://classroom.udacity.com/courses/cs253/lessons/48737165/concepts/483298540923 https://www.udacity.com/wiki/">
 <meta name="keywords" content="Udacity">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Udacity-cs253-notebook">
@@ -73,79 +158,343 @@
 <meta name="twitter:title" content="Udacity-cs253-notebook">
 <meta name="twitter:description" content="https://classroom.udacity.com/courses/cs253 Components of the Web updated in 2017-05-01 https://classroom.udacity.com/courses/cs253/lessons/48737165/concepts/483298540923 https://www.udacity.com/wiki/">
 <meta name="twitter:image" content="https://s3.cn-north-1.amazonaws.com.cn/u-img/48230539">
-  
-    <link rel="alternate" href="/atom.xml" title="SSQ" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://ssq.github.io/2017/05/01/Udacity-cs253-notebook/"/>
+
+
+
+
+
+  <title>Udacity-cs253-notebook | SSQ</title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">SSQ</a>
-      </h1>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-91307065-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3c8ad2ecdd2387b44044b1d7cd3536a9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SSQ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ssq.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Udacity-cs253-notebook" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/01/Udacity-cs253-notebook/" class="article-date">
-  <time datetime="2017-05-01T12:22:30.000Z" itemprop="datePublished">2017-05-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Udacity/">Udacity</a>►<a class="article-category-link" href="/categories/Udacity/How-to-Build-a-Blog/">How to Build a Blog</a>
+        <p class="site-subtitle"></p>
+      
   </div>
 
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Udacity-cs253-notebook
-    </h1>
+</div>
+
+<nav class="site-nav">
   
 
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-friends">
+          <a href="/friends" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            friends
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://ssq.github.io/2017/05/01/Udacity-cs253-notebook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SSQ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SSQ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Udacity-cs253-notebook</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-01T20:22:30+08:00">
+                2017-05-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Udacity/" itemprop="url" rel="index">
+                    <span itemprop="name">Udacity</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Udacity/How-to-Build-a-Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">How to Build a Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/01/Udacity-cs253-notebook/" class="leancloud_visitors" data-flag-title="Udacity-cs253-notebook">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <p><a href="https://classroom.udacity.com/courses/cs253" target="_blank" rel="external">https://classroom.udacity.com/courses/cs253</a></p>
 <p>Components of the Web</p>
@@ -1668,143 +2017,865 @@ return USER_RE.match(username)
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="https://ssq.github.io/2017/05/01/Udacity-cs253-notebook/" data-id="cj487ze6m001sccddpxwg0ac4" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Udacity/">Udacity</a></li></ul>
 
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>打赏随意，感谢支持</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="SSQ WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="SSQ Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Udacity/" rel="tag"># Udacity</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/14/CS229/" rel="next" title="CS229 notebook">
+                <i class="fa fa-chevron-left"></i> CS229 notebook
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/25/Jupyter-Notebook-Note/" rel="prev" title="Jupyter Notebook Note">
+                Jupyter Notebook Note <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
     </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-  
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-<nav id="article-nav">
-  
-    <a href="/2017/05/25/Jupyter-Notebook-Note/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
+  </div>
+
+
+        </div>
         
-          Jupyter Notebook Note
+          
+  
+  
+    <div class="sidebar-toggle">
+      <div class="sidebar-toggle-line-wrap">
+        <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      </div>
+    </div>
+  
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          
+            
+          
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SSQ" />
+          <p class="site-author-name" itemprop="name">SSQ</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SSQ" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-the-Web-Works"><span class="nav-number">1.</span> <span class="nav-text">How the Web Works</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction-to-the-Web"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction to the Web</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#World-Wide-Web"><span class="nav-number">1.2.</span> <span class="nav-text">World Wide Web</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Types"><span class="nav-number">1.3.</span> <span class="nav-text">File Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Components-of-the-Web"><span class="nav-number">1.4.</span> <span class="nav-text">Components of the Web</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Best-Browser"><span class="nav-number">1.5.</span> <span class="nav-text">Best Browser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-Basics"><span class="nav-number">1.6.</span> <span class="nav-text">HTML Basics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-HTML-Tags"><span class="nav-number">1.7.</span> <span class="nav-text">Intro to HTML Tags</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bold-Tag"><span class="nav-number">1.8.</span> <span class="nav-text">Bold Tag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Italics"><span class="nav-number">1.9.</span> <span class="nav-text">Italics</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Missing-End-Tag"><span class="nav-number">1.10.</span> <span class="nav-text">Missing End Tag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Making-Links"><span class="nav-number">1.11.</span> <span class="nav-text">Making Links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Adding-Images"><span class="nav-number">1.12.</span> <span class="nav-text">Adding Images</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Whitespace"><span class="nav-number">1.13.</span> <span class="nav-text">Whitespace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Paragraph-Tag"><span class="nav-number">1.14.</span> <span class="nav-text">Paragraph Tag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inline-vs-Block"><span class="nav-number">1.15.</span> <span class="nav-text">Inline vs Block</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Span-and-Div"><span class="nav-number">1.16.</span> <span class="nav-text">Span and Div</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Document-Structure"><span class="nav-number">1.17.</span> <span class="nav-text">Document Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introducing-URLs"><span class="nav-number">1.18.</span> <span class="nav-text">Introducing URLs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Correct-URL"><span class="nav-number">1.19.</span> <span class="nav-text">Correct URL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Query-Parameters"><span class="nav-number">1.20.</span> <span class="nav-text">Query Parameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fragments"><span class="nav-number">1.21.</span> <span class="nav-text">Fragments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port"><span class="nav-number">1.22.</span> <span class="nav-text">Port</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Get"><span class="nav-number">1.23.</span> <span class="nav-text">Get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Most-Common-Method"><span class="nav-number">1.24.</span> <span class="nav-text">Most Common Method</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Making-Requests"><span class="nav-number">1.25.</span> <span class="nav-text">Making Requests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User-Agent-Header"><span class="nav-number">1.26.</span> <span class="nav-text">User Agent Header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valid-Headers"><span class="nav-number">1.27.</span> <span class="nav-text">Valid Headers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-Responses"><span class="nav-number">1.28.</span> <span class="nav-text">HTTP Responses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response-Headers"><span class="nav-number">1.29.</span> <span class="nav-text">Response Headers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NOTE"><span class="nav-number">1.29.1.</span> <span class="nav-text">NOTE:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-Telnet"><span class="nav-number">1.29.2.</span> <span class="nav-text">Running Telnet</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Telnet-Request"><span class="nav-number">1.30.</span> <span class="nav-text">Telnet Request</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web-Applications"><span class="nav-number">1.31.</span> <span class="nav-text">Web Applications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dynamic-Content"><span class="nav-number">1.32.</span> <span class="nav-text">Dynamic Content</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-1-Creating-Your-First-Cite"><span class="nav-number">2.</span> <span class="nav-text">Problem Set 1 - Creating Your First Cite</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-App-Engine"><span class="nav-number">2.1.</span> <span class="nav-text">Google App Engine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tutorial"><span class="nav-number">2.1.1.</span> <span class="nav-text">tutorial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#succeed-in-deploying"><span class="nav-number">2.1.2.</span> <span class="nav-text">succeed in deploying</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#success-Try-locally"><span class="nav-number">2.1.3.</span> <span class="nav-text">(success)Try locally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fail-try-locally-again"><span class="nav-number">2.1.4.</span> <span class="nav-text">(Fail)try locally again</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-your-app-to-the-cloud"><span class="nav-number">2.1.5.</span> <span class="nav-text">Deploy your app to the cloud</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-1-Help"><span class="nav-number">3.</span> <span class="nav-text">Problem Set 1 Help</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro"><span class="nav-number">3.1.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-Google-App-Engine"><span class="nav-number">3.2.</span> <span class="nav-text">Install Google App Engine</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Google-App-Engine-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">Install Google App Engine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Changes-to-Google-App-Engine"><span class="nav-number">3.2.2.</span> <span class="nav-text">Changes to Google App Engine</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installing-Python-on-Linux"><span class="nav-number">3.2.3.</span> <span class="nav-text">Installing Python on Linux</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-Google-App-Engine-on-Mac-OS"><span class="nav-number">3.2.4.</span> <span class="nav-text">Running Google App Engine on Mac OS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-Google-App-Engine-on-Linux"><span class="nav-number">3.2.5.</span> <span class="nav-text">Running Google App Engine on Linux</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Office-Hours-1"><span class="nav-number">4.</span> <span class="nav-text">Office Hours 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forms-and-Input"><span class="nav-number">5.</span> <span class="nav-text">Forms and Input</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">5.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Forms"><span class="nav-number">5.2.</span> <span class="nav-text">Forms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User-Input"><span class="nav-number">5.3.</span> <span class="nav-text">User Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Naming-Input"><span class="nav-number">5.4.</span> <span class="nav-text">Naming Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Entering-Input"><span class="nav-number">5.5.</span> <span class="nav-text">Entering Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Submitting-Input"><span class="nav-number">5.6.</span> <span class="nav-text">Submitting Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Action-Attribute"><span class="nav-number">5.7.</span> <span class="nav-text">The Action Attribute</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL-Encoding"><span class="nav-number">5.8.</span> <span class="nav-text">URL Encoding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-Webapp-World"><span class="nav-number">5.9.</span> <span class="nav-text">Hello Webapp World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Content-Type"><span class="nav-number">5.10.</span> <span class="nav-text">Content Type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-Handlers"><span class="nav-number">5.11.</span> <span class="nav-text">More Handlers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Method-Attribute"><span class="nav-number">5.12.</span> <span class="nav-text">The Method Attribute</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Methods-and-Parameters"><span class="nav-number">5.13.</span> <span class="nav-text">Methods and Parameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Differences-Between-Get-and-Post"><span class="nav-number">5.14.</span> <span class="nav-text">Differences Between Get and Post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problems-with-Get"><span class="nav-number">5.15.</span> <span class="nav-text">Problems with Get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#When-to-Use-Get-and-Post"><span class="nav-number">5.16.</span> <span class="nav-text">When to Use Get and Post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Passwords"><span class="nav-number">5.17.</span> <span class="nav-text">Passwords</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checkboxes"><span class="nav-number">5.18.</span> <span class="nav-text">Checkboxes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Multiple-Checkboxes"><span class="nav-number">5.19.</span> <span class="nav-text">Multiple Checkboxes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Radio-Buttons"><span class="nav-number">5.20.</span> <span class="nav-text">Radio Buttons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grouping-Radio-Buttons"><span class="nav-number">5.21.</span> <span class="nav-text">Grouping Radio Buttons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Radio-Button-Values"><span class="nav-number">5.22.</span> <span class="nav-text">Radio Button Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Label-Elements"><span class="nav-number">5.23.</span> <span class="nav-text">Label Elements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dropdowns"><span class="nav-number">5.24.</span> <span class="nav-text">Dropdowns</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dropdowns-and-Values"><span class="nav-number">5.25.</span> <span class="nav-text">Dropdowns and Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Number-One"><span class="nav-number">5.26.</span> <span class="nav-text">The Number One</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Validation"><span class="nav-number">5.27.</span> <span class="nav-text">Validation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Is-Your-Birthday"><span class="nav-number">5.28.</span> <span class="nav-text">What Is Your Birthday?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handling-Posts"><span class="nav-number">5.29.</span> <span class="nav-text">Handling Posts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handling-Bad-Data"><span class="nav-number">5.30.</span> <span class="nav-text">Handling Bad Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valid-Month"><span class="nav-number">5.31.</span> <span class="nav-text">Valid Month</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valid-Day"><span class="nav-number">5.32.</span> <span class="nav-text">Valid Day</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Valid-Year"><span class="nav-number">5.33.</span> <span class="nav-text">Valid Year</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checking-Validation"><span class="nav-number">5.34.</span> <span class="nav-text">Checking Validation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Responding-Based-On-Verification"><span class="nav-number">5.35.</span> <span class="nav-text">Responding Based On Verification</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-Substitution"><span class="nav-number">5.36.</span> <span class="nav-text">String Substitution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Substituting-Multiple-Strings"><span class="nav-number">5.37.</span> <span class="nav-text">Substituting Multiple Strings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-String-Substitution"><span class="nav-number">5.38.</span> <span class="nav-text">Advanced String Substitution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Substituting-into-Our-Form"><span class="nav-number">5.39.</span> <span class="nav-text">Substituting into Our Form</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preserving-User-Input"><span class="nav-number">5.40.</span> <span class="nav-text">Preserving User Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problems-with-HTML-Input"><span class="nav-number">5.41.</span> <span class="nav-text">Problems with HTML Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Handling-HTML-Input"><span class="nav-number">5.42.</span> <span class="nav-text">Handling HTML Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-Escaping"><span class="nav-number">5.43.</span> <span class="nav-text">HTML Escaping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-HTML-Escaping"><span class="nav-number">5.44.</span> <span class="nav-text">Using HTML Escaping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementing-HTML-Escaping"><span class="nav-number">5.45.</span> <span class="nav-text">Implementing HTML Escaping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problems-Reinventing-the-Wheel"><span class="nav-number">5.46.</span> <span class="nav-text">Problems Reinventing the Wheel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Current-Limitations"><span class="nav-number">5.47.</span> <span class="nav-text">Current Limitations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redirection"><span class="nav-number">5.48.</span> <span class="nav-text">Redirection</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redirection-Advantages"><span class="nav-number">5.49.</span> <span class="nav-text">Redirection Advantages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementing-Redirection"><span class="nav-number">5.50.</span> <span class="nav-text">Implementing Redirection</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-2"><span class="nav-number">6.</span> <span class="nav-text">Problem Set 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rot13"><span class="nav-number">6.1.</span> <span class="nav-text">Rot13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User-Signup"><span class="nav-number">6.2.</span> <span class="nav-text">User Signup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rot13-Solution"><span class="nav-number">6.3.</span> <span class="nav-text">Rot13 Solution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#User-Signup-Solution"><span class="nav-number">6.4.</span> <span class="nav-text">User Signup Solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Office-Hours-2"><span class="nav-number">7.</span> <span class="nav-text">Office Hours 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-1"><span class="nav-number">7.1.</span> <span class="nav-text">Question 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-2"><span class="nav-number">7.2.</span> <span class="nav-text">Question 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-3"><span class="nav-number">7.3.</span> <span class="nav-text">Question 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-4"><span class="nav-number">7.4.</span> <span class="nav-text">Question 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-5"><span class="nav-number">7.5.</span> <span class="nav-text">Question 5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-8-Lesson-2a-Templates"><span class="nav-number">8.</span> <span class="nav-text">Lesson 8: Lesson 2a-Templates</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-a-Basic-Form"><span class="nav-number">8.1.</span> <span class="nav-text">Writing a Basic Form</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hidden-Inputs"><span class="nav-number">8.2.</span> <span class="nav-text">Hidden Inputs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shopping-List-Take-1"><span class="nav-number">8.3.</span> <span class="nav-text">Shopping List Take 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introducing-Templates"><span class="nav-number">8.4.</span> <span class="nav-text">Introducing Templates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Template-Refactor"><span class="nav-number">8.5.</span> <span class="nav-text">Template Refactor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Variable-Substitution"><span class="nav-number">8.6.</span> <span class="nav-text">Variable Substitution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Statement-Syntax"><span class="nav-number">8.7.</span> <span class="nav-text">Statement Syntax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Statement-Syntax"><span class="nav-number">8.8.</span> <span class="nav-text">Testing Statement Syntax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Templates-and-Types"><span class="nav-number">8.9.</span> <span class="nav-text">Templates and Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Templates-and-Types-1"><span class="nav-number">8.10.</span> <span class="nav-text">Templates and Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#For-Loop-Syntax"><span class="nav-number">8.11.</span> <span class="nav-text">For Loop Syntax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FizzBuzz"><span class="nav-number">8.12.</span> <span class="nav-text">FizzBuzz</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shopping-List-Take-2"><span class="nav-number">8.13.</span> <span class="nav-text">Shopping List Take 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Escaping-Templates"><span class="nav-number">8.14.</span> <span class="nav-text">Escaping Templates</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Helpful-Tips"><span class="nav-number">8.15.</span> <span class="nav-text">Helpful Tips</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Template-Inheritance"><span class="nav-number">8.16.</span> <span class="nav-text">Template Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FizzBuzz-Inheritance"><span class="nav-number">8.17.</span> <span class="nav-text">FizzBuzz Inheritance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">8.18.</span> <span class="nav-text">Conclusion</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-9-Lesson-3-Databases"><span class="nav-number">9.</span> <span class="nav-text">Lesson 9: Lesson 3-Databases</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Databases"><span class="nav-number">9.1.</span> <span class="nav-text">Databases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Databases-Continued"><span class="nav-number">9.2.</span> <span class="nav-text">Databases Continued</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Is-a-Database"><span class="nav-number">9.3.</span> <span class="nav-text">What Is a Database?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tables"><span class="nav-number">9.4.</span> <span class="nav-text">Tables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementing-Tables-in-Python"><span class="nav-number">9.5.</span> <span class="nav-text">Implementing Tables in Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Querying"><span class="nav-number">9.6.</span> <span class="nav-text">Querying</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Databases"><span class="nav-number">9.7.</span> <span class="nav-text">Why Databases?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Types-of-Databases"><span class="nav-number">9.8.</span> <span class="nav-text">Types of Databases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL"><span class="nav-number">9.9.</span> <span class="nav-text">SQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Databases-in-Python"><span class="nav-number">9.10.</span> <span class="nav-text">Databases in Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-Advanced-SQL"><span class="nav-number">9.11.</span> <span class="nav-text">More Advanced SQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-SQL-in-Python"><span class="nav-number">9.12.</span> <span class="nav-text">Advanced SQL in Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Order-By"><span class="nav-number">9.13.</span> <span class="nav-text">Order By</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Joins"><span class="nav-number">9.14.</span> <span class="nav-text">Joins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Indexes"><span class="nav-number">9.15.</span> <span class="nav-text">Indexes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Querying-Links"><span class="nav-number">9.16.</span> <span class="nav-text">Querying Links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Dictionaries-As-Indices"><span class="nav-number">9.17.</span> <span class="nav-text">Using Dictionaries As Indices</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lookup"><span class="nav-number">9.18.</span> <span class="nav-text">Lookup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advantages-of-Indices"><span class="nav-number">9.19.</span> <span class="nav-text">Advantages of Indices</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Real-World-Example"><span class="nav-number">9.20.</span> <span class="nav-text">Real-World Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Indices-for-Sorting"><span class="nav-number">9.21.</span> <span class="nav-text">Indices for Sorting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Another-Real-World-Example"><span class="nav-number">9.22.</span> <span class="nav-text">Another Real-World Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scaling-Databases"><span class="nav-number">9.23.</span> <span class="nav-text">Scaling Databases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Growing-Databases"><span class="nav-number">9.24.</span> <span class="nav-text">Growing Databases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ACID"><span class="nav-number">9.25.</span> <span class="nav-text">ACID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-App-Engine-Datastore"><span class="nav-number">9.26.</span> <span class="nav-text">Google App Engine Datastore</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GQL"><span class="nav-number">9.27.</span> <span class="nav-text">GQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Automatic-Sharding-and-Replication"><span class="nav-number">9.28.</span> <span class="nav-text">Automatic Sharding and Replication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASCII-Chan"><span class="nav-number">9.29.</span> <span class="nav-text">ASCII Chan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Started-on-ASCII-Chan"><span class="nav-number">9.30.</span> <span class="nav-text">Getting Started on ASCII Chan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-the-Form"><span class="nav-number">9.31.</span> <span class="nav-text">Creating the Form</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Textarea"><span class="nav-number">9.32.</span> <span class="nav-text">Textarea</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Form-Handling"><span class="nav-number">9.33.</span> <span class="nav-text">Form Handling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Form-Handling-Continued"><span class="nav-number">9.34.</span> <span class="nav-text">Form Handling Continued</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-Entities"><span class="nav-number">9.35.</span> <span class="nav-text">Creating Entities</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Datastore-Types"><span class="nav-number">9.36.</span> <span class="nav-text">Datastore Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-Entities-Continued"><span class="nav-number">9.37.</span> <span class="nav-text">Creating Entities Continued</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Working-with-Entities"><span class="nav-number">9.38.</span> <span class="nav-text">Working with Entities</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-Queries"><span class="nav-number">9.39.</span> <span class="nav-text">Running Queries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Styling"><span class="nav-number">9.40.</span> <span class="nav-text">Styling</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-10-Problem-Set-3-Building-a-Basic-Blog"><span class="nav-number">10.</span> <span class="nav-text">Lesson 10: Problem Set 3-Building a Basic Blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Blog"><span class="nav-number">10.1.</span> <span class="nav-text">Basic Blog</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-    </a>
-  
-  
-    <a href="/2017/04/14/CS229/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">CS229 notebook</div>
-    </a>
-  
-</nav>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-</article>
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SSQ</span>
+</div>
 
-</section>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
         
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Udacity/">Udacity</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Udacity/Anaconda-and-Jupyter-Notebooks/">Anaconda and Jupyter Notebooks</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Udacity/How-to-Build-a-Blog/">How to Build a Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Udacity/Intro-to-CS/">Intro to CS</a></li></ul></li></ul>
-    </div>
-  </div>
-
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Duet/">Duet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTex/">LaTex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Listening/">Listening</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Speaking/">Speaking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Stanford/">Stanford</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TOEFL/">TOEFL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Udacity/">Udacity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vagrant/">Vagrant</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter-notebook/">jupyter notebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ud256/">ud256</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ud595/">ud595</a></li></ul>
-    </div>
-  </div>
-
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Duet/" style="font-size: 10px;">Duet</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/LaTex/" style="font-size: 10px;">LaTex</a> <a href="/tags/Listening/" style="font-size: 10px;">Listening</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Speaking/" style="font-size: 10px;">Speaking</a> <a href="/tags/Stanford/" style="font-size: 10px;">Stanford</a> <a href="/tags/TOEFL/" style="font-size: 10px;">TOEFL</a> <a href="/tags/Udacity/" style="font-size: 20px;">Udacity</a> <a href="/tags/Vagrant/" style="font-size: 15px;">Vagrant</a> <a href="/tags/VirtualBox/" style="font-size: 15px;">VirtualBox</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jupyter-notebook/" style="font-size: 15px;">jupyter notebook</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/ud256/" style="font-size: 10px;">ud256</a> <a href="/tags/ud595/" style="font-size: 10px;">ud595</a>
-    </div>
-  </div>
-
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
-    </div>
-  </div>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/20/Udacity-ud170-Intro-to-DA-Notebook/">Udacity ud170 Intro to DA Notebook</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/20/Udacity-ud1111-Anaconda-and-Jupyter-Notebooks-notebook/">Udacity ud1111 Anaconda and Jupyter Notebooks notebook</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/09/Daily-Easy-English-Expression-Notebook/">Daily Easy English Expression Notebook</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/25/Jupyter-Notebook-Note/">Jupyter Notebook Note</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/01/Udacity-cs253-notebook/">Udacity-cs253-notebook</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 SSQ<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("MWlUL7cwf0gV4nd1BczDGmFm-gzGzoHsz", "YwuYEA1xBo0rm9hzIjUwOm2F");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
 </body>
 </html>
