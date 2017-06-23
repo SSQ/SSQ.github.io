@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Udacity,Data Analysis," />
 
 
 
@@ -90,13 +90,17 @@
 
 
 
+<meta name="description" content="on the way">
+<meta name="keywords" content="Udacity,Data Analysis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Udacity ud170 Intro to DA Notebook">
 <meta property="og:url" content="https://ssq.github.io/2017/06/20/Udacity-ud170-Intro-to-DA-Notebook/index.html">
 <meta property="og:site_name" content="SSQ">
-<meta property="og:updated_time" content="2017-06-20T12:40:21.519Z">
+<meta property="og:description" content="on the way">
+<meta property="og:updated_time" content="2017-06-23T01:07:31.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Udacity ud170 Intro to DA Notebook">
+<meta name="twitter:description" content="on the way">
 
 
 
@@ -362,6 +366,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Udacity/" itemprop="url" rel="index">
+                    <span itemprop="name">Udacity</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Udacity/Data-Analysis/" itemprop="url" rel="index">
+                    <span itemprop="name">Data Analysis</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -402,7 +439,59 @@
       
 
       
-        
+        <p>on the way<br><a id="more"></a><br>This course can be found in <a href="https://classroom.udacity.com/courses/ud170" target="_blank" rel="external">udacity ud170</a>.</p>
+<h1 id="Data-Analysis-Process"><a href="#Data-Analysis-Process" class="headerlink" title="Data Analysis Process"></a>Data Analysis Process</h1><h2 id="Setting-Up-Your-System"><a href="#Setting-Up-Your-System" class="headerlink" title="Setting Up Your System"></a>Setting Up Your System</h2><p>Otherwise, you can find the <a href="https://classroom.udacity.com/courses/ud1111" target="_blank" rel="external">free course</a> here. </p>
+<h2 id="Intro-to-CSVs"><a href="#Intro-to-CSVs" class="headerlink" title="Intro to CSVs"></a>Intro to CSVs</h2><p>If you’d like to learn more about data wrangling, check out the Udacity course <a href="https://www.udacity.com/course/data-wrangling-with-mongodb--ud032" target="_blank" rel="external">Data Wrangling with MongoDB</a>.</p>
+<h2 id="CSVs-in-Python"><a href="#CSVs-in-Python" class="headerlink" title="CSVs in Python"></a>CSVs in Python</h2><p><a href="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/22sQCo6ovH0.mp4" target="_blank" rel="external">https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/22sQCo6ovH0.mp4</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">import unicodecsv</div><div class="line"></div><div class="line">enrollments_filename = &apos;/datasets/ud170/udacity-students/enrollments.csv&apos;</div><div class="line"></div><div class="line">## Longer version of code (replaced with shorter, equivalent version below)</div><div class="line"></div><div class="line"># enrollments = []</div><div class="line"># f = open(enrollments_filename, &apos;rb&apos;)</div><div class="line"># reader = unicodecsv.DictReader(f)</div><div class="line"># for row in reader:</div><div class="line">#     enrollments.append(row)</div><div class="line"># f.close()</div><div class="line"></div><div class="line">with open(enrollments_filename, &apos;rb&apos;) as f:</div><div class="line">    reader = unicodecsv.DictReader(f)</div><div class="line">    enrollments = list(reader)</div><div class="line">    </div><div class="line">### Write code similar to the above to load the engagement</div><div class="line">### and submission data. The data is stored in files with</div><div class="line">### the given filenames. Then print the first row of each</div><div class="line">### table to make sure that your code works. You can use the</div><div class="line">### &quot;Test Run&quot; button to see the output of your code.</div><div class="line"></div><div class="line">engagement_filename = &apos;/datasets/ud170/udacity-students/daily_engagement.csv&apos;</div><div class="line">submissions_filename = &apos;/datasets/ud170/udacity-students/project_submissions.csv&apos;</div><div class="line">    </div><div class="line">daily_engagement = None     # Replace this with your code</div><div class="line">project_submissions = None  # Replace this with your code</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">with open(engagement_filename, &apos;rb&apos;) as f:</div><div class="line">    reader = unicodecsv.DictReader(f)</div><div class="line">    daily_engagement = list(reader)    </div><div class="line">print daily_engagement[0]</div><div class="line"></div><div class="line">with open(submissions_filename, &apos;rb&apos;) as f:</div><div class="line">    reader = unicodecsv.DictReader(f)</div><div class="line">    project_submissions = list(reader)</div><div class="line">print project_submissions[0]</div></pre></td></tr></table></figure>
+<h3 id="Python’s-csv-Module"><a href="#Python’s-csv-Module" class="headerlink" title="Python’s csv Module"></a>Python’s csv Module</h3><p><a href="https://docs.python.org/2/library/csv.html" target="_blank" rel="external">This page</a> contains documentation for Python’s csv module. Instead of csv, you’ll be using unicodecsv in this course. unicodecsv works exactly the same as csv, but it comes with Anaconda and has support for unicode. The csv documentation page is still the best way to learn how to use the unicodecsv library, since the two libraries work exactly the same way.</p>
+<h3 id="Iterators-in-Python"><a href="#Iterators-in-Python" class="headerlink" title="Iterators in Python"></a>Iterators in Python</h3><p><a href="https://www.codementor.io/python/tutorial/python-generators-and-iterators" target="_blank" rel="external">This page</a> explains the difference between iterators and lists in Python, and how to use iterators.</p>
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd002/parts/0021345403/modules/317671873575460/lessons/5430778793/concepts/3cde04b0-873d-41b8-a618-526cd8b5bb35#" target="_blank" rel="external">DAND students click here for solution code</a></p>
+<p>IPND students: Look at the end of this lesson for Quiz Solutions</p>
+<h2 id="Fixing-Data-Types"><a href="#Fixing-Data-Types" class="headerlink" title="Fixing Data Types"></a>Fixing Data Types</h2><p><a href="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/7NSYtdVrlRE.mp4" target="_blank" rel="external">https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/7NSYtdVrlRE.mp4</a></p>
+<h2 id="Questions-about-Student-Data"><a href="#Questions-about-Student-Data" class="headerlink" title="Questions about Student Data"></a>Questions about Student Data</h2><p><a href="https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/AO8vSyAtfV4.mp4" target="_blank" rel="external">https://s3.cn-north-1.amazonaws.com.cn/u-vid-hd/AO8vSyAtfV4.mp4</a></p>
+<h2 id="Investigating-the-Data"><a href="#Investigating-the-Data" class="headerlink" title="Investigating the Data"></a>Investigating the Data</h2><p>Now you’ve started the data wrangling process by loading the data and making sure it’s in a good format. The next step is to investigate a bit and see if there are any inconsistencies or problems in the data that you’ll need to clean up.</p>
+<p>For each of the three files you’ve loaded, find the total number of rows in the csv and the number of unique students. To find the number of unique students in each table, you might want to try creating a set of the account keys.</p>
+<p>Again, in case you’re not finished with your local setup, you can complete this exercise in the Udacity code editor. You’ll need to run the next exercise locally, though, so if you haven’t finished setting up, you should do that now.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">import unicodecsv</div><div class="line"></div><div class="line">def read_csv(filename):</div><div class="line">    with open(filename, &apos;rb&apos;) as f:</div><div class="line">        reader = unicodecsv.DictReader(f)</div><div class="line">        return list(reader)</div><div class="line"></div><div class="line">enrollments = read_csv(&apos;/datasets/ud170/udacity-students/enrollments.csv&apos;)</div><div class="line">daily_engagement = read_csv(&apos;/datasets/ud170/udacity-students/daily_engagement.csv&apos;)</div><div class="line">project_submissions = read_csv(&apos;/datasets/ud170/udacity-students/project_submissions.csv&apos;)</div><div class="line">    </div><div class="line">### For each of these three tables, find the number of rows in the table and</div><div class="line">### the number of unique students in the table. To find the number of unique</div><div class="line">### students, you might want to create a set of the account keys in each table.</div><div class="line"></div><div class="line">enrollment_num_rows = 0             # Replace this with your code</div><div class="line">enrollment_num_unique_students = 0  # Replace this with your code</div><div class="line"></div><div class="line">engagement_num_rows = 0             # Replace this with your code</div><div class="line">engagement_num_unique_students = 0  # Replace this with your code</div><div class="line"></div><div class="line">submission_num_rows = 0             # Replace this with your code</div><div class="line">submission_num_unique_students = 0  # Replace this with your code</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">def unique_num(data):</div><div class="line">    unique_data = set()</div><div class="line">    for element in data:</div><div class="line">        if &apos;acct&apos; in element:</div><div class="line">            element[&apos;account_key&apos;] = element[&apos;acct&apos;]</div><div class="line">            del element[&apos;acct&apos;]</div><div class="line">        unique_data.add(element[&apos;account_key&apos;])</div><div class="line">    return len(unique_data)</div><div class="line"></div><div class="line">print enrollments[0]</div><div class="line">enrollment_num_rows = len(enrollments)             # Replace this with your code</div><div class="line">enrollment_num_unique_students = unique_num(enrollments)  # Replace this with your code</div><div class="line">print enrollment_num_rows</div><div class="line">print enrollment_num_unique_students</div><div class="line"></div><div class="line">    </div><div class="line">print daily_engagement[0]</div><div class="line">engagement_num_rows = len(daily_engagement)             # Replace this with your code</div><div class="line">print engagement_num_rows</div><div class="line">engagement_num_unique_students = unique_num(daily_engagement)  # Replace this with your code</div><div class="line">print engagement_num_unique_students</div><div class="line"></div><div class="line">print project_submissions[0]</div><div class="line">submission_num_rows = len(project_submissions)             # Replace this with your code</div><div class="line">submission_num_unique_students = unique_num(project_submissions)  # Replace this with your code</div><div class="line">print submission_num_rows</div><div class="line">print submission_num_unique_students</div></pre></td></tr></table></figure>
+<h2 id="Problems-in-the-Data"><a href="#Problems-in-the-Data" class="headerlink" title="Problems in the Data"></a>Problems in the Data</h2><h3 id="Removing-an-Element-from-a-Dictionary"><a href="#Removing-an-Element-from-a-Dictionary" class="headerlink" title="Removing an Element from a Dictionary"></a>Removing an Element from a Dictionary</h3><p>If you’re not sure how to remove an element from a dictionary, <a href="http://stackoverflow.com/questions/5844672/delete-an-element-from-a-dictionary" target="_blank" rel="external">this</a> post might be helpful.</p>
+<h3 id="Solutions-1"><a href="#Solutions-1" class="headerlink" title="Solutions"></a>Solutions</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd002/parts/0021345403/modules/317671873575460/lessons/5430778793/concepts/3cde04b0-873d-41b8-a618-526cd8b5bb35#" target="_blank" rel="external">DAND students click here for solution code</a></p>
+<p>IPND students: Look at the end of this lesson for Quiz Solutions</p>
+<h3 id="Updated-Code-for-Previous-Exercise"><a href="#Updated-Code-for-Previous-Exercise" class="headerlink" title="Updated Code for Previous Exercise"></a>Updated Code for Previous Exercise</h3><p>After running the above code, Caroline also shows rewriting the solution from the previous exercise to the following code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">def get_unique_students(data):</div><div class="line">    unique_students = set()</div><div class="line">    for data_point in data:</div><div class="line">        unique_students.add(data_point[&apos;account_key&apos;])</div><div class="line">    return unique_students</div><div class="line">len(enrollments)</div><div class="line">unique_enrolled_students = get_unique_students(enrollments)</div><div class="line">len(unique_enrolled_students)</div><div class="line">len(daily_engagement)</div><div class="line">unique_engagement_students = get_unique_students(daily_engagement)</div><div class="line">len(unique_engagement_students)</div><div class="line">len(project_submissions)</div><div class="line">unique_project_submitters = get_unique_students(project_submissions)</div><div class="line">len(unique_project_submitters)</div></pre></td></tr></table></figure></p>
+<h2 id="Missing-Engagement-Records"><a href="#Missing-Engagement-Records" class="headerlink" title="Missing Engagement Records"></a>Missing Engagement Records</h2><p>Printing a Single Row<br><a href="http://www.tutorialspoint.com/python/python_break_statement.htm" target="_blank" rel="external">This page</a> describes how to use Python’s <code>break</code> statement, which might be helpful for printing only a single problem record.</p>
+<p>Solutions<br><a href="https://classroom.udacity.com/nanodegrees/nd002/parts/0021345403/modules/317671873575460/lessons/5430778793/concepts/3cde04b0-873d-41b8-a618-526cd8b5bb35#" target="_blank" rel="external">DAND students click here for solution code</a></p>
+<p>IPND students: Look at the end of this lesson for Quiz Solutions</p>
+<h2 id="Checking-for-More-Problem-Records"><a href="#Checking-for-More-Problem-Records" class="headerlink" title="Checking for More Problem Records"></a>Checking for More Problem Records</h2><h2 id="Tracking-Down-the-Remaining-Problems"><a href="#Tracking-Down-the-Remaining-Problems" class="headerlink" title="Tracking Down the Remaining Problems"></a>Tracking Down the Remaining Problems</h2><h2 id="Refining-the-Question"><a href="#Refining-the-Question" class="headerlink" title="Refining the Question"></a>Refining the Question</h2><h3 id="Exploratory-Data-Analysis"><a href="#Exploratory-Data-Analysis" class="headerlink" title="Exploratory Data Analysis"></a>Exploratory Data Analysis</h3><p>If you’d like to learn more about the exploratory phase of the data analysis process, check out the Udacity course <a href="https://www.udacity.com/course/data-analysis-with-r--ud651" target="_blank" rel="external">Data Analysis with R</a>.</p>
+<h3 id="Solutions-2"><a href="#Solutions-2" class="headerlink" title="Solutions"></a>Solutions</h3><p><a href="https://classroom.udacity.com/nanodegrees/nd002/parts/0021345403/modules/317671873575460/lessons/5430778793/concepts/3cde04b0-873d-41b8-a618-526cd8b5bb35#" target="_blank" rel="external">DAND students click here for solution code</a></p>
+<p>IPND students: Look at the end of this lesson for Quiz Solutions</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+<p>##</p>
+
       
     </div>
 
@@ -450,6 +539,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Udacity/" rel="tag"># Udacity</a>
+          
+            <a href="/tags/Data-Analysis/" rel="tag"># Data Analysis</a>
+          
+        </div>
+      
 
       
         
@@ -468,6 +565,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/22/Udacity-ud651-DA-with-R-Notebook/" rel="prev" title="Udacity ud651 DA with R Notebook">
+                Udacity ud651 DA with R Notebook <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -516,8 +617,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          
+            
+          
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -532,7 +642,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -543,7 +653,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -554,7 +664,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -590,6 +700,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-Analysis-Process"><span class="nav-number">1.</span> <span class="nav-text">Data Analysis Process</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Setting-Up-Your-System"><span class="nav-number">1.1.</span> <span class="nav-text">Setting Up Your System</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-CSVs"><span class="nav-number">1.2.</span> <span class="nav-text">Intro to CSVs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSVs-in-Python"><span class="nav-number">1.3.</span> <span class="nav-text">CSVs in Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python’s-csv-Module"><span class="nav-number">1.3.1.</span> <span class="nav-text">Python’s csv Module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterators-in-Python"><span class="nav-number">1.3.2.</span> <span class="nav-text">Iterators in Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions"><span class="nav-number">1.3.3.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fixing-Data-Types"><span class="nav-number">1.4.</span> <span class="nav-text">Fixing Data Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Questions-about-Student-Data"><span class="nav-number">1.5.</span> <span class="nav-text">Questions about Student Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Investigating-the-Data"><span class="nav-number">1.6.</span> <span class="nav-text">Investigating the Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problems-in-the-Data"><span class="nav-number">1.7.</span> <span class="nav-text">Problems in the Data</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Removing-an-Element-from-a-Dictionary"><span class="nav-number">1.7.1.</span> <span class="nav-text">Removing an Element from a Dictionary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions-1"><span class="nav-number">1.7.2.</span> <span class="nav-text">Solutions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Updated-Code-for-Previous-Exercise"><span class="nav-number">1.7.3.</span> <span class="nav-text">Updated Code for Previous Exercise</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Missing-Engagement-Records"><span class="nav-number">1.8.</span> <span class="nav-text">Missing Engagement Records</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checking-for-More-Problem-Records"><span class="nav-number">1.9.</span> <span class="nav-text">Checking for More Problem Records</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tracking-Down-the-Remaining-Problems"><span class="nav-number">1.10.</span> <span class="nav-text">Tracking Down the Remaining Problems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Refining-the-Question"><span class="nav-number">1.11.</span> <span class="nav-text">Refining the Question</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Exploratory-Data-Analysis"><span class="nav-number">1.11.1.</span> <span class="nav-text">Exploratory Data Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions-2"><span class="nav-number">1.11.2.</span> <span class="nav-text">Solutions</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
