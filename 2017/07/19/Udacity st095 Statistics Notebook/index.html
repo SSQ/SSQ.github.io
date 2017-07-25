@@ -1,0 +1,1314 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Udacity,Statistics," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="This course, classroom can be divided into describe (classroom) and inference statistics.wiki">
+<meta name="keywords" content="Udacity,Statistics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Udacity st095 Statistics Notebook">
+<meta property="og:url" content="https://ssq.github.io/2017/07/19/Udacity st095 Statistics Notebook/index.html">
+<meta property="og:site_name" content="SSQ">
+<meta property="og:description" content="This course, classroom can be divided into describe (classroom) and inference statistics.wiki">
+<meta property="og:updated_time" content="2017-07-24T14:55:39.226Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Udacity st095 Statistics Notebook">
+<meta name="twitter:description" content="This course, classroom can be divided into describe (classroom) and inference statistics.wiki">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://ssq.github.io/2017/07/19/Udacity st095 Statistics Notebook/"/>
+
+
+
+
+
+  <title>Udacity st095 Statistics Notebook | SSQ</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-91307065-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3c8ad2ecdd2387b44044b1d7cd3536a9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SSQ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-friends">
+          <a href="/friends" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            friends
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://ssq.github.io/2017/07/19/Udacity st095 Statistics Notebook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SSQ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SSQ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Udacity st095 Statistics Notebook</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-19T15:12:31+08:00">
+                2017-07-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/19/Udacity st095 Statistics Notebook/" class="leancloud_visitors" data-flag-title="Udacity st095 Statistics Notebook">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note primary"><p>This <a href="https://cn.udacity.com/course/statistics--st095" target="_blank" rel="external">course</a>, <a href="https://classroom.udacity.com/courses/st095" target="_blank" rel="external">classroom</a> can be divided into <a href="https://cn.udacity.com/course/intro-to-descriptive-statistics--ud827" target="_blank" rel="external">describe</a> (<a href="https://classroom.udacity.com/courses/ud827" target="_blank" rel="external">classroom</a>) and <a href="https://www.udacity.com/course/intro-to-inferential-statistics--ud201" target="_blank" rel="external">inference statistics</a>.<br><a href="https://www.udacity.com/wiki/st095" target="_blank" rel="external">wiki</a></p>
+</div>
+<a id="more"></a>
+<h1 id="Orientation"><a href="#Orientation" class="headerlink" title="Orientation!"></a>Orientation!</h1><h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><h2 id="Quiz-MnMs"><a href="#Quiz-MnMs" class="headerlink" title="Quiz: MnMs"></a>Quiz: MnMs</h2><h2 id="Quiz-Definitely-blue"><a href="#Quiz-Definitely-blue" class="headerlink" title="Quiz: Definitely blue"></a>Quiz: Definitely blue</h2><h2 id="Problem-Sets"><a href="#Problem-Sets" class="headerlink" title="Problem Sets"></a>Problem Sets</h2><h2 id="Quiz-Forums"><a href="#Quiz-Forums" class="headerlink" title="Quiz: Forums"></a>Quiz: Forums</h2><h2 id="Quiz-Instructor-Notes"><a href="#Quiz-Instructor-Notes" class="headerlink" title="Quiz: Instructor Notes"></a>Quiz: Instructor Notes</h2><h2 id="My-Drive"><a href="#My-Drive" class="headerlink" title="My Drive"></a>My Drive</h2><h2 id="Quiz-Practice-with-Spreadsheets"><a href="#Quiz-Practice-with-Spreadsheets" class="headerlink" title="Quiz: Practice with Spreadsheets"></a>Quiz: Practice with Spreadsheets</h2><h2 id="Quiz-Calculate-sums"><a href="#Quiz-Calculate-sums" class="headerlink" title="Quiz: Calculate sums"></a>Quiz: Calculate sums</h2><h2 id="Course-Wiki"><a href="#Course-Wiki" class="headerlink" title="Course Wiki"></a>Course Wiki</h2><p>You can get to the course wiki by clicking “Materials” or following this <a href="(https://www.udacity.com/wiki/st095">link</a>.</p>
+<h1 id="Intro-to-Research-Methods"><a href="#Intro-to-Research-Methods" class="headerlink" title="Intro to Research Methods"></a>Intro to Research Methods</h1><h2 id="Lauren-39-s-Intro-Video"><a href="#Lauren-39-s-Intro-Video" class="headerlink" title="Lauren&#39;s Intro Video"></a>Lauren&#39;s Intro Video</h2><h2 id="Quiz-Believe-Results"><a href="#Quiz-Believe-Results" class="headerlink" title="Quiz: Believe Results"></a>Quiz: Believe Results</h2><h2 id="Quiz-Measure-Memory"><a href="#Quiz-Measure-Memory" class="headerlink" title="Quiz: Measure Memory"></a>Quiz: Measure Memory</h2><h2 id="Define-Constructs"><a href="#Define-Constructs" class="headerlink" title="Define Constructs"></a>Define Constructs</h2><h2 id="BBC-Memory-Test"><a href="#BBC-Memory-Test" class="headerlink" title="BBC Memory Test"></a>BBC Memory Test</h2><h2 id="Memory-Test-Description"><a href="#Memory-Test-Description" class="headerlink" title="Memory Test Description"></a>Memory Test Description</h2><p>Here is a brief description of how the test worked, to help you follow the rest of the lesson. The test consisted of three parts:</p>
+<p>Users were shown 12 photos in the first part.<br>Users were shown another 12 photos in the second part.<br>Users were shown 48 photos in the third part and asked if they saw each photo<br>in the first part, the second part, or neither.</p>
+<p>After the test, users were given two scores:</p>
+<p>A “Recognition score”, calculated as the percentage of times they correctly identified whether they saw the face at all, regardless of which part the face was from.<br>A “Temporal memory score”, calculated as the percentage of recognized faces that were identified with the correct part (part 1 or part 2).</p>
+<p>Users were advised to take a 5 minute break between each part of the test.</p>
+<h2 id="BBC-Scores"><a href="#BBC-Scores" class="headerlink" title="BBC Scores"></a>BBC Scores</h2><h2 id="Google-Account"><a href="#Google-Account" class="headerlink" title="Google Account"></a>Google Account</h2><h2 id="Quiz-BBC-Measurement"><a href="#Quiz-BBC-Measurement" class="headerlink" title="Quiz: BBC Measurement"></a>Quiz: BBC Measurement</h2><h2 id="Operational-Definition"><a href="#Operational-Definition" class="headerlink" title="Operational Definition"></a>Operational Definition</h2><h2 id="Quiz-Constructs"><a href="#Quiz-Constructs" class="headerlink" title="Quiz: Constructs"></a>Quiz: Constructs</h2><h2 id="Quiz-Operational-Definitions"><a href="#Quiz-Operational-Definitions" class="headerlink" title="Quiz: Operational Definitions"></a>Quiz: Operational Definitions</h2><h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><h2 id="Quiz-Sleep-and-Memory"><a href="#Quiz-Sleep-and-Memory" class="headerlink" title="Quiz: Sleep and Memory"></a>Quiz: Sleep and Memory</h2><h2 id="Quiz-Influence-Memory"><a href="#Quiz-Influence-Memory" class="headerlink" title="Quiz: Influence Memory"></a>Quiz: Influence Memory</h2><h2 id="Quiz-Control-for-Time-of-Day"><a href="#Quiz-Control-for-Time-of-Day" class="headerlink" title="Quiz: Control for Time of Day"></a>Quiz: Control for Time of Day</h2><p>lurking variables<br>extraneous factor</p>
+<h2 id="Quiz-Same-Scores"><a href="#Quiz-Same-Scores" class="headerlink" title="Quiz: Same Scores"></a>Quiz: Same Scores</h2><p>Population parameters (such as mu, or μ) are values that describe the entire population. Sample statistics (such as X-bar, or $\bar{x}$​​ ) are values that describe our sample; we use statistics to estimate the population parameters. Estimates are our best guesses for the population parameters. So, for example, we would use X-bar to estimate mu.</p>
+<h2 id="Quiz-Sample-Average"><a href="#Quiz-Sample-Average" class="headerlink" title="Quiz: Sample Average"></a>Quiz: Sample Average</h2><h2 id="Quiz-Better-Sample"><a href="#Quiz-Better-Sample" class="headerlink" title="Quiz: Better Sample"></a>Quiz: Better Sample</h2><h2 id="Randomness"><a href="#Randomness" class="headerlink" title="Randomness"></a>Randomness</h2><h2 id="Quiz-Visualize-Relationship"><a href="#Quiz-Visualize-Relationship" class="headerlink" title="Quiz: Visualize Relationship"></a>Quiz: Visualize Relationship</h2><h2 id="Quiz-True-or-Not"><a href="#Quiz-True-or-Not" class="headerlink" title="Quiz: True or Not?"></a>Quiz: True or Not?</h2><h2 id="Golden-Arches-Theory"><a href="#Golden-Arches-Theory" class="headerlink" title="Golden Arches Theory"></a>Golden Arches Theory</h2><h2 id="McDonald-39-s"><a href="#McDonald-39-s" class="headerlink" title="McDonald&#39;s"></a>McDonald&#39;s</h2><h2 id="Quiz-World-Peace"><a href="#Quiz-World-Peace" class="headerlink" title="Quiz: World Peace"></a>Quiz: World Peace</h2><h2 id="Causal-Inference"><a href="#Causal-Inference" class="headerlink" title="Causal Inference"></a>Causal Inference</h2><h2 id="Quiz-Benefits-of-Surveys"><a href="#Quiz-Benefits-of-Surveys" class="headerlink" title="Quiz: Benefits of Surveys"></a>Quiz: Benefits of Surveys</h2><h2 id="Quiz-Downsides-of-Surveys"><a href="#Quiz-Downsides-of-Surveys" class="headerlink" title="Quiz: Downsides of Surveys"></a>Quiz: Downsides of Surveys</h2><h2 id="Quiz-Placebo"><a href="#Quiz-Placebo" class="headerlink" title="Quiz: Placebo"></a>Quiz: Placebo</h2><h2 id="Quiz-Blind"><a href="#Quiz-Blind" class="headerlink" title="Quiz: Blind"></a>Quiz: Blind</h2><h2 id="Quiz-Double-Blind"><a href="#Quiz-Double-Blind" class="headerlink" title="Quiz: Double Blind"></a>Quiz: Double Blind</h2><h2 id="Quiz-Controlled-Factors"><a href="#Quiz-Controlled-Factors" class="headerlink" title="Quiz: Controlled Factors"></a>Quiz: Controlled Factors</h2><h2 id="Random-Assignment"><a href="#Random-Assignment" class="headerlink" title="Random Assignment"></a>Random Assignment</h2><h2 id="Quiz-Control-for-What"><a href="#Quiz-Control-for-What" class="headerlink" title="Quiz: Control for What?"></a>Quiz: Control for What?</h2><h2 id="Quiz-Katie-39-s-Hand"><a href="#Quiz-Katie-39-s-Hand" class="headerlink" title="Quiz: Katie&#39;s Hand"></a>Quiz: Katie&#39;s Hand</h2><p>Click this link to access the data: <a href="https://docs.google.com/a/knowlabs.com/spreadsheet/ccc?key=0Alo47BBiqLE0dHVfWkt3Mm83SFROcG1JdFFuamxuVVE#gid=0" target="_blank" rel="external">Height and hand length</a></p>
+<p>Copy and paste the data into your own spreadsheet to create the scatterplot. From <a href="https://drive.google.com/" target="_blank" rel="external">Google Drive</a> (at the top of the page once you’re signed in to your Google account), click the button on the left that says “CREATE” and click “Spreadsheet.”</p>
+<h2 id="Quiz-Draw-Conclusions"><a href="#Quiz-Draw-Conclusions" class="headerlink" title="Quiz: Draw Conclusions"></a>Quiz: Draw Conclusions</h2><h1 id="Problem-Set-1-Intro-to-statistical-research-methods"><a href="#Problem-Set-1-Intro-to-statistical-research-methods" class="headerlink" title="Problem Set 1: Intro to statistical research methods"></a>Problem Set 1: Intro to statistical research methods</h1><h2 id="Quiz-1-All-California-Residents"><a href="#Quiz-1-All-California-Residents" class="headerlink" title="Quiz: 1. All California Residents"></a>Quiz: 1. All California Residents</h2><h2 id="Quiz-2-Sleepy-College-Students"><a href="#Quiz-2-Sleepy-College-Students" class="headerlink" title="Quiz: 2. Sleepy College Students"></a>Quiz: 2. Sleepy College Students</h2><h2 id="Quiz-3-Not-Enough-Sleep…"><a href="#Quiz-3-Not-Enough-Sleep…" class="headerlink" title="Quiz: 3. Not Enough Sleep…?"></a>Quiz: 3. Not Enough Sleep…?</h2><h2 id="Quiz-4-Characteristic-of-a-Sample"><a href="#Quiz-4-Characteristic-of-a-Sample" class="headerlink" title="Quiz: 4. Characteristic of a Sample"></a>Quiz: 4. Characteristic of a Sample</h2><h2 id="Quiz-5-Freshman-15"><a href="#Quiz-5-Freshman-15" class="headerlink" title="Quiz: 5. Freshman 15"></a>Quiz: 5. Freshman 15</h2><h2 id="Quiz-6-Characteristic-of-a-Population"><a href="#Quiz-6-Characteristic-of-a-Population" class="headerlink" title="Quiz: 6. Characteristic of a Population"></a>Quiz: 6. Characteristic of a Population</h2><h2 id="Quiz-7-Sample-Approximates-Population"><a href="#Quiz-7-Sample-Approximates-Population" class="headerlink" title="Quiz: 7. Sample Approximates Population"></a>Quiz: 7. Sample Approximates Population</h2><h2 id="Quiz-8-SAT-Scores"><a href="#Quiz-8-SAT-Scores" class="headerlink" title="Quiz: 8. SAT Scores"></a>Quiz: 8. SAT Scores</h2><h2 id="Quiz-9-Survey-to-Friends"><a href="#Quiz-9-Survey-to-Friends" class="headerlink" title="Quiz: 9. Survey to Friends"></a>Quiz: 9. Survey to Friends</h2><h2 id="Quiz-10-Which-Are-Constructs"><a href="#Quiz-10-Which-Are-Constructs" class="headerlink" title="Quiz: 10. Which Are Constructs?"></a>Quiz: 10. Which Are Constructs?</h2><h2 id="Quiz-11-Which-Are-Not-Constructs"><a href="#Quiz-11-Which-Are-Not-Constructs" class="headerlink" title="Quiz: 11. Which Are Not Constructs?"></a>Quiz: 11. Which Are Not Constructs?</h2><h2 id="Quiz-12-Define-Operational-Definition"><a href="#Quiz-12-Define-Operational-Definition" class="headerlink" title="Quiz: 12. Define Operational Definition"></a>Quiz: 12. Define Operational Definition</h2><h2 id="Quiz-13-Research-Studies"><a href="#Quiz-13-Research-Studies" class="headerlink" title="Quiz: 13. Research Studies"></a>Quiz: 13. Research Studies</h2><h2 id="Quiz-14-Variables"><a href="#Quiz-14-Variables" class="headerlink" title="Quiz: 14. Variables"></a>Quiz: 14. Variables</h2><h2 id="Quiz-15-Variable-Relationships"><a href="#Quiz-15-Variable-Relationships" class="headerlink" title="Quiz: 15. Variable Relationships"></a>Quiz: 15. Variable Relationships</h2><h2 id="Quiz-16-Which-Are-Hypotheses"><a href="#Quiz-16-Which-Are-Hypotheses" class="headerlink" title="Quiz: 16. Which Are Hypotheses?"></a>Quiz: 16. Which Are Hypotheses?</h2><h2 id="Quiz-17-Lurking-Around"><a href="#Quiz-17-Lurking-Around" class="headerlink" title="Quiz: 17. Lurking Around"></a>Quiz: 17. Lurking Around</h2><h2 id="Quiz-18-Symbols-Fun-Fun-Fun"><a href="#Quiz-18-Symbols-Fun-Fun-Fun" class="headerlink" title="Quiz: 18. Symbols = Fun Fun Fun!"></a>Quiz: 18. Symbols = Fun Fun Fun!</h2><h2 id="Quiz-19-n"><a href="#Quiz-19-n" class="headerlink" title="Quiz: 19. n"></a>Quiz: 19. n</h2><h2 id="Quiz-20-Which-Are-True"><a href="#Quiz-20-Which-Are-True" class="headerlink" title="Quiz: 20. Which Are True?"></a>Quiz: 20. Which Are True?</h2><h2 id="Quiz-21-Random-Sample"><a href="#Quiz-21-Random-Sample" class="headerlink" title="Quiz: 21. Random Sample"></a>Quiz: 21. Random Sample</h2><h2 id="Quiz-22-Convenience-Samples"><a href="#Quiz-22-Convenience-Samples" class="headerlink" title="Quiz: 22. Convenience Samples"></a>Quiz: 22. Convenience Samples</h2><h2 id="Quiz-23-Sample-vs-Population"><a href="#Quiz-23-Sample-vs-Population" class="headerlink" title="Quiz: 23. Sample vs. Population"></a>Quiz: 23. Sample vs. Population</h2><h2 id="Quiz-24-Classical-Music"><a href="#Quiz-24-Classical-Music" class="headerlink" title="Quiz: 24. Classical Music"></a>Quiz: 24. Classical Music</h2><h2 id="Quiz-25-Caffeine"><a href="#Quiz-25-Caffeine" class="headerlink" title="Quiz: 25. Caffeine"></a>Quiz: 25. Caffeine</h2><h2 id="Quiz-26-Video-Games"><a href="#Quiz-26-Video-Games" class="headerlink" title="Quiz: 26. Video Games"></a>Quiz: 26. Video Games</h2><h2 id="Quiz-27-English-Teaching"><a href="#Quiz-27-English-Teaching" class="headerlink" title="Quiz: 27. English Teaching"></a>Quiz: 27. English Teaching</h2><h2 id="Quiz-28-Reading-Score"><a href="#Quiz-28-Reading-Score" class="headerlink" title="Quiz: 28. Reading Score"></a>Quiz: 28. Reading Score</h2><h2 id="Quiz-29-Extreme-Temperature"><a href="#Quiz-29-Extreme-Temperature" class="headerlink" title="Quiz: 29. Extreme Temperature"></a>Quiz: 29. Extreme Temperature</h2><h2 id="Quiz-30-Teaching-Method"><a href="#Quiz-30-Teaching-Method" class="headerlink" title="Quiz: 30. Teaching Method"></a>Quiz: 30. Teaching Method</h2><h2 id="Quiz-31-Reading-Scores"><a href="#Quiz-31-Reading-Scores" class="headerlink" title="Quiz: 31. Reading Scores"></a>Quiz: 31. Reading Scores</h2><h2 id="Quiz-32-Which-Is-Better"><a href="#Quiz-32-Which-Is-Better" class="headerlink" title="Quiz: 32. Which Is Better?"></a>Quiz: 32. Which Is Better?</h2><h2 id="Quiz-33-All-Kinds-of-Variables"><a href="#Quiz-33-All-Kinds-of-Variables" class="headerlink" title="Quiz: 33. All Kinds of Variables"></a>Quiz: 33. All Kinds of Variables</h2><h2 id="Quiz-34-Landmines"><a href="#Quiz-34-Landmines" class="headerlink" title="Quiz: 34. Landmines"></a>Quiz: 34. Landmines</h2><h2 id="Quiz-35-Landmines"><a href="#Quiz-35-Landmines" class="headerlink" title="Quiz: 35. Landmines"></a>Quiz: 35. Landmines</h2><h2 id="Quiz-36-Student-Satisfaction"><a href="#Quiz-36-Student-Satisfaction" class="headerlink" title="Quiz: 36. Student Satisfaction"></a>Quiz: 36. Student Satisfaction</h2><h2 id="Quiz-37-Insomnia"><a href="#Quiz-37-Insomnia" class="headerlink" title="Quiz: 37. Insomnia"></a>Quiz: 37. Insomnia</h2><h2 id="Quiz-38-Insomnia"><a href="#Quiz-38-Insomnia" class="headerlink" title="Quiz: 38. Insomnia"></a>Quiz: 38. Insomnia</h2><h2 id="Quiz-39-SAD"><a href="#Quiz-39-SAD" class="headerlink" title="Quiz: 39. SAD"></a>Quiz: 39. SAD</h2><h2 id="Quiz-40-Random-Assignment"><a href="#Quiz-40-Random-Assignment" class="headerlink" title="Quiz: 40. Random Assignment"></a>Quiz: 40. Random Assignment</h2><h2 id="Quiz-41-Placebo-Control-Condition"><a href="#Quiz-41-Placebo-Control-Condition" class="headerlink" title="Quiz: 41. Placebo Control Condition"></a>Quiz: 41. Placebo Control Condition</h2><h2 id="Quiz-42-Why-Placebo"><a href="#Quiz-42-Why-Placebo" class="headerlink" title="Quiz: 42. Why Placebo?"></a>Quiz: 42. Why Placebo?</h2><h2 id="Quiz-43-Measuring-Constructs"><a href="#Quiz-43-Measuring-Constructs" class="headerlink" title="Quiz: 43. Measuring Constructs"></a>Quiz: 43. Measuring Constructs</h2><h2 id="Quiz-44-Participants"><a href="#Quiz-44-Participants" class="headerlink" title="Quiz: 44. Participants"></a>Quiz: 44. Participants</h2><h2 id="Quiz-45-What-Proportion"><a href="#Quiz-45-What-Proportion" class="headerlink" title="Quiz: 45. What Proportion?"></a>Quiz: 45. What Proportion?</h2><h2 id="Quiz-46-Blind-Studies"><a href="#Quiz-46-Blind-Studies" class="headerlink" title="Quiz: 46. Blind Studies"></a>Quiz: 46. Blind Studies</h2><h2 id="Quiz-47-Causality"><a href="#Quiz-47-Causality" class="headerlink" title="Quiz: 47. Causality?"></a>Quiz: 47. Causality?</h2><h2 id="Quiz-48-Depression"><a href="#Quiz-48-Depression" class="headerlink" title="Quiz: 48. Depression"></a>Quiz: 48. Depression</h2><h2 id="Quiz-49-Depression"><a href="#Quiz-49-Depression" class="headerlink" title="Quiz: 49. Depression"></a>Quiz: 49. Depression</h2><h2 id="Quiz-50-Depression"><a href="#Quiz-50-Depression" class="headerlink" title="Quiz: 50. Depression"></a>Quiz: 50. Depression</h2><h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>construct<br>opertaional definition<br>independent variable<br>dependent variable<br>extraneous or lurking variable<br>experimental study - casual conclusion<br>observational study </p>
+<h1 id="Visualizing-Data"><a href="#Visualizing-Data" class="headerlink" title="Visualizing Data"></a>Visualizing Data</h1><h2 id="Quiz-Where-Students-Are-From"><a href="#Quiz-Where-Students-Are-From" class="headerlink" title="Quiz: Where Students Are From"></a>Quiz: Where Students Are From</h2><h2 id="Quiz-Frequency"><a href="#Quiz-Frequency" class="headerlink" title="Quiz: Frequency"></a>Quiz: Frequency</h2><h2 id="Quiz-US-China-Pakistan"><a href="#Quiz-US-China-Pakistan" class="headerlink" title="Quiz: US, China, Pakistan"></a>Quiz: US, China, Pakistan</h2><h2 id="Quiz-Relative-Frequency"><a href="#Quiz-Relative-Frequency" class="headerlink" title="Quiz: Relative Frequency"></a>Quiz: Relative Frequency</h2><h2 id="Quiz-Range-of-Proportions"><a href="#Quiz-Range-of-Proportions" class="headerlink" title="Quiz: Range of Proportions"></a>Quiz: Range of Proportions</h2><h2 id="Quiz-Sum-Relative-Frequencies"><a href="#Quiz-Sum-Relative-Frequencies" class="headerlink" title="Quiz: Sum Relative Frequencies"></a>Quiz: Sum Relative Frequencies</h2><h2 id="Quiz-Proportion-from-Countries"><a href="#Quiz-Proportion-from-Countries" class="headerlink" title="Quiz: Proportion from Countries"></a>Quiz: Proportion from Countries</h2><h2 id="Quiz-Convert-to-Percentage"><a href="#Quiz-Convert-to-Percentage" class="headerlink" title="Quiz: Convert to Percentage"></a>Quiz: Convert to Percentage</h2><h2 id="Quiz-Range-Percentages"><a href="#Quiz-Range-Percentages" class="headerlink" title="Quiz: Range Percentages"></a>Quiz: Range Percentages</h2><h2 id="Quiz-Continents"><a href="#Quiz-Continents" class="headerlink" title="Quiz: Continents"></a>Quiz: Continents</h2><h2 id="Quiz-Number-of-Rows"><a href="#Quiz-Number-of-Rows" class="headerlink" title="Quiz: Number of Rows"></a>Quiz: Number of Rows</h2><p>interval = bin = bucket</p>
+<h2 id="Quiz-Bin-Size"><a href="#Quiz-Bin-Size" class="headerlink" title="Quiz: Bin Size"></a>Quiz: Bin Size</h2><h2 id="Visualizing-Data-1"><a href="#Visualizing-Data-1" class="headerlink" title="Visualizing Data"></a>Visualizing Data</h2><h2 id="Quiz-Histogram"><a href="#Quiz-Histogram" class="headerlink" title="Quiz: Histogram"></a>Quiz: Histogram</h2><h2 id="Different-Bin-Sizes"><a href="#Different-Bin-Sizes" class="headerlink" title="Different Bin Sizes"></a>Different Bin Sizes</h2><p>Click this link to play around with the histogram applet! (You may need to install the Java plug-in.) <a href="http://www.shodor.org/interactivate/activities/Histogram/" target="_blank" rel="external">Interactivate Histogram Applet</a></p>
+<p><a href="https://docs.google.com/spreadsheets/d/1FhX_MCkqiXPVArIZi5pO9xPpftHzmqeuY4KbS5qQMv8/edit?usp=sharing" target="_blank" rel="external">Udacity Student Ages Data</a>: Make sure you have one number per line for the applet.</p>
+<h2 id="Quiz-Smaller-Bin"><a href="#Quiz-Smaller-Bin" class="headerlink" title="Quiz: Smaller Bin"></a>Quiz: Smaller Bin</h2><h2 id="Quiz-Find-Bin-Size"><a href="#Quiz-Find-Bin-Size" class="headerlink" title="Quiz: Find Bin Size"></a>Quiz: Find Bin Size</h2><h2 id="Quiz-Most-Frequent-Age"><a href="#Quiz-Most-Frequent-Age" class="headerlink" title="Quiz: Most Frequent Age"></a>Quiz: Most Frequent Age</h2><h2 id="Quiz-Proportion-over-60"><a href="#Quiz-Proportion-over-60" class="headerlink" title="Quiz: Proportion over 60"></a>Quiz: Proportion over 60</h2><h2 id="Quiz-Percentage-Under-60"><a href="#Quiz-Percentage-Under-60" class="headerlink" title="Quiz: Percentage Under 60"></a>Quiz: Percentage Under 60</h2><h2 id="Quiz-Younger-than-20"><a href="#Quiz-Younger-than-20" class="headerlink" title="Quiz: Younger than 20"></a>Quiz: Younger than 20</h2><h2 id="Quiz-Continent-Graph"><a href="#Quiz-Continent-Graph" class="headerlink" title="Quiz: Continent Graph"></a>Quiz: Continent Graph</h2><h2 id="Quiz-Difference-Between-Graphs"><a href="#Quiz-Difference-Between-Graphs" class="headerlink" title="Quiz: Difference Between Graphs"></a>Quiz: Difference Between Graphs</h2><p>histogram: bin x-axis: numerical/quantitative<br>bar: x-axis: categorical/qualitative</p>
+<h2 id="Quiz-Biased-Graphs"><a href="#Quiz-Biased-Graphs" class="headerlink" title="Quiz: Biased Graphs"></a>Quiz: Biased Graphs</h2><h2 id="Changing-Bin-Size"><a href="#Changing-Bin-Size" class="headerlink" title="Changing Bin Size"></a>Changing Bin Size</h2><h2 id="Quiz-Interpret-Histogram"><a href="#Quiz-Interpret-Histogram" class="headerlink" title="Quiz: Interpret Histogram"></a>Quiz: Interpret Histogram</h2><h2 id="Quiz-Skewed-Distribution"><a href="#Quiz-Skewed-Distribution" class="headerlink" title="Quiz: Skewed Distribution"></a>Quiz: Skewed Distribution</h2><h1 id="Problem-Set-2-Visualizing-data"><a href="#Problem-Set-2-Visualizing-data" class="headerlink" title="Problem Set 2: Visualizing data"></a>Problem Set 2: Visualizing data</h1><h2 id="Quiz-1-Blood-Types"><a href="#Quiz-1-Blood-Types" class="headerlink" title="Quiz: 1. Blood Types"></a>Quiz: 1. Blood Types</h2><p>The Σ symbol means the total sum. It is the Greek letter capital sigma. f stands for frequency (count), p stands for proportion.</p>
+<p>The Σ symbol means the total sum. It is the Greek letter capital sigma. f stands for frequency (count), p stands for proportion.</p>
+<p>Enter each answer as a number without any special characters, including % signs. Enter proportions as decimals.</p>
+<p>The Σ symbol means the total sum. It is the Greek letter capital sigma. </p>
+<h2 id="Quiz-2-Rare-Blood"><a href="#Quiz-2-Rare-Blood" class="headerlink" title="Quiz: 2. Rare Blood"></a>Quiz: 2. Rare Blood</h2><h2 id="Quiz-3-Common-Blood"><a href="#Quiz-3-Common-Blood" class="headerlink" title="Quiz: 3. Common Blood"></a>Quiz: 3. Common Blood</h2><h2 id="Quiz-4-Type-A"><a href="#Quiz-4-Type-A" class="headerlink" title="Quiz: 4. Type A"></a>Quiz: 4. Type A</h2><h2 id="Quiz-5-Guesstimate"><a href="#Quiz-5-Guesstimate" class="headerlink" title="Quiz: 5. Guesstimate"></a>Quiz: 5. Guesstimate</h2><h2 id="Quiz-6-Analyze-Stuff"><a href="#Quiz-6-Analyze-Stuff" class="headerlink" title="Quiz: 6. Analyze Stuff"></a>Quiz: 6. Analyze Stuff</h2><h2 id="Quiz-7-Ode-to-n"><a href="#Quiz-7-Ode-to-n" class="headerlink" title="Quiz: 7. Ode to n"></a>Quiz: 7. Ode to n</h2><h2 id="Quiz-8-Calculate-Percentages"><a href="#Quiz-8-Calculate-Percentages" class="headerlink" title="Quiz: 8. Calculate Percentages"></a>Quiz: 8. Calculate Percentages</h2><h2 id="Quiz-9-Common-Decade"><a href="#Quiz-9-Common-Decade" class="headerlink" title="Quiz: 9. Common Decade"></a>Quiz: 9. Common Decade</h2><h2 id="Quiz-10-How-Old"><a href="#Quiz-10-How-Old" class="headerlink" title="Quiz: 10. How Old?"></a>Quiz: 10. How Old?</h2><h2 id="Quiz-11-Really-Old"><a href="#Quiz-11-Really-Old" class="headerlink" title="Quiz: 11. Really Old!"></a>Quiz: 11. Really Old!</h2><h2 id="Quiz-12-Birth-Year-Histogram"><a href="#Quiz-12-Birth-Year-Histogram" class="headerlink" title="Quiz: 12. Birth Year Histogram"></a>Quiz: 12. Birth Year Histogram</h2><h2 id="Quiz-13-Most-Common-Bin"><a href="#Quiz-13-Most-Common-Bin" class="headerlink" title="Quiz: 13. Most Common Bin"></a>Quiz: 13. Most Common Bin</h2><h2 id="Quiz-14-When-Most-Were-Born"><a href="#Quiz-14-When-Most-Were-Born" class="headerlink" title="Quiz: 14. When Most Were Born"></a>Quiz: 14. When Most Were Born</h2><h2 id="Quiz-15-Type-of-Data"><a href="#Quiz-15-Type-of-Data" class="headerlink" title="Quiz: 15. Type of Data"></a>Quiz: 15. Type of Data</h2><h2 id="Quiz-16-Heights-of-Bars"><a href="#Quiz-16-Heights-of-Bars" class="headerlink" title="Quiz: 16. Heights of Bars"></a>Quiz: 16. Heights of Bars</h2><h2 id="Quiz-17-Which-Region"><a href="#Quiz-17-Which-Region" class="headerlink" title="Quiz: 17. Which Region?"></a>Quiz: 17. Which Region?</h2><h2 id="Quiz-18-Calculate-Bin-Size"><a href="#Quiz-18-Calculate-Bin-Size" class="headerlink" title="Quiz: 18. Calculate Bin Size"></a>Quiz: 18. Calculate Bin Size</h2><h2 id="Quiz-19-How-to-Find-n"><a href="#Quiz-19-How-to-Find-n" class="headerlink" title="Quiz: 19. How to Find n"></a>Quiz: 19. How to Find n</h2><h2 id="Quiz-20-How-to-Analyze-Shape"><a href="#Quiz-20-How-to-Analyze-Shape" class="headerlink" title="Quiz: 20. How to Analyze Shape"></a>Quiz: 20. How to Analyze Shape</h2><h2 id="Quiz-21-Commute-Time"><a href="#Quiz-21-Commute-Time" class="headerlink" title="Quiz: 21. Commute Time"></a>Quiz: 21. Commute Time</h2><h2 id="Quiz-22-Commute-an-Hour"><a href="#Quiz-22-Commute-an-Hour" class="headerlink" title="Quiz: 22. Commute an Hour"></a>Quiz: 22. Commute an Hour</h2><h2 id="Quiz-23-Find-Bin-Width"><a href="#Quiz-23-Find-Bin-Width" class="headerlink" title="Quiz: 23. Find Bin Width"></a>Quiz: 23. Find Bin Width</h2><h2 id="Quiz-24-Analyze-Histogram"><a href="#Quiz-24-Analyze-Histogram" class="headerlink" title="Quiz: 24. Analyze Histogram"></a>Quiz: 24. Analyze Histogram</h2><h2 id="Quiz-25-Frequency-and-Bin-Size"><a href="#Quiz-25-Frequency-and-Bin-Size" class="headerlink" title="Quiz: 25. Frequency and Bin Size"></a>Quiz: 25. Frequency and Bin Size</h2><h2 id="Quiz-26-Positively-Skewed"><a href="#Quiz-26-Positively-Skewed" class="headerlink" title="Quiz: 26. Positively Skewed"></a>Quiz: 26. Positively Skewed</h2><h2 id="Quiz-27-Distribution-of-What"><a href="#Quiz-27-Distribution-of-What" class="headerlink" title="Quiz: 27. Distribution of What?"></a>Quiz: 27. Distribution of What?</h2><h2 id="Quiz-28-Thinking-About-Distributions"><a href="#Quiz-28-Thinking-About-Distributions" class="headerlink" title="Quiz: 28. Thinking About Distributions"></a>Quiz: 28. Thinking About Distributions</h2><h2 id="Quiz-29-Frequency-Axis"><a href="#Quiz-29-Frequency-Axis" class="headerlink" title="Quiz: 29. Frequency Axis"></a>Quiz: 29. Frequency Axis</h2><h2 id="Quiz-30-X-Axis-Represent"><a href="#Quiz-30-X-Axis-Represent" class="headerlink" title="Quiz: 30. X-Axis Represent!"></a>Quiz: 30. X-Axis Represent!</h2><h2 id="Quiz-31-Skewness"><a href="#Quiz-31-Skewness" class="headerlink" title="Quiz: 31. Skewness"></a>Quiz: 31. Skewness</h2><p>positively skewed</p>
+<h2 id="Quiz-32-Negatively-Skewed"><a href="#Quiz-32-Negatively-Skewed" class="headerlink" title="Quiz: 32. Negatively Skewed"></a>Quiz: 32. Negatively Skewed</h2><h2 id="Quiz-33-Normal-Distribution"><a href="#Quiz-33-Normal-Distribution" class="headerlink" title="Quiz: 33. Normal Distribution"></a>Quiz: 33. Normal Distribution</h2><h2 id="Quiz-34-Table-vs-Histogram"><a href="#Quiz-34-Table-vs-Histogram" class="headerlink" title="Quiz: 34. Table vs. Histogram"></a>Quiz: 34. Table vs. Histogram</h2><h1 id="Google-Spreadsheet-Tutorial"><a href="#Google-Spreadsheet-Tutorial" class="headerlink" title="Google Spreadsheet Tutorial"></a>Google Spreadsheet Tutorial</h1><h2 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h2><p>Link to <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dG5xRWtyUEJWWTZidExmUEQ4ZGlMNUE&amp;usp=sharing" target="_blank" rel="external">Udacians’ Facebook Friends</a></p>
+<p>Copy and paste the data into your own spreadsheet to perform the calculations. From Google Drive (at the top of the page once you’re signed in to your Google account), click the button on the left that says “CREATE” and click “Spreadsheet.”</p>
+<p>You will work with this data in Lesson 3.</p>
+<h1 id="Central-tendency"><a href="#Central-tendency" class="headerlink" title="Central tendency"></a>Central tendency</h1><h2 id="Quiz-Which-Major"><a href="#Quiz-Which-Major" class="headerlink" title="Quiz: Which Major?"></a>Quiz: Which Major?</h2><h2 id="One-Number-to-Describe-Data"><a href="#One-Number-to-Describe-Data" class="headerlink" title="One Number to Describe Data"></a>One Number to Describe Data</h2><h2 id="Quiz-Which-Number-to-Choose"><a href="#Quiz-Which-Number-to-Choose" class="headerlink" title="Quiz: Which Number to Choose?"></a>Quiz: Which Number to Choose?</h2><h2 id="Quiz-Mode-of-Dataset"><a href="#Quiz-Mode-of-Dataset" class="headerlink" title="Quiz: Mode of Dataset"></a>Quiz: Mode of Dataset</h2><p>mode: most frequency</p>
+<h2 id="Quiz-Mode-of-Distribution"><a href="#Quiz-Mode-of-Distribution" class="headerlink" title="Quiz: Mode of Distribution"></a>Quiz: Mode of Distribution</h2><h2 id="Quiz-Mode-Negatively-Skewed-Distribution"><a href="#Quiz-Mode-Negatively-Skewed-Distribution" class="headerlink" title="Quiz: Mode - Negatively Skewed Distribution"></a>Quiz: Mode - Negatively Skewed Distribution</h2><h2 id="Quiz-Mode-Uniform-Distribution"><a href="#Quiz-Mode-Uniform-Distribution" class="headerlink" title="Quiz: Mode - Uniform Distribution"></a>Quiz: Mode - Uniform Distribution</h2><h2 id="Quiz-More-than-One-Mode"><a href="#Quiz-More-than-One-Mode" class="headerlink" title="Quiz: More than One Mode?"></a>Quiz: More than One Mode?</h2><h2 id="Quiz-Mode-of-Categorical-Data"><a href="#Quiz-Mode-of-Categorical-Data" class="headerlink" title="Quiz: Mode of Categorical Data"></a>Quiz: Mode of Categorical Data</h2><h2 id="Quiz-More-o-39-Mode"><a href="#Quiz-More-o-39-Mode" class="headerlink" title="Quiz: More o&#39; Mode!"></a>Quiz: More o&#39; Mode!</h2><h2 id="Quiz-Find-the-Mean"><a href="#Quiz-Find-the-Mean" class="headerlink" title="Quiz: Find the Mean"></a>Quiz: Find the Mean</h2><h2 id="Quiz-Procedure-for-Finding-Mean"><a href="#Quiz-Procedure-for-Finding-Mean" class="headerlink" title="Quiz: Procedure for Finding Mean"></a>Quiz: Procedure for Finding Mean</h2><h2 id="Quiz-Iterative-Procedure"><a href="#Quiz-Iterative-Procedure" class="headerlink" title="Quiz: Iterative Procedure"></a>Quiz: Iterative Procedure</h2><h2 id="Helpful-Symbols"><a href="#Helpful-Symbols" class="headerlink" title="Helpful Symbols"></a>Helpful Symbols</h2><h2 id="Quiz-Properties-of-the-Mean"><a href="#Quiz-Properties-of-the-Mean" class="headerlink" title="Quiz: Properties of the Mean"></a>Quiz: Properties of the Mean</h2><h2 id="Quiz-Mean-with-Outlier"><a href="#Quiz-Mean-with-Outlier" class="headerlink" title="Quiz: Mean with Outlier"></a>Quiz: Mean with Outlier</h2><h2 id="Quiz-What-Can-You-Expect"><a href="#Quiz-What-Can-You-Expect" class="headerlink" title="Quiz: What Can You Expect?"></a>Quiz: What Can You Expect?</h2><h2 id="UNC"><a href="#UNC" class="headerlink" title="UNC"></a>UNC</h2><h2 id="Quiz-Requirement-for-Median"><a href="#Quiz-Requirement-for-Median" class="headerlink" title="Quiz: Requirement for Median"></a>Quiz: Requirement for Median</h2><h2 id="Quiz-Find-the-Median"><a href="#Quiz-Find-the-Median" class="headerlink" title="Quiz: Find the Median"></a>Quiz: Find the Median</h2><h2 id="Quiz-Median-with-Outlier"><a href="#Quiz-Median-with-Outlier" class="headerlink" title="Quiz: Median with Outlier"></a>Quiz: Median with Outlier</h2><h2 id="Quiz-Find-Median-with-Outlier"><a href="#Quiz-Find-Median-with-Outlier" class="headerlink" title="Quiz: Find Median with Outlier"></a>Quiz: Find Median with Outlier</h2><h2 id="Measures-of-Center"><a href="#Measures-of-Center" class="headerlink" title="Measures of Center"></a>Measures of Center</h2><p>mean median mode</p>
+<h2 id="Quiz-Order-Measures-of-Center-1"><a href="#Quiz-Order-Measures-of-Center-1" class="headerlink" title="Quiz: Order Measures of Center 1"></a>Quiz: Order Measures of Center 1</h2><h2 id="Quiz-Order-Measures-of-Center-2"><a href="#Quiz-Order-Measures-of-Center-2" class="headerlink" title="Quiz: Order Measures of Center 2"></a>Quiz: Order Measures of Center 2</h2><h2 id="Use-Measures-of-Center-to-Compare"><a href="#Use-Measures-of-Center-to-Compare" class="headerlink" title="Use Measures of Center to Compare"></a>Use Measures of Center to Compare</h2><h2 id="Quiz-Udacians-39-Facebook-Friends-Mean"><a href="#Quiz-Udacians-39-Facebook-Friends-Mean" class="headerlink" title="Quiz: Udacians&#39; Facebook Friends - Mean"></a>Quiz: Udacians&#39; Facebook Friends - Mean</h2><h2 id="Quiz-Udacians-39-Facebook-Friends-Median"><a href="#Quiz-Udacians-39-Facebook-Friends-Median" class="headerlink" title="Quiz: Udacians&#39; Facebook Friends - Median"></a>Quiz: Udacians&#39; Facebook Friends - Median</h2><h2 id="Quiz-Formula-for-Location-of-Median"><a href="#Quiz-Formula-for-Location-of-Median" class="headerlink" title="Quiz: Formula for Location of Median"></a>Quiz: Formula for Location of Median</h2><h2 id="Quiz-Wrap-Up-Measures-of-Center"><a href="#Quiz-Wrap-Up-Measures-of-Center" class="headerlink" title="Quiz: Wrap Up - Measures of Center"></a>Quiz: Wrap Up - Measures of Center</h2><h2 id="Good-Job"><a href="#Good-Job" class="headerlink" title="Good Job!"></a>Good Job!</h2><h1 id="Problem-Set-3-Central-tendency"><a href="#Problem-Set-3-Central-tendency" class="headerlink" title="Problem Set 3: Central tendency"></a>Problem Set 3: Central tendency</h1><h2 id="Quiz-1-BBC-Memory-Scores"><a href="#Quiz-1-BBC-Memory-Scores" class="headerlink" title="Quiz: 1. BBC Memory Scores"></a>Quiz: 1. BBC Memory Scores</h2><p>Link to spreadsheet with sample memory scores: <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dHFiM2pCT2JsckZaejJzUDltSUNpU1E&amp;usp=sharing" target="_blank" rel="external">BBC Sample Scores</a></p>
+<p>Copy and paste the data into your own spreadsheet to perform the calculations. From <a href="https://drive.google.com/" target="_blank" rel="external">Google Drive</a> (at the top of the page once you’re signed in to your Google account), click the button on the left that says “CREATE” and click “Spreadsheet.”</p>
+<h2 id="Quiz-2-BBC-Memory-Scores"><a href="#Quiz-2-BBC-Memory-Scores" class="headerlink" title="Quiz: 2. BBC Memory Scores"></a>Quiz: 2. BBC Memory Scores</h2><h2 id="Quiz-3-BBC-Memory-Scores"><a href="#Quiz-3-BBC-Memory-Scores" class="headerlink" title="Quiz: 3. BBC Memory Scores"></a>Quiz: 3. BBC Memory Scores</h2><h2 id="Quiz-4-What-Distribution"><a href="#Quiz-4-What-Distribution" class="headerlink" title="Quiz: 4. What Distribution?"></a>Quiz: 4. What Distribution?</h2><h2 id="Quiz-5-What-Distribution"><a href="#Quiz-5-What-Distribution" class="headerlink" title="Quiz: 5. What Distribution?"></a>Quiz: 5. What Distribution?</h2><h2 id="Quiz-6-Normal-Distribution"><a href="#Quiz-6-Normal-Distribution" class="headerlink" title="Quiz: 6. Normal Distribution"></a>Quiz: 6. Normal Distribution</h2><h2 id="Quiz-7-Positively-Skewed"><a href="#Quiz-7-Positively-Skewed" class="headerlink" title="Quiz: 7. Positively Skewed"></a>Quiz: 7. Positively Skewed</h2><h2 id="Quiz-8-Mean"><a href="#Quiz-8-Mean" class="headerlink" title="Quiz: 8. Mean"></a>Quiz: 8. Mean</h2><h2 id="Quiz-9-Median"><a href="#Quiz-9-Median" class="headerlink" title="Quiz: 9. Median"></a>Quiz: 9. Median</h2><h2 id="Quiz-10-Mode"><a href="#Quiz-10-Mode" class="headerlink" title="Quiz: 10. Mode"></a>Quiz: 10. Mode</h2><h2 id="Quiz-11-Deal-or-No-Deal-Median"><a href="#Quiz-11-Deal-or-No-Deal-Median" class="headerlink" title="Quiz: 11. Deal or No Deal? (Median)"></a>Quiz: 11. Deal or No Deal? (Median)</h2><p><a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dGw1RFBDd2xCSC1fLUREQW1EM1BrYUE&amp;usp=sharing" target="_blank" rel="external">Deal or No Deal?</a></p>
+<h2 id="Quiz-12-Deal-or-No-Deal-Mode"><a href="#Quiz-12-Deal-or-No-Deal-Mode" class="headerlink" title="Quiz: 12. Deal or No Deal? (Mode)"></a>Quiz: 12. Deal or No Deal? (Mode)</h2><h2 id="Quiz-13-Deal-or-No-Deal-Number"><a href="#Quiz-13-Deal-or-No-Deal-Number" class="headerlink" title="Quiz: 13. Deal or No Deal? (Number)"></a>Quiz: 13. Deal or No Deal? (Number)</h2><h2 id="Quiz-14-Deal-or-No-Deal-Mean-vs-Median"><a href="#Quiz-14-Deal-or-No-Deal-Mean-vs-Median" class="headerlink" title="Quiz: 14. Deal or No Deal? (Mean vs. Median)"></a>Quiz: 14. Deal or No Deal? (Mean vs. Median)</h2><h2 id="Quiz-15-Deal-or-No-Deal-Mean"><a href="#Quiz-15-Deal-or-No-Deal-Mean" class="headerlink" title="Quiz: 15. Deal or No Deal? (Mean)"></a>Quiz: 15. Deal or No Deal? (Mean)</h2><h2 id="Quiz-16-Deal-or-No-Deal-Proportion"><a href="#Quiz-16-Deal-or-No-Deal-Proportion" class="headerlink" title="Quiz: 16. Deal or No Deal? (Proportion)"></a>Quiz: 16. Deal or No Deal? (Proportion)</h2><h2 id="Quiz-17-Deal-or-No-Deal-Frequency"><a href="#Quiz-17-Deal-or-No-Deal-Frequency" class="headerlink" title="Quiz: 17. Deal or No Deal? (Frequency)"></a>Quiz: 17. Deal or No Deal? (Frequency)</h2><h2 id="Quiz-18-Deal-or-No-Deal-Distribution"><a href="#Quiz-18-Deal-or-No-Deal-Distribution" class="headerlink" title="Quiz: 18. Deal or No Deal? (Distribution)"></a>Quiz: 18. Deal or No Deal? (Distribution)</h2><h2 id="Quiz-19-Deal-or-No-Deal-Center"><a href="#Quiz-19-Deal-or-No-Deal-Center" class="headerlink" title="Quiz: 19. Deal or No Deal? (Center)"></a>Quiz: 19. Deal or No Deal? (Center)</h2><h2 id="Quiz-20-NHL-Mean"><a href="#Quiz-20-NHL-Mean" class="headerlink" title="Quiz: 20. NHL (Mean)"></a>Quiz: 20. NHL (Mean)</h2><p>Round to the nearest hundredth (xx.xx)</p>
+<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dGw2anBPMTVHUFY2T09faVdxWXFjV2c&amp;usp=sharing" target="_blank" rel="external">National Hockey League</a></p>
+<h2 id="Quiz-21-NHL-Mode"><a href="#Quiz-21-NHL-Mode" class="headerlink" title="Quiz: 21. NHL (Mode)"></a>Quiz: 21. NHL (Mode)</h2><h2 id="Quiz-22-NHL-Median"><a href="#Quiz-22-NHL-Median" class="headerlink" title="Quiz: 22. NHL (Median)"></a>Quiz: 22. NHL (Median)</h2><h2 id="Quiz-23-Which-Distributions"><a href="#Quiz-23-Which-Distributions" class="headerlink" title="Quiz: 23. Which Distributions?"></a>Quiz: 23. Which Distributions?</h2><h2 id="Quiz-24-Median-Given-Histogram"><a href="#Quiz-24-Median-Given-Histogram" class="headerlink" title="Quiz: 24. Median Given Histogram"></a>Quiz: 24. Median Given Histogram</h2><h1 id="Variability"><a href="#Variability" class="headerlink" title="Variability"></a>Variability</h1><h2 id="Quiz-Social-Networkers-39-Salaries"><a href="#Quiz-Social-Networkers-39-Salaries" class="headerlink" title="Quiz: Social Networkers&#39; Salaries"></a>Quiz: Social Networkers&#39; Salaries</h2><h2 id="Quiz-Should-You-Get-an-Account"><a href="#Quiz-Should-You-Get-an-Account" class="headerlink" title="Quiz: Should You Get an Account?"></a>Quiz: Should You Get an Account?</h2><h2 id="Quiz-What-39-s-the-Difference"><a href="#Quiz-What-39-s-the-Difference" class="headerlink" title="Quiz: What&#39;s the Difference?"></a>Quiz: What&#39;s the Difference?</h2><h2 id="Quiz-Quantify-Spread"><a href="#Quiz-Quantify-Spread" class="headerlink" title="Quiz: Quantify Spread"></a>Quiz: Quantify Spread</h2><h2 id="Quiz-Does-Range-Change"><a href="#Quiz-Does-Range-Change" class="headerlink" title="Quiz: Does Range Change?"></a>Quiz: Does Range Change?</h2><h2 id="Quiz-Mark-Z-the-Outlier"><a href="#Quiz-Mark-Z-the-Outlier" class="headerlink" title="Quiz: Mark Z the Outlier"></a>Quiz: Mark Z the Outlier</h2><h2 id="Chop-Off-the-Tails"><a href="#Chop-Off-the-Tails" class="headerlink" title="Chop Off the Tails"></a>Chop Off the Tails</h2><h2 id="Quiz-Where-Is-Q1"><a href="#Quiz-Where-Is-Q1" class="headerlink" title="Quiz: Where Is Q1?"></a>Quiz: Where Is Q1?</h2><p>quartile</p>
+<h2 id="Quiz-Q3-Q1"><a href="#Quiz-Q3-Q1" class="headerlink" title="Quiz: Q3 - Q1"></a>Quiz: Q3 - Q1</h2><h2 id="Quiz-IQR"><a href="#Quiz-IQR" class="headerlink" title="Quiz: IQR"></a>Quiz: IQR</h2><p>IQR=Q3-Q1</p>
+<h2 id="Quiz-What-Is-an-Outlier"><a href="#Quiz-What-Is-an-Outlier" class="headerlink" title="Quiz: What Is an Outlier?"></a>Quiz: What Is an Outlier?</h2><h2 id="Quiz-Define-Outlier"><a href="#Quiz-Define-Outlier" class="headerlink" title="Quiz: Define Outlier"></a>Quiz: Define Outlier</h2><p>&lt; Q1 - 1.5 IQR<br>> Q3 + 1.5 IQR</p>
+<h2 id="Quiz-Match-Boxplots"><a href="#Quiz-Match-Boxplots" class="headerlink" title="Quiz: Match Boxplots"></a>Quiz: Match Boxplots</h2><h2 id="Quiz-Mean-Within-IQR"><a href="#Quiz-Mean-Within-IQR" class="headerlink" title="Quiz: Mean Within IQR?"></a>Quiz: Mean Within IQR?</h2><h2 id="Problem-with-IQR"><a href="#Problem-with-IQR" class="headerlink" title="Problem with IQR"></a>Problem with IQR</h2><h2 id="Quiz-Measure-Variability"><a href="#Quiz-Measure-Variability" class="headerlink" title="Quiz: Measure Variability"></a>Quiz: Measure Variability</h2><h2 id="Quiz-Calculate-Mean"><a href="#Quiz-Calculate-Mean" class="headerlink" title="Quiz: Calculate Mean"></a>Quiz: Calculate Mean</h2><h2 id="Quiz-Deviation-from-Mean"><a href="#Quiz-Deviation-from-Mean" class="headerlink" title="Quiz: Deviation from Mean"></a>Quiz: Deviation from Mean</h2><h2 id="Quiz-Average-Deviation"><a href="#Quiz-Average-Deviation" class="headerlink" title="Quiz: Average Deviation"></a>Quiz: Average Deviation</h2><h2 id="Quiz-Equation-for-Average-Deviation"><a href="#Quiz-Equation-for-Average-Deviation" class="headerlink" title="Quiz: Equation for Average Deviation"></a>Quiz: Equation for Average Deviation</h2><h2 id="Quiz-Be-Happy-and-Get-Rid-of-Negatives"><a href="#Quiz-Be-Happy-and-Get-Rid-of-Negatives" class="headerlink" title="Quiz: Be Happy and Get Rid of Negatives"></a>Quiz: Be Happy and Get Rid of Negatives</h2><h2 id="Quiz-Absolute-Deviations"><a href="#Quiz-Absolute-Deviations" class="headerlink" title="Quiz: Absolute Deviations"></a>Quiz: Absolute Deviations</h2><h2 id="Quiz-Average-Absolute-Deviation"><a href="#Quiz-Average-Absolute-Deviation" class="headerlink" title="Quiz: Average Absolute Deviation"></a>Quiz: Average Absolute Deviation</h2><h2 id="Quiz-Formula-for-Avg-Abs-Dev"><a href="#Quiz-Formula-for-Avg-Abs-Dev" class="headerlink" title="Quiz: Formula for Avg. Abs. Dev."></a>Quiz: Formula for Avg. Abs. Dev.</h2><h2 id="Quiz-Squared-Deviations"><a href="#Quiz-Squared-Deviations" class="headerlink" title="Quiz: Squared Deviations"></a>Quiz: Squared Deviations</h2><h2 id="Quiz-Sum-of-Squares"><a href="#Quiz-Sum-of-Squares" class="headerlink" title="Quiz: Sum of Squares"></a>Quiz: Sum of Squares</h2><h2 id="Quiz-Average-Squared-Deviation"><a href="#Quiz-Average-Squared-Deviation" class="headerlink" title="Quiz: Average Squared Deviation"></a>Quiz: Average Squared Deviation</h2><p>variance</p>
+<h2 id="Quiz-Avg-Squared-Dev-in-Words"><a href="#Quiz-Avg-Squared-Dev-in-Words" class="headerlink" title="Quiz: Avg. Squared Dev. in Words"></a>Quiz: Avg. Squared Dev. in Words</h2><h2 id="Quiz-One-Dimension"><a href="#Quiz-One-Dimension" class="headerlink" title="Quiz: One Dimension"></a>Quiz: One Dimension</h2><h2 id="Standard-Deviation"><a href="#Standard-Deviation" class="headerlink" title="Standard Deviation"></a>Standard Deviation</h2><p>square root of variance </p>
+<h2 id="Quiz-Calculate-SD"><a href="#Quiz-Calculate-SD" class="headerlink" title="Quiz: Calculate SD"></a>Quiz: Calculate SD</h2><h2 id="Quiz-SD-Social-Networkers"><a href="#Quiz-SD-Social-Networkers" class="headerlink" title="Quiz: SD Social Networkers"></a>Quiz: SD Social Networkers</h2><h2 id="Quiz-SD-in-Words"><a href="#Quiz-SD-in-Words" class="headerlink" title="Quiz: SD in Words"></a>Quiz: SD in Words</h2><h2 id="Quiz-Spreadsheet-SD"><a href="#Quiz-Spreadsheet-SD" class="headerlink" title="Quiz: Spreadsheet SD"></a>Quiz: Spreadsheet SD</h2><p>Click here to access the data: <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dEVWcW5XS1B6YWFvZnlvbXZ5U1hyNHc&amp;usp=sharing" target="_blank" rel="external">Sample Social Networkers’ Salary</a></p>
+<p>Copy and paste the data into your own spreadsheet to perform the calculations. From <a href="https://drive.google.com/" target="_blank" rel="external">Google Drive</a> (at the top of the page once you’re signed in to your Google account), click the button on the left that says “CREATE” and click “Spreadsheet.”</p>
+<p>Click here to access the data: <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dEVWcW5XS1B6YWFvZnlvbXZ5U1hyNHc&amp;usp=sharing" target="_blank" rel="external">Sample Social Networkers’ Salary</a> Enter your answer as a number without any special characters, including $ or commas.</p>
+<p>Link to <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dEVWcW5XS1B6YWFvZnlvbXZ5U1hyNHc&amp;usp=sharing" target="_blank" rel="external">Sample Social Networkers’ Salary</a> Copy and paste this data into your own spreadsheet to calculate the standard deviation.</p>
+<h2 id="Point-of-SD"><a href="#Point-of-SD" class="headerlink" title="Point of SD"></a>Point of SD</h2><h2 id="Quiz-Find-Values"><a href="#Quiz-Find-Values" class="headerlink" title="Quiz: Find Values"></a>Quiz: Find Values</h2><h2 id="Quiz-Sample-SD"><a href="#Quiz-Sample-SD" class="headerlink" title="Quiz: Sample SD"></a>Quiz: Sample SD</h2><h2 id="Quiz-Bessel-39-s-Correction"><a href="#Quiz-Bessel-39-s-Correction" class="headerlink" title="Quiz: Bessel&#39;s Correction"></a>Quiz: Bessel&#39;s Correction</h2><p>SD of sample is smaller than SD of population, so we use n-1 to estimate the  SD of population(sample SD)</p>
+<h2 id="Clarifying-Sample-SD"><a href="#Clarifying-Sample-SD" class="headerlink" title="Clarifying Sample SD"></a>Clarifying Sample SD</h2><h2 id="Jelly-Beans"><a href="#Jelly-Beans" class="headerlink" title="Jelly Beans"></a>Jelly Beans</h2><h1 id="Problem-Set-4-Variability"><a href="#Problem-Set-4-Variability" class="headerlink" title="Problem Set 4: Variability"></a>Problem Set 4: Variability</h1><h2 id="Quiz-1-Udacians-39-Facebook-Friends-Mean"><a href="#Quiz-1-Udacians-39-Facebook-Friends-Mean" class="headerlink" title="Quiz: 1. Udacians&#39; Facebook Friends (Mean)"></a>Quiz: 1. Udacians&#39; Facebook Friends (Mean)</h2><p>Click here for the link to the data: <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dG5xRWtyUEJWWTZidExmUEQ4ZGlMNUE&amp;usp=sharing" target="_blank" rel="external">Udacians’ Facebook Friends</a></p>
+<h2 id="Quiz-2-Udacians-39-Facebook-Friends-Avg-Dev"><a href="#Quiz-2-Udacians-39-Facebook-Friends-Avg-Dev" class="headerlink" title="Quiz: 2. Udacians&#39; Facebook Friends (Avg. Dev)"></a>Quiz: 2. Udacians&#39; Facebook Friends (Avg. Dev)</h2><h2 id="Quiz-3-Udacians-39-Facebook-Friends-SS"><a href="#Quiz-3-Udacians-39-Facebook-Friends-SS" class="headerlink" title="Quiz: 3. Udacians&#39; Facebook Friends (SS)"></a>Quiz: 3. Udacians&#39; Facebook Friends (SS)</h2><h2 id="Quiz-4-Udacians-39-Facebook-Friends-Variance"><a href="#Quiz-4-Udacians-39-Facebook-Friends-Variance" class="headerlink" title="Quiz: 4. Udacians&#39; Facebook Friends (Variance)"></a>Quiz: 4. Udacians&#39; Facebook Friends (Variance)</h2><h2 id="Quiz-5-Udacians-39-Facebook-Friends-Std-Dev"><a href="#Quiz-5-Udacians-39-Facebook-Friends-Std-Dev" class="headerlink" title="Quiz: 5. Udacians&#39; Facebook Friends (Std Dev)"></a>Quiz: 5. Udacians&#39; Facebook Friends (Std Dev)</h2><h2 id="Quiz-6-Udacians-39-Facebook-Friends-mean-std-dev"><a href="#Quiz-6-Udacians-39-Facebook-Friends-mean-std-dev" class="headerlink" title="Quiz: 6. Udacians&#39; Facebook Friends (mean +/- std dev)"></a>Quiz: 6. Udacians&#39; Facebook Friends (mean +/- std dev)</h2><h2 id="Quiz-7-Udacians-39-Facebook-Friends-proportion"><a href="#Quiz-7-Udacians-39-Facebook-Friends-proportion" class="headerlink" title="Quiz: 7. Udacians&#39; Facebook Friends (proportion)"></a>Quiz: 7. Udacians&#39; Facebook Friends (proportion)</h2><h2 id="Quiz-8-Udacians-39-Facebook-Friends-sample-sd"><a href="#Quiz-8-Udacians-39-Facebook-Friends-sample-sd" class="headerlink" title="Quiz: 8. Udacians&#39; Facebook Friends (sample sd)"></a>Quiz: 8. Udacians&#39; Facebook Friends (sample sd)</h2><h2 id="Quiz-9-Class-Exam"><a href="#Quiz-9-Class-Exam" class="headerlink" title="Quiz: 9. Class Exam"></a>Quiz: 9. Class Exam</h2><h2 id="Quiz-10-Where-39-s-Your-Score-sd-5"><a href="#Quiz-10-Where-39-s-Your-Score-sd-5" class="headerlink" title="Quiz: 10. Where&#39;s Your Score? (sd = 5)"></a>Quiz: 10. Where&#39;s Your Score? (sd = 5)</h2><h2 id="Quiz-11-Where-39-s-Your-Score-sd-2-5"><a href="#Quiz-11-Where-39-s-Your-Score-sd-2-5" class="headerlink" title="Quiz: 11. Where&#39;s Your Score? (sd = 2.5)"></a>Quiz: 11. Where&#39;s Your Score? (sd = 2.5)</h2><h2 id="Quiz-12-Where-39-s-Your-Score-sd-10"><a href="#Quiz-12-Where-39-s-Your-Score-sd-10" class="headerlink" title="Quiz: 12. Where&#39;s Your Score? (sd = 10)"></a>Quiz: 12. Where&#39;s Your Score? (sd = 10)</h2><h2 id="Quiz-13-BBC-Sample-Scores-Std-Dev"><a href="#Quiz-13-BBC-Sample-Scores-Std-Dev" class="headerlink" title="Quiz: 13. BBC Sample Scores (Std. Dev.)"></a>Quiz: 13. BBC Sample Scores (Std. Dev.)</h2><p>Link to <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dHFiM2pCT2JsckZaejJzUDltSUNpU1E&amp;usp=sharing" target="_blank" rel="external">BBC Sample Scores</a></p>
+<h2 id="Quiz-14-BBC-Sample-Scores-Variability"><a href="#Quiz-14-BBC-Sample-Scores-Variability" class="headerlink" title="Quiz: 14. BBC Sample Scores (Variability)"></a>Quiz: 14. BBC Sample Scores (Variability)</h2><h1 id="Lessons-1-4-Review-Assessment"><a href="#Lessons-1-4-Review-Assessment" class="headerlink" title="Lessons 1-4 Review/Assessment"></a>Lessons 1-4 Review/Assessment</h1><h2 id="Quiz-I"><a href="#Quiz-I" class="headerlink" title="Quiz: I"></a>Quiz: I</h2><h2 id="Quiz-II"><a href="#Quiz-II" class="headerlink" title="Quiz: II"></a>Quiz: II</h2><h2 id="Quiz-III"><a href="#Quiz-III" class="headerlink" title="Quiz: III"></a>Quiz: III</h2><h2 id="Quiz-IV"><a href="#Quiz-IV" class="headerlink" title="Quiz: IV"></a>Quiz: IV</h2><h2 id="Quiz-V"><a href="#Quiz-V" class="headerlink" title="Quiz: V"></a>Quiz: V</h2><h2 id="Quiz-VI"><a href="#Quiz-VI" class="headerlink" title="Quiz: VI"></a>Quiz: VI</h2><h2 id="Quiz-VII"><a href="#Quiz-VII" class="headerlink" title="Quiz: VII"></a>Quiz: VII</h2><h2 id="Quiz-VIII"><a href="#Quiz-VIII" class="headerlink" title="Quiz: VIII"></a>Quiz: VIII</h2><h2 id="Quiz-IX"><a href="#Quiz-IX" class="headerlink" title="Quiz: IX"></a>Quiz: IX</h2><h2 id="Quiz-X"><a href="#Quiz-X" class="headerlink" title="Quiz: X"></a>Quiz: X</h2><h2 id="Quiz-XI"><a href="#Quiz-XI" class="headerlink" title="Quiz: XI"></a>Quiz: XI</h2><h2 id="Quiz-XII"><a href="#Quiz-XII" class="headerlink" title="Quiz: XII"></a>Quiz: XII</h2><h2 id="Quiz-XIII"><a href="#Quiz-XIII" class="headerlink" title="Quiz: XIII"></a>Quiz: XIII</h2><h2 id="Quiz-XIV"><a href="#Quiz-XIV" class="headerlink" title="Quiz: XIV"></a>Quiz: XIV</h2><h2 id="Quiz-XV"><a href="#Quiz-XV" class="headerlink" title="Quiz: XV"></a>Quiz: XV</h2><h2 id="Quiz-XVI"><a href="#Quiz-XVI" class="headerlink" title="Quiz: XVI"></a>Quiz: XVI</h2><h2 id="Quiz-XVII"><a href="#Quiz-XVII" class="headerlink" title="Quiz: XVII"></a>Quiz: XVII</h2><h2 id="Quiz-XVIII"><a href="#Quiz-XVIII" class="headerlink" title="Quiz: XVIII"></a>Quiz: XVIII</h2><h2 id="Quiz-XIX"><a href="#Quiz-XIX" class="headerlink" title="Quiz: XIX"></a>Quiz: XIX</h2><h2 id="Quiz-XX"><a href="#Quiz-XX" class="headerlink" title="Quiz: XX"></a>Quiz: XX</h2><h2 id="Quiz-XXI"><a href="#Quiz-XXI" class="headerlink" title="Quiz: XXI"></a>Quiz: XXI</h2><h2 id="Quiz-XXII"><a href="#Quiz-XXII" class="headerlink" title="Quiz: XXII"></a>Quiz: XXII</h2><h2 id="Quiz-XXIII"><a href="#Quiz-XXIII" class="headerlink" title="Quiz: XXIII"></a>Quiz: XXIII</h2><h2 id="Quiz-XXIV"><a href="#Quiz-XXIV" class="headerlink" title="Quiz: XXIV"></a>Quiz: XXIV</h2><h2 id="Quiz-XXV"><a href="#Quiz-XXV" class="headerlink" title="Quiz: XXV"></a>Quiz: XXV</h2><h2 id="Quiz-XXVI"><a href="#Quiz-XXVI" class="headerlink" title="Quiz: XXVI"></a>Quiz: XXVI</h2><h2 id="Quiz-XXVII"><a href="#Quiz-XXVII" class="headerlink" title="Quiz: XXVII"></a>Quiz: XXVII</h2><h2 id="Quiz-XXVIII"><a href="#Quiz-XXVIII" class="headerlink" title="Quiz: XXVIII"></a>Quiz: XXVIII</h2><h2 id="Quiz-XXIX"><a href="#Quiz-XXIX" class="headerlink" title="Quiz: XXIX"></a>Quiz: XXIX</h2><h2 id="Quiz-XXX"><a href="#Quiz-XXX" class="headerlink" title="Quiz: XXX"></a>Quiz: XXX</h2><h2 id="Quiz-XXXI"><a href="#Quiz-XXXI" class="headerlink" title="Quiz: XXXI"></a>Quiz: XXXI</h2><h1 id="Standardizing"><a href="#Standardizing" class="headerlink" title="Standardizing"></a>Standardizing</h1><h2 id="Quiz-Chess"><a href="#Quiz-Chess" class="headerlink" title="Quiz: Chess"></a>Quiz: Chess</h2><h2 id="USCF-Distribution"><a href="#USCF-Distribution" class="headerlink" title="USCF Distribution"></a>USCF Distribution</h2><h2 id="Quiz-Absolute-or-Relative"><a href="#Quiz-Absolute-or-Relative" class="headerlink" title="Quiz: Absolute or Relative"></a>Quiz: Absolute or Relative</h2><h2 id="Quiz-Relative-Frequency-Histogram"><a href="#Quiz-Relative-Frequency-Histogram" class="headerlink" title="Quiz: Relative Frequency Histogram"></a>Quiz: Relative Frequency Histogram</h2><h2 id="Quiz-Proportion-Between-170-and-210"><a href="#Quiz-Proportion-Between-170-and-210" class="headerlink" title="Quiz: Proportion Between 170 and 210"></a>Quiz: Proportion Between 170 and 210</h2><h2 id="Quiz-Proportion-Between-180-and-200"><a href="#Quiz-Proportion-Between-180-and-200" class="headerlink" title="Quiz: Proportion Between 180 and 200"></a>Quiz: Proportion Between 180 and 200</h2><h2 id="Quiz-More-Detail"><a href="#Quiz-More-Detail" class="headerlink" title="Quiz: More Detail"></a>Quiz: More Detail</h2><h2 id="Infinitely-Small"><a href="#Infinitely-Small" class="headerlink" title="Infinitely Small"></a>Infinitely Small</h2><h2 id="Quiz-Continuous-Distribution"><a href="#Quiz-Continuous-Distribution" class="headerlink" title="Quiz: Continuous Distribution"></a>Quiz: Continuous Distribution</h2><h2 id="Theoretical-Normal-Distribution"><a href="#Theoretical-Normal-Distribution" class="headerlink" title="Theoretical Normal Distribution"></a>Theoretical Normal Distribution</h2><h2 id="Z"><a href="#Z" class="headerlink" title="Z"></a>Z</h2><p>number of standard deviations away from the mean</p>
+<h2 id="Unpopular"><a href="#Unpopular" class="headerlink" title="Unpopular"></a>Unpopular</h2><h2 id="Quiz-Katie-SDs-Below"><a href="#Quiz-Katie-SDs-Below" class="headerlink" title="Quiz: Katie - SDs Below"></a>Quiz: Katie - SDs Below</h2><h2 id="Quiz-Andy-SDs-Below"><a href="#Quiz-Andy-SDs-Below" class="headerlink" title="Quiz: Andy - SDs Below"></a>Quiz: Andy - SDs Below</h2><h2 id="Quiz-Who-39-s-More-Unpopular"><a href="#Quiz-Who-39-s-More-Unpopular" class="headerlink" title="Quiz: Who&#39;s More Unpopular?"></a>Quiz: Who&#39;s More Unpopular?</h2><h2 id="Quiz-Formula-for-Number-of-SDs"><a href="#Quiz-Formula-for-Number-of-SDs" class="headerlink" title="Quiz: Formula for Number of SDs"></a>Quiz: Formula for Number of SDs</h2><h2 id="Z-Score"><a href="#Z-Score" class="headerlink" title="Z-Score"></a>Z-Score</h2><p>Link to poll: <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDVIamhxZV9hUHBfMnJ5WmZkM2ZrWFE6MQ" target="_blank" rel="external">How many Facebook friends do you have?</a><br>$z = \frac{x-\mu}{\sigma}$</p>
+<h2 id="Quiz-Negative-Z-Score"><a href="#Quiz-Negative-Z-Score" class="headerlink" title="Quiz: Negative Z-Score"></a>Quiz: Negative Z-Score</h2><h2 id="Quiz-Mean-of-Standardized-Distribution"><a href="#Quiz-Mean-of-Standardized-Distribution" class="headerlink" title="Quiz: Mean of Standardized Distribution"></a>Quiz: Mean of Standardized Distribution</h2><h2 id="Quiz-SD-of-Standardized-Distribution"><a href="#Quiz-SD-of-Standardized-Distribution" class="headerlink" title="Quiz: SD of Standardized Distribution"></a>Quiz: SD of Standardized Distribution</h2><h2 id="Standard-Normal-Distribution"><a href="#Standard-Normal-Distribution" class="headerlink" title="Standard Normal Distribution"></a>Standard Normal Distribution</h2><h2 id="Quiz-Popular-Chris"><a href="#Quiz-Popular-Chris" class="headerlink" title="Quiz: Popular Chris"></a>Quiz: Popular Chris</h2><h2 id="Quiz-Convert-to-Z-Score"><a href="#Quiz-Convert-to-Z-Score" class="headerlink" title="Quiz: Convert to Z-Score"></a>Quiz: Convert to Z-Score</h2><h2 id="Quiz-Convert-to-Popularity-Score"><a href="#Quiz-Convert-to-Popularity-Score" class="headerlink" title="Quiz: Convert to Popularity Score"></a>Quiz: Convert to Popularity Score</h2><h1 id="Problem-Set-5-Standardizing"><a href="#Problem-Set-5-Standardizing" class="headerlink" title="Problem Set 5: Standardizing"></a>Problem Set 5: Standardizing</h1><h2 id="Quiz-1-Which-Distribution-Is-Which"><a href="#Quiz-1-Which-Distribution-Is-Which" class="headerlink" title="Quiz: 1. Which Distribution Is Which?"></a>Quiz: 1. Which Distribution Is Which?</h2><h2 id="Quiz-2-Z-Scores"><a href="#Quiz-2-Z-Scores" class="headerlink" title="Quiz: 2. Z-Scores"></a>Quiz: 2. Z-Scores</h2><h2 id="Quiz-3-OkCupid"><a href="#Quiz-3-OkCupid" class="headerlink" title="Quiz: 3. OkCupid"></a>Quiz: 3. OkCupid</h2><h2 id="Quiz-4-Social-Media"><a href="#Quiz-4-Social-Media" class="headerlink" title="Quiz: 4. Social Media"></a>Quiz: 4. Social Media</h2><h2 id="Quiz-5-Z-Scores-of-Usage"><a href="#Quiz-5-Z-Scores-of-Usage" class="headerlink" title="Quiz: 5. Z-Scores of Usage"></a>Quiz: 5. Z-Scores of Usage</h2><h2 id="Quiz-6-Where-on-the-Distribution"><a href="#Quiz-6-Where-on-the-Distribution" class="headerlink" title="Quiz: 6. Where on the Distribution?"></a>Quiz: 6. Where on the Distribution?</h2><h2 id="Quiz-7-Mean-and-SD"><a href="#Quiz-7-Mean-and-SD" class="headerlink" title="Quiz: 7. Mean and SD"></a>Quiz: 7. Mean and SD</h2><h2 id="Quiz-8-IQ-125"><a href="#Quiz-8-IQ-125" class="headerlink" title="Quiz: 8. IQ 125"></a>Quiz: 8. IQ 125</h2><h2 id="Quiz-9-IQ-150"><a href="#Quiz-9-IQ-150" class="headerlink" title="Quiz: 9. IQ 150"></a>Quiz: 9. IQ 150</h2><h2 id="Quiz-10-Scores"><a href="#Quiz-10-Scores" class="headerlink" title="Quiz: 10. Scores"></a>Quiz: 10. Scores</h2><h2 id="Quiz-11-Grade-on-a-Curve"><a href="#Quiz-11-Grade-on-a-Curve" class="headerlink" title="Quiz: 11. Grade on a Curve"></a>Quiz: 11. Grade on a Curve</h2><h2 id="Quiz-12-Extreme"><a href="#Quiz-12-Extreme" class="headerlink" title="Quiz: 12. Extreme"></a>Quiz: 12. Extreme</h2><h2 id="Quiz-13-SD"><a href="#Quiz-13-SD" class="headerlink" title="Quiz: 13. SD"></a>Quiz: 13. SD</h2><h2 id="Quiz-14-SJSU-Football"><a href="#Quiz-14-SJSU-Football" class="headerlink" title="Quiz: 14. SJSU Football"></a>Quiz: 14. SJSU Football</h2><h2 id="Quiz-15-Exams"><a href="#Quiz-15-Exams" class="headerlink" title="Quiz: 15. Exams"></a>Quiz: 15. Exams</h2><h2 id="Quiz-16-Which-SD"><a href="#Quiz-16-Which-SD" class="headerlink" title="Quiz: 16. Which SD?"></a>Quiz: 16. Which SD?</h2><h2 id="Quiz-17-Closest-to-Mean"><a href="#Quiz-17-Closest-to-Mean" class="headerlink" title="Quiz: 17. Closest to Mean"></a>Quiz: 17. Closest to Mean</h2><h2 id="Quiz-18-Farthest-from-Mean"><a href="#Quiz-18-Farthest-from-Mean" class="headerlink" title="Quiz: 18. Farthest from Mean"></a>Quiz: 18. Farthest from Mean</h2><h2 id="Quiz-19-True-or-False"><a href="#Quiz-19-True-or-False" class="headerlink" title="Quiz: 19. True or False?"></a>Quiz: 19. True or False?</h2><h2 id="Quiz-20-BBC-Sleep"><a href="#Quiz-20-BBC-Sleep" class="headerlink" title="Quiz: 20. BBC - Sleep"></a>Quiz: 20. BBC - Sleep</h2><h2 id="Quiz-21-BBC-Recognition"><a href="#Quiz-21-BBC-Recognition" class="headerlink" title="Quiz: 21. BBC - Recognition"></a>Quiz: 21. BBC - Recognition</h2><h2 id="Quiz-22-BBC-Temporal"><a href="#Quiz-22-BBC-Temporal" class="headerlink" title="Quiz: 22. BBC - Temporal"></a>Quiz: 22. BBC - Temporal</h2><h2 id="Quiz-23-BBC-What-Score"><a href="#Quiz-23-BBC-What-Score" class="headerlink" title="Quiz: 23. BBC - What Score?"></a>Quiz: 23. BBC - What Score?</h2><h1 id="Normal-Distribution"><a href="#Normal-Distribution" class="headerlink" title="Normal Distribution"></a>Normal Distribution</h1><h2 id="Intro-to-the-PDF"><a href="#Intro-to-the-PDF" class="headerlink" title="Intro to the PDF"></a>Intro to the PDF</h2><p>probability density function</p>
+<h2 id="Quiz-Probability"><a href="#Quiz-Probability" class="headerlink" title="Quiz: Probability"></a>Quiz: Probability</h2><h2 id="Get-to-Know-the-PDF"><a href="#Get-to-Know-the-PDF" class="headerlink" title="Get to Know the PDF"></a>Get to Know the PDF</h2><h2 id="Quiz-Probability-Greater"><a href="#Quiz-Probability-Greater" class="headerlink" title="Quiz: Probability Greater"></a>Quiz: Probability Greater</h2><h2 id="Quiz-Probability-Less"><a href="#Quiz-Probability-Less" class="headerlink" title="Quiz: Probability Less"></a>Quiz: Probability Less</h2><h2 id="Quiz-2-SDs-Below-or-Above"><a href="#Quiz-2-SDs-Below-or-Above" class="headerlink" title="Quiz: 2 SDs Below or Above"></a>Quiz: 2 SDs Below or Above</h2><h2 id="Quiz-Proportion-of-Facebook-Friends"><a href="#Quiz-Proportion-of-Facebook-Friends" class="headerlink" title="Quiz: Proportion of Facebook Friends"></a>Quiz: Proportion of Facebook Friends</h2><h2 id="Quiz-More-than-262"><a href="#Quiz-More-than-262" class="headerlink" title="Quiz: More than 262"></a>Quiz: More than 262</h2><h2 id="Quiz-Between-118-and-226"><a href="#Quiz-Between-118-and-226" class="headerlink" title="Quiz: Between 118 and 226"></a>Quiz: Between 118 and 226</h2><h2 id="Quiz-Less-than-240"><a href="#Quiz-Less-than-240" class="headerlink" title="Quiz: Less than 240"></a>Quiz: Less than 240</h2><h2 id="Z-Table"><a href="#Z-Table" class="headerlink" title="Z-Table"></a>Z-Table</h2><p>Here is a link to the z-table shown in the video:<br><a href="https://s3.amazonaws.com/udacity-hosted-downloads/ZTable.jpg" target="_blank" rel="external">z-table</a></p>
+<h2 id="Quiz-Using-the-Z-Table"><a href="#Quiz-Using-the-Z-Table" class="headerlink" title="Quiz: Using the Z-Table"></a>Quiz: Using the Z-Table</h2><h2 id="Karma"><a href="#Karma" class="headerlink" title="Karma"></a>Karma</h2><p>Udacity forums no longer use the karma system Katie describes. However, you can still access the dataset Katie created by clicking here: <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dERoTWtkczVrcGNWOE5tUmJXYUp4R3c&amp;usp=sharing" target="_blank" rel="external">Average Karma points per post</a>.</p>
+<h2 id="Quiz-Average-Karma-Points-per-Post"><a href="#Quiz-Average-Karma-Points-per-Post" class="headerlink" title="Quiz: Average Karma Points per Post"></a>Quiz: Average Karma Points per Post</h2><h2 id="Quiz-SD-of-Karma-Points-per-Post"><a href="#Quiz-SD-of-Karma-Points-per-Post" class="headerlink" title="Quiz: SD of Karma Points per Post"></a>Quiz: SD of Karma Points per Post</h2><h2 id="Quiz-Integer-SDs"><a href="#Quiz-Integer-SDs" class="headerlink" title="Quiz: Integer SDs"></a>Quiz: Integer SDs</h2><h2 id="Quiz-Less-than-5"><a href="#Quiz-Less-than-5" class="headerlink" title="Quiz: Less than 5"></a>Quiz: Less than 5</h2><h2 id="Quiz-More-than-20"><a href="#Quiz-More-than-20" class="headerlink" title="Quiz: More than 20"></a>Quiz: More than 20</h2><h2 id="Quiz-Between-10-and-16"><a href="#Quiz-Between-10-and-16" class="headerlink" title="Quiz: Between 10 and 16"></a>Quiz: Between 10 and 16</h2><h2 id="Quiz-Top-5"><a href="#Quiz-Top-5" class="headerlink" title="Quiz: Top 5%"></a>Quiz: Top 5%</h2><h2 id="Great-Job"><a href="#Great-Job" class="headerlink" title="Great Job!"></a>Great Job!</h2><p>Link to <a href="http://psych.colorado.edu/~mcclella/java/normal/handleNormal.html" target="_blank" rel="external">visualize the area under the curve</a></p>
+<h1 id="Problem-Set-6-Normal-Distribution"><a href="#Problem-Set-6-Normal-Distribution" class="headerlink" title="Problem Set 6: Normal Distribution"></a>Problem Set 6: Normal Distribution</h1><h2 id="Quiz-1-Heights"><a href="#Quiz-1-Heights" class="headerlink" title="Quiz: 1. Heights"></a>Quiz: 1. Heights</h2><h2 id="Quiz-CHALLENGE-2-Heights"><a href="#Quiz-CHALLENGE-2-Heights" class="headerlink" title="Quiz: CHALLENGE 2. Heights"></a>Quiz: <em>CHALLENGE</em> 2. Heights</h2><h2 id="Quiz-3-Houses"><a href="#Quiz-3-Houses" class="headerlink" title="Quiz: 3. Houses"></a>Quiz: 3. Houses</h2><h2 id="Quiz-4-Houses"><a href="#Quiz-4-Houses" class="headerlink" title="Quiz: 4. Houses"></a>Quiz: 4. Houses</h2><h2 id="Quiz-5-Houses"><a href="#Quiz-5-Houses" class="headerlink" title="Quiz: 5. Houses"></a>Quiz: 5. Houses</h2><h2 id="Quiz-6-Houses"><a href="#Quiz-6-Houses" class="headerlink" title="Quiz: 6. Houses"></a>Quiz: 6. Houses</h2><h2 id="Quiz-7-Greater-than-108"><a href="#Quiz-7-Greater-than-108" class="headerlink" title="Quiz: 7. Greater than 108"></a>Quiz: 7. Greater than 108</h2><h2 id="Quiz-8-Less-than-76"><a href="#Quiz-8-Less-than-76" class="headerlink" title="Quiz: 8. Less than 76"></a>Quiz: 8. Less than 76</h2><h2 id="Quiz-9-Between-65-and-90"><a href="#Quiz-9-Between-65-and-90" class="headerlink" title="Quiz: 9. Between 65 and 90"></a>Quiz: 9. Between 65 and 90</h2><h2 id="Quiz-10-Between-80-and-95"><a href="#Quiz-10-Between-80-and-95" class="headerlink" title="Quiz: 10. Between 80 and 95"></a>Quiz: 10. Between 80 and 95</h2><h2 id="Quiz-11-Top-30"><a href="#Quiz-11-Top-30" class="headerlink" title="Quiz: 11. Top 30%"></a>Quiz: 11. Top 30%</h2><h2 id="Quiz-12-Greater-than-1-64"><a href="#Quiz-12-Greater-than-1-64" class="headerlink" title="Quiz: 12. Greater than 1.64"></a>Quiz: 12. Greater than 1.64</h2><h2 id="Quiz-13-Less-than-2-33"><a href="#Quiz-13-Less-than-2-33" class="headerlink" title="Quiz: 13. Less than -2.33"></a>Quiz: 13. Less than -2.33</h2><h2 id="Quiz-14-Top-40"><a href="#Quiz-14-Top-40" class="headerlink" title="Quiz: 14. Top 40%"></a>Quiz: 14. Top 40%</h2><h2 id="Quiz-15-Meanings"><a href="#Quiz-15-Meanings" class="headerlink" title="Quiz: 15. Meanings"></a>Quiz: 15. Meanings</h2><h2 id="Quiz-16-64th-Percentile"><a href="#Quiz-16-64th-Percentile" class="headerlink" title="Quiz: 16. 64th Percentile"></a>Quiz: 16. 64th Percentile</h2><h1 id="Sampling-Distributions"><a href="#Sampling-Distributions" class="headerlink" title="Sampling Distributions"></a>Sampling Distributions</h1><h2 id="Quiz-Compare-Sample-Means"><a href="#Quiz-Compare-Sample-Means" class="headerlink" title="Quiz: Compare Sample Means"></a>Quiz: Compare Sample Means</h2><h2 id="Quiz-Gambling-in-Vegas"><a href="#Quiz-Gambling-in-Vegas" class="headerlink" title="Quiz: Gambling in Vegas"></a>Quiz: Gambling in Vegas</h2><p>A tetrahedral die will result in a 1, 2, 3, or 4 on each roll. If you’re curious about how this works, you can read <a href="http://rpg.stackexchange.com/questions/25135/how-do-i-read-a-4-sided-die" target="_blank" rel="external">this thread</a>. Write your answer as a proportion.</p>
+<h2 id="Quiz-Tetrahedral-Die"><a href="#Quiz-Tetrahedral-Die" class="headerlink" title="Quiz: Tetrahedral Die"></a>Quiz: Tetrahedral Die</h2><h2 id="Quiz-Total-Number-of-Samples"><a href="#Quiz-Total-Number-of-Samples" class="headerlink" title="Quiz: Total Number of Samples"></a>Quiz: Total Number of Samples</h2><h2 id="Quiz-Mean-of-Each-Sample"><a href="#Quiz-Mean-of-Each-Sample" class="headerlink" title="Quiz: Mean of Each Sample"></a>Quiz: Mean of Each Sample</h2><h2 id="Quiz-Mean-of-Sample-Means"><a href="#Quiz-Mean-of-Sample-Means" class="headerlink" title="Quiz: Mean of Sample Means"></a>Quiz: Mean of Sample Means</h2><h2 id="Quiz-Sampling-Distribution"><a href="#Quiz-Sampling-Distribution" class="headerlink" title="Quiz: Sampling Distribution"></a>Quiz: Sampling Distribution</h2><p>distribution of sample means = Sampling Distribution<br>Mean of each sample:<br>1, 1.5, 2, 2.5, 1.5, 2, 2.5, 3, 2, 2.5, 3, 3.5, 2.5, 3, 3.5, 4</p>
+<p>Copy and paste the sample means into <a href="http://www.wolframalpha.com/" target="_blank" rel="external">WolframAlpha</a> and hit enter. Pay particular attention to the histogram showing the frequency of each mean.</p>
+<h2 id="Quiz-Probability-Mean-gt-or-3"><a href="#Quiz-Probability-Mean-gt-or-3" class="headerlink" title="Quiz: Probability Mean &gt; or = 3"></a>Quiz: Probability Mean &gt; or = 3</h2><h2 id="Quiz-What-We-Need-to-Compare-the-Means"><a href="#Quiz-What-We-Need-to-Compare-the-Means" class="headerlink" title="Quiz: What We Need to Compare the Means"></a>Quiz: What We Need to Compare the Means</h2><h2 id="Quiz-Calculate-SDs"><a href="#Quiz-Calculate-SDs" class="headerlink" title="Quiz: Calculate SDs"></a>Quiz: Calculate SDs</h2><h2 id="Quiz-Relationship-Between-SDs"><a href="#Quiz-Relationship-Between-SDs" class="headerlink" title="Quiz: Relationship Between SDs"></a>Quiz: Relationship Between SDs</h2><h2 id="Quiz-Ratio-of-SDs"><a href="#Quiz-Ratio-of-SDs" class="headerlink" title="Quiz: Ratio of SDs"></a>Quiz: Ratio of SDs</h2><h2 id="Quiz-SD-of-Sampling-Distribution"><a href="#Quiz-SD-of-Sampling-Distribution" class="headerlink" title="Quiz: SD of Sampling Distribution"></a>Quiz: SD of Sampling Distribution</h2><h2 id="The-Central-Limit-Theorem"><a href="#The-Central-Limit-Theorem" class="headerlink" title="The Central Limit Theorem"></a>The Central Limit Theorem</h2><h2 id="Quiz-Roll-1-Die"><a href="#Quiz-Roll-1-Die" class="headerlink" title="Quiz: Roll 1 Die"></a>Quiz: Roll 1 Die</h2><p>NOTE: Unfortunately, the rolling die simulation we used to link to here is no longer valid. Don’t worry! You have enough information now to answer this question without it. Give it your best shot, and you’ll see how the applet works in the solution video.</p>
+<p>An alternative simulation can be found <a href="http://www.math.uah.edu/stat/apps/DiceExperiment.html" target="_blank" rel="external">here</a>.</p>
+<h2 id="Quiz-Roll-2-Dice"><a href="#Quiz-Roll-2-Dice" class="headerlink" title="Quiz: Roll 2 Dice"></a>Quiz: Roll 2 Dice</h2><h2 id="Quiz-Find-Standard-Error"><a href="#Quiz-Find-Standard-Error" class="headerlink" title="Quiz: Find Standard Error"></a>Quiz: Find Standard Error</h2><p>The “standard deviation of the sampling distribution” is also known as the standard error.<br>The mean is solved for by adding up the different outcomes (1, 2, 3, 4, 5, 6) and dividing by the number of outcomes (6), yielding a result of 3.5</p>
+<h2 id="Quiz-Roll-5-Dice"><a href="#Quiz-Roll-5-Dice" class="headerlink" title="Quiz: Roll 5 Dice"></a>Quiz: Roll 5 Dice</h2><h2 id="Quiz-Standard-Error-for-Avg-of-5-Dice"><a href="#Quiz-Standard-Error-for-Avg-of-5-Dice" class="headerlink" title="Quiz: Standard Error for Avg of 5 Dice"></a>Quiz: Standard Error for Avg of 5 Dice</h2><h2 id="Quiz-Standard-Error-When-n-Increases"><a href="#Quiz-Standard-Error-When-n-Increases" class="headerlink" title="Quiz: Standard Error When n Increases"></a>Quiz: Standard Error When n Increases</h2><h2 id="Quiz-Shape-of-Distribution-When-n-Increases"><a href="#Quiz-Shape-of-Distribution-When-n-Increases" class="headerlink" title="Quiz: Shape of Distribution When n Increases"></a>Quiz: Shape of Distribution When n Increases</h2><h2 id="Simulation-Applet"><a href="#Simulation-Applet" class="headerlink" title="Simulation Applet"></a>Simulation Applet</h2><p>Link to <a href="http://onlinestatbook.com/stat_sim/sampling_dist/index.html" target="_blank" rel="external">awesome simulation applet</a></p>
+<h2 id="M-amp-Ms"><a href="#M-amp-Ms" class="headerlink" title="M&amp;Ms"></a>M&amp;Ms</h2><h2 id="Quiz-M-amp-M-CLT"><a href="#Quiz-M-amp-M-CLT" class="headerlink" title="Quiz: M&amp;M CLT"></a>Quiz: M&amp;M CLT</h2><h2 id="Using-Sampling-Distribution"><a href="#Using-Sampling-Distribution" class="headerlink" title="Using Sampling Distribution"></a>Using Sampling Distribution</h2><h2 id="Klout"><a href="#Klout" class="headerlink" title="Klout"></a>Klout</h2><p><a href="http://klout.com/corp/score" target="_blank" rel="external">What is Klout and how does it work?</a></p>
+<h2 id="Quiz-Klout-Parameters"><a href="#Quiz-Klout-Parameters" class="headerlink" title="Quiz: Klout Parameters"></a>Quiz: Klout Parameters</h2><p>Link to <a href="https://docs.google.com/spreadsheet/ccc?key=0Alo47BBiqLE0dFkwMHZZNFhxLW4xeHRaZXNZX1F4U0E&amp;usp=sharing" target="_blank" rel="external">Klout data</a> Copy and paste the data into your own spreadsheet to perform the calculations. From Google Drive (at the top of the page once you’re signed in to your Google account), click the button on the left that says “CREATE” and click “Spreadsheet.” Your calculations should automatically save in Google Drive.</p>
+<h2 id="Quiz-Klout-Sampling-Distribution-Mean"><a href="#Quiz-Klout-Sampling-Distribution-Mean" class="headerlink" title="Quiz: Klout Sampling Distribution (Mean)"></a>Quiz: Klout Sampling Distribution (Mean)</h2><h2 id="Quiz-Klout-Sampling-Distribution-SD"><a href="#Quiz-Klout-Sampling-Distribution-SD" class="headerlink" title="Quiz: Klout Sampling Distribution (SD)"></a>Quiz: Klout Sampling Distribution (SD)</h2><h2 id="Quiz-Sampling-Distribution-Shape"><a href="#Quiz-Sampling-Distribution-Shape" class="headerlink" title="Quiz: Sampling Distribution Shape"></a>Quiz: Sampling Distribution Shape</h2><h2 id="What-Do-You-Get-with-a-Good-Klout-Score"><a href="#What-Do-You-Get-with-a-Good-Klout-Score" class="headerlink" title="What Do You Get with a Good Klout Score?"></a>What Do You Get with a Good Klout Score?</h2><h2 id="Quiz-Location-of-Mean-on-Distribution"><a href="#Quiz-Location-of-Mean-on-Distribution" class="headerlink" title="Quiz: Location of Mean on Distribution"></a>Quiz: Location of Mean on Distribution</h2><h2 id="Quiz-Probability-of-Obtaining-Mean"><a href="#Quiz-Probability-of-Obtaining-Mean" class="headerlink" title="Quiz: Probability of Obtaining Mean"></a>Quiz: Probability of Obtaining Mean</h2><h2 id="Quiz-Does-Low-Probability-Causation"><a href="#Quiz-Does-Low-Probability-Causation" class="headerlink" title="Quiz: Does Low Probability = Causation?"></a>Quiz: Does Low Probability = Causation?</h2><h2 id="Quiz-Increase-Sample-Size"><a href="#Quiz-Increase-Sample-Size" class="headerlink" title="Quiz: Increase Sample Size"></a>Quiz: Increase Sample Size</h2><h2 id="Quiz-Location-of-Mean"><a href="#Quiz-Location-of-Mean" class="headerlink" title="Quiz: Location of Mean"></a>Quiz: Location of Mean</h2><h2 id="Quiz-Probability-of-Mean"><a href="#Quiz-Probability-of-Mean" class="headerlink" title="Quiz: Probability of Mean"></a>Quiz: Probability of Mean</h2><h2 id="Quiz-Something-Fun"><a href="#Quiz-Something-Fun" class="headerlink" title="Quiz: Something Fun"></a>Quiz: Something Fun</h2><h1 id="Problem-Set-7-Sampling-Distributions"><a href="#Problem-Set-7-Sampling-Distributions" class="headerlink" title="Problem Set 7: Sampling Distributions"></a>Problem Set 7: Sampling Distributions</h1><h2 id="Quiz-1-Central-Limit-Theorem"><a href="#Quiz-1-Central-Limit-Theorem" class="headerlink" title="Quiz: 1. Central Limit Theorem"></a>Quiz: 1. Central Limit Theorem</h2><h2 id="Quiz-2-Location-of-Sample-Mean"><a href="#Quiz-2-Location-of-Sample-Mean" class="headerlink" title="Quiz: 2. Location of Sample Mean"></a>Quiz: 2. Location of Sample Mean</h2><h2 id="Quiz-3-Average-Difference"><a href="#Quiz-3-Average-Difference" class="headerlink" title="Quiz: 3.  Average Difference"></a>Quiz: 3.  Average Difference</h2><h2 id="Quiz-4-Increase-Sample-Size"><a href="#Quiz-4-Increase-Sample-Size" class="headerlink" title="Quiz: 4. Increase Sample Size"></a>Quiz: 4. Increase Sample Size</h2><h2 id="Quiz-5-Standard-Error"><a href="#Quiz-5-Standard-Error" class="headerlink" title="Quiz: 5. Standard Error"></a>Quiz: 5. Standard Error</h2><h2 id="Quiz-6-n-and-σ"><a href="#Quiz-6-n-and-σ" class="headerlink" title="Quiz: 6. n and σ"></a>Quiz: 6. n and σ</h2><h2 id="Quiz-7-n-and-x-bar"><a href="#Quiz-7-n-and-x-bar" class="headerlink" title="Quiz: 7. n and x-bar"></a>Quiz: 7. n and x-bar</h2><h2 id="Quiz-8-Mean-of-Sample-Means"><a href="#Quiz-8-Mean-of-Sample-Means" class="headerlink" title="Quiz: 8. Mean of Sample Means"></a>Quiz: 8. Mean of Sample Means</h2><h2 id="Quiz-9-Standard-Error"><a href="#Quiz-9-Standard-Error" class="headerlink" title="Quiz: 9. Standard Error"></a>Quiz: 9. Standard Error</h2><h2 id="Quiz-10-Z-Score"><a href="#Quiz-10-Z-Score" class="headerlink" title="Quiz: 10. Z-Score"></a>Quiz: 10. Z-Score</h2><h2 id="Quiz-11-Probability"><a href="#Quiz-11-Probability" class="headerlink" title="Quiz: 11. Probability"></a>Quiz: 11. Probability</h2><h2 id="Quiz-12-Mean-n-25"><a href="#Quiz-12-Mean-n-25" class="headerlink" title="Quiz: 12. Mean n = 25"></a>Quiz: 12. Mean n = 25</h2><h2 id="Quiz-13-Standard-Error"><a href="#Quiz-13-Standard-Error" class="headerlink" title="Quiz: 13. Standard Error"></a>Quiz: 13. Standard Error</h2><h2 id="Quiz-14-Probability"><a href="#Quiz-14-Probability" class="headerlink" title="Quiz: 14. Probability"></a>Quiz: 14. Probability</h2><h2 id="Quiz-15-Probability-Decreased"><a href="#Quiz-15-Probability-Decreased" class="headerlink" title="Quiz: 15. Probability Decreased"></a>Quiz: 15. Probability Decreased</h2><h2 id="Quiz-16-Population-Distribution-Shape"><a href="#Quiz-16-Population-Distribution-Shape" class="headerlink" title="Quiz: 16. Population Distribution Shape"></a>Quiz: 16. Population Distribution Shape</h2><h2 id="Quiz-17-Sampling-Distribution-Shape"><a href="#Quiz-17-Sampling-Distribution-Shape" class="headerlink" title="Quiz: 17. Sampling Distribution Shape"></a>Quiz: 17. Sampling Distribution Shape</h2><h2 id="Quiz-18-Mean-of-Sampling-Distribution"><a href="#Quiz-18-Mean-of-Sampling-Distribution" class="headerlink" title="Quiz: 18. Mean of Sampling Distribution"></a>Quiz: 18. Mean of Sampling Distribution</h2><h2 id="Quiz-19-SD-of-Sampling-Distribution"><a href="#Quiz-19-SD-of-Sampling-Distribution" class="headerlink" title="Quiz: 19. SD of Sampling Distribution"></a>Quiz: 19. SD of Sampling Distribution</h2><h2 id="Quiz-20-Which-Distribution"><a href="#Quiz-20-Which-Distribution" class="headerlink" title="Quiz: 20. Which Distribution?"></a>Quiz: 20. Which Distribution?</h2><h2 id="Quiz-21-Greater-or-Less"><a href="#Quiz-21-Greater-or-Less" class="headerlink" title="Quiz: 21. Greater or Less?"></a>Quiz: 21. Greater or Less?</h2><h2 id="Quiz-CHALLENGE-22-What-Sample-Size"><a href="#Quiz-CHALLENGE-22-What-Sample-Size" class="headerlink" title="Quiz: CHALLENGE 22. What Sample Size?"></a>Quiz: <strong>CHALLENGE</strong> 22. What Sample Size?</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Udacity/" rel="tag"># Udacity</a>
+          
+            <a href="/tags/Statistics/" rel="tag"># Statistics</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/19/Udacity Courses Wanted to Learn/" rel="next" title="Udacity Courses Wanted to Learn">
+                <i class="fa fa-chevron-left"></i> Udacity Courses Wanted to Learn
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/24/Coursera Data Science Community Notebook/" rel="prev" title="Coursera Data Science Community Notebook">
+                Coursera Data Science Community Notebook <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  
+    <div class="sidebar-toggle">
+      <div class="sidebar-toggle-line-wrap">
+        <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      </div>
+    </div>
+  
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          
+            
+          
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SSQ" />
+          <p class="site-author-name" itemprop="name">SSQ</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SSQ" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Orientation"><span class="nav-number">1.</span> <span class="nav-text">Orientation!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Welcome"><span class="nav-number">1.1.</span> <span class="nav-text">Welcome</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro"><span class="nav-number">1.2.</span> <span class="nav-text">Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-MnMs"><span class="nav-number">1.3.</span> <span class="nav-text">Quiz: MnMs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Definitely-blue"><span class="nav-number">1.4.</span> <span class="nav-text">Quiz: Definitely blue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-Sets"><span class="nav-number">1.5.</span> <span class="nav-text">Problem Sets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Forums"><span class="nav-number">1.6.</span> <span class="nav-text">Quiz: Forums</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Instructor-Notes"><span class="nav-number">1.7.</span> <span class="nav-text">Quiz: Instructor Notes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-Drive"><span class="nav-number">1.8.</span> <span class="nav-text">My Drive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Practice-with-Spreadsheets"><span class="nav-number">1.9.</span> <span class="nav-text">Quiz: Practice with Spreadsheets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Calculate-sums"><span class="nav-number">1.10.</span> <span class="nav-text">Quiz: Calculate sums</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Wiki"><span class="nav-number">1.11.</span> <span class="nav-text">Course Wiki</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intro-to-Research-Methods"><span class="nav-number">2.</span> <span class="nav-text">Intro to Research Methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lauren-39-s-Intro-Video"><span class="nav-number">2.1.</span> <span class="nav-text">Lauren's Intro Video</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Believe-Results"><span class="nav-number">2.2.</span> <span class="nav-text">Quiz: Believe Results</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Measure-Memory"><span class="nav-number">2.3.</span> <span class="nav-text">Quiz: Measure Memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Define-Constructs"><span class="nav-number">2.4.</span> <span class="nav-text">Define Constructs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BBC-Memory-Test"><span class="nav-number">2.5.</span> <span class="nav-text">BBC Memory Test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-Test-Description"><span class="nav-number">2.6.</span> <span class="nav-text">Memory Test Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BBC-Scores"><span class="nav-number">2.7.</span> <span class="nav-text">BBC Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Account"><span class="nav-number">2.8.</span> <span class="nav-text">Google Account</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-BBC-Measurement"><span class="nav-number">2.9.</span> <span class="nav-text">Quiz: BBC Measurement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Operational-Definition"><span class="nav-number">2.10.</span> <span class="nav-text">Operational Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Constructs"><span class="nav-number">2.11.</span> <span class="nav-text">Quiz: Constructs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Operational-Definitions"><span class="nav-number">2.12.</span> <span class="nav-text">Quiz: Operational Definitions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data"><span class="nav-number">2.13.</span> <span class="nav-text">Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sleep-and-Memory"><span class="nav-number">2.14.</span> <span class="nav-text">Quiz: Sleep and Memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Influence-Memory"><span class="nav-number">2.15.</span> <span class="nav-text">Quiz: Influence Memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Control-for-Time-of-Day"><span class="nav-number">2.16.</span> <span class="nav-text">Quiz: Control for Time of Day</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Same-Scores"><span class="nav-number">2.17.</span> <span class="nav-text">Quiz: Same Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sample-Average"><span class="nav-number">2.18.</span> <span class="nav-text">Quiz: Sample Average</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Better-Sample"><span class="nav-number">2.19.</span> <span class="nav-text">Quiz: Better Sample</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Randomness"><span class="nav-number">2.20.</span> <span class="nav-text">Randomness</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Visualize-Relationship"><span class="nav-number">2.21.</span> <span class="nav-text">Quiz: Visualize Relationship</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-True-or-Not"><span class="nav-number">2.22.</span> <span class="nav-text">Quiz: True or Not?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golden-Arches-Theory"><span class="nav-number">2.23.</span> <span class="nav-text">Golden Arches Theory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#McDonald-39-s"><span class="nav-number">2.24.</span> <span class="nav-text">McDonald's</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-World-Peace"><span class="nav-number">2.25.</span> <span class="nav-text">Quiz: World Peace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Causal-Inference"><span class="nav-number">2.26.</span> <span class="nav-text">Causal Inference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Benefits-of-Surveys"><span class="nav-number">2.27.</span> <span class="nav-text">Quiz: Benefits of Surveys</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Downsides-of-Surveys"><span class="nav-number">2.28.</span> <span class="nav-text">Quiz: Downsides of Surveys</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Placebo"><span class="nav-number">2.29.</span> <span class="nav-text">Quiz: Placebo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Blind"><span class="nav-number">2.30.</span> <span class="nav-text">Quiz: Blind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Double-Blind"><span class="nav-number">2.31.</span> <span class="nav-text">Quiz: Double Blind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Controlled-Factors"><span class="nav-number">2.32.</span> <span class="nav-text">Quiz: Controlled Factors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Random-Assignment"><span class="nav-number">2.33.</span> <span class="nav-text">Random Assignment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Control-for-What"><span class="nav-number">2.34.</span> <span class="nav-text">Quiz: Control for What?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Katie-39-s-Hand"><span class="nav-number">2.35.</span> <span class="nav-text">Quiz: Katie's Hand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Draw-Conclusions"><span class="nav-number">2.36.</span> <span class="nav-text">Quiz: Draw Conclusions</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-1-Intro-to-statistical-research-methods"><span class="nav-number">3.</span> <span class="nav-text">Problem Set 1: Intro to statistical research methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-All-California-Residents"><span class="nav-number">3.1.</span> <span class="nav-text">Quiz: 1. All California Residents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-Sleepy-College-Students"><span class="nav-number">3.2.</span> <span class="nav-text">Quiz: 2. Sleepy College Students</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-Not-Enough-Sleep…"><span class="nav-number">3.3.</span> <span class="nav-text">Quiz: 3. Not Enough Sleep…?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-Characteristic-of-a-Sample"><span class="nav-number">3.4.</span> <span class="nav-text">Quiz: 4. Characteristic of a Sample</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-Freshman-15"><span class="nav-number">3.5.</span> <span class="nav-text">Quiz: 5. Freshman 15</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-Characteristic-of-a-Population"><span class="nav-number">3.6.</span> <span class="nav-text">Quiz: 6. Characteristic of a Population</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-Sample-Approximates-Population"><span class="nav-number">3.7.</span> <span class="nav-text">Quiz: 7. Sample Approximates Population</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-SAT-Scores"><span class="nav-number">3.8.</span> <span class="nav-text">Quiz: 8. SAT Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-Survey-to-Friends"><span class="nav-number">3.9.</span> <span class="nav-text">Quiz: 9. Survey to Friends</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-Which-Are-Constructs"><span class="nav-number">3.10.</span> <span class="nav-text">Quiz: 10. Which Are Constructs?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Which-Are-Not-Constructs"><span class="nav-number">3.11.</span> <span class="nav-text">Quiz: 11. Which Are Not Constructs?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Define-Operational-Definition"><span class="nav-number">3.12.</span> <span class="nav-text">Quiz: 12. Define Operational Definition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-Research-Studies"><span class="nav-number">3.13.</span> <span class="nav-text">Quiz: 13. Research Studies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-Variables"><span class="nav-number">3.14.</span> <span class="nav-text">Quiz: 14. Variables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-15-Variable-Relationships"><span class="nav-number">3.15.</span> <span class="nav-text">Quiz: 15. Variable Relationships</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-16-Which-Are-Hypotheses"><span class="nav-number">3.16.</span> <span class="nav-text">Quiz: 16. Which Are Hypotheses?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-17-Lurking-Around"><span class="nav-number">3.17.</span> <span class="nav-text">Quiz: 17. Lurking Around</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-18-Symbols-Fun-Fun-Fun"><span class="nav-number">3.18.</span> <span class="nav-text">Quiz: 18. Symbols = Fun Fun Fun!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-19-n"><span class="nav-number">3.19.</span> <span class="nav-text">Quiz: 19. n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-20-Which-Are-True"><span class="nav-number">3.20.</span> <span class="nav-text">Quiz: 20. Which Are True?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-21-Random-Sample"><span class="nav-number">3.21.</span> <span class="nav-text">Quiz: 21. Random Sample</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-22-Convenience-Samples"><span class="nav-number">3.22.</span> <span class="nav-text">Quiz: 22. Convenience Samples</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-23-Sample-vs-Population"><span class="nav-number">3.23.</span> <span class="nav-text">Quiz: 23. Sample vs. Population</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-24-Classical-Music"><span class="nav-number">3.24.</span> <span class="nav-text">Quiz: 24. Classical Music</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-25-Caffeine"><span class="nav-number">3.25.</span> <span class="nav-text">Quiz: 25. Caffeine</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-26-Video-Games"><span class="nav-number">3.26.</span> <span class="nav-text">Quiz: 26. Video Games</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-27-English-Teaching"><span class="nav-number">3.27.</span> <span class="nav-text">Quiz: 27. English Teaching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-28-Reading-Score"><span class="nav-number">3.28.</span> <span class="nav-text">Quiz: 28. Reading Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-29-Extreme-Temperature"><span class="nav-number">3.29.</span> <span class="nav-text">Quiz: 29. Extreme Temperature</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-30-Teaching-Method"><span class="nav-number">3.30.</span> <span class="nav-text">Quiz: 30. Teaching Method</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-31-Reading-Scores"><span class="nav-number">3.31.</span> <span class="nav-text">Quiz: 31. Reading Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-32-Which-Is-Better"><span class="nav-number">3.32.</span> <span class="nav-text">Quiz: 32. Which Is Better?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-33-All-Kinds-of-Variables"><span class="nav-number">3.33.</span> <span class="nav-text">Quiz: 33. All Kinds of Variables</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-34-Landmines"><span class="nav-number">3.34.</span> <span class="nav-text">Quiz: 34. Landmines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-35-Landmines"><span class="nav-number">3.35.</span> <span class="nav-text">Quiz: 35. Landmines</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-36-Student-Satisfaction"><span class="nav-number">3.36.</span> <span class="nav-text">Quiz: 36. Student Satisfaction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-37-Insomnia"><span class="nav-number">3.37.</span> <span class="nav-text">Quiz: 37. Insomnia</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-38-Insomnia"><span class="nav-number">3.38.</span> <span class="nav-text">Quiz: 38. Insomnia</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-39-SAD"><span class="nav-number">3.39.</span> <span class="nav-text">Quiz: 39. SAD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-40-Random-Assignment"><span class="nav-number">3.40.</span> <span class="nav-text">Quiz: 40. Random Assignment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-41-Placebo-Control-Condition"><span class="nav-number">3.41.</span> <span class="nav-text">Quiz: 41. Placebo Control Condition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-42-Why-Placebo"><span class="nav-number">3.42.</span> <span class="nav-text">Quiz: 42. Why Placebo?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-43-Measuring-Constructs"><span class="nav-number">3.43.</span> <span class="nav-text">Quiz: 43. Measuring Constructs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-44-Participants"><span class="nav-number">3.44.</span> <span class="nav-text">Quiz: 44. Participants</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-45-What-Proportion"><span class="nav-number">3.45.</span> <span class="nav-text">Quiz: 45. What Proportion?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-46-Blind-Studies"><span class="nav-number">3.46.</span> <span class="nav-text">Quiz: 46. Blind Studies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-47-Causality"><span class="nav-number">3.47.</span> <span class="nav-text">Quiz: 47. Causality?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-48-Depression"><span class="nav-number">3.48.</span> <span class="nav-text">Quiz: 48. Depression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-49-Depression"><span class="nav-number">3.49.</span> <span class="nav-text">Quiz: 49. Depression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-50-Depression"><span class="nav-number">3.50.</span> <span class="nav-text">Quiz: 50. Depression</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion"><span class="nav-number">4.</span> <span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visualizing-Data"><span class="nav-number">5.</span> <span class="nav-text">Visualizing Data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Where-Students-Are-From"><span class="nav-number">5.1.</span> <span class="nav-text">Quiz: Where Students Are From</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Frequency"><span class="nav-number">5.2.</span> <span class="nav-text">Quiz: Frequency</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-US-China-Pakistan"><span class="nav-number">5.3.</span> <span class="nav-text">Quiz: US, China, Pakistan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Relative-Frequency"><span class="nav-number">5.4.</span> <span class="nav-text">Quiz: Relative Frequency</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Range-of-Proportions"><span class="nav-number">5.5.</span> <span class="nav-text">Quiz: Range of Proportions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sum-Relative-Frequencies"><span class="nav-number">5.6.</span> <span class="nav-text">Quiz: Sum Relative Frequencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Proportion-from-Countries"><span class="nav-number">5.7.</span> <span class="nav-text">Quiz: Proportion from Countries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Convert-to-Percentage"><span class="nav-number">5.8.</span> <span class="nav-text">Quiz: Convert to Percentage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Range-Percentages"><span class="nav-number">5.9.</span> <span class="nav-text">Quiz: Range Percentages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Continents"><span class="nav-number">5.10.</span> <span class="nav-text">Quiz: Continents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Number-of-Rows"><span class="nav-number">5.11.</span> <span class="nav-text">Quiz: Number of Rows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Bin-Size"><span class="nav-number">5.12.</span> <span class="nav-text">Quiz: Bin Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visualizing-Data-1"><span class="nav-number">5.13.</span> <span class="nav-text">Visualizing Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Histogram"><span class="nav-number">5.14.</span> <span class="nav-text">Quiz: Histogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Different-Bin-Sizes"><span class="nav-number">5.15.</span> <span class="nav-text">Different Bin Sizes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Smaller-Bin"><span class="nav-number">5.16.</span> <span class="nav-text">Quiz: Smaller Bin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Find-Bin-Size"><span class="nav-number">5.17.</span> <span class="nav-text">Quiz: Find Bin Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Most-Frequent-Age"><span class="nav-number">5.18.</span> <span class="nav-text">Quiz: Most Frequent Age</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Proportion-over-60"><span class="nav-number">5.19.</span> <span class="nav-text">Quiz: Proportion over 60</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Percentage-Under-60"><span class="nav-number">5.20.</span> <span class="nav-text">Quiz: Percentage Under 60</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Younger-than-20"><span class="nav-number">5.21.</span> <span class="nav-text">Quiz: Younger than 20</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Continent-Graph"><span class="nav-number">5.22.</span> <span class="nav-text">Quiz: Continent Graph</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Difference-Between-Graphs"><span class="nav-number">5.23.</span> <span class="nav-text">Quiz: Difference Between Graphs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Biased-Graphs"><span class="nav-number">5.24.</span> <span class="nav-text">Quiz: Biased Graphs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Changing-Bin-Size"><span class="nav-number">5.25.</span> <span class="nav-text">Changing Bin Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Interpret-Histogram"><span class="nav-number">5.26.</span> <span class="nav-text">Quiz: Interpret Histogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Skewed-Distribution"><span class="nav-number">5.27.</span> <span class="nav-text">Quiz: Skewed Distribution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-2-Visualizing-data"><span class="nav-number">6.</span> <span class="nav-text">Problem Set 2: Visualizing data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-Blood-Types"><span class="nav-number">6.1.</span> <span class="nav-text">Quiz: 1. Blood Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-Rare-Blood"><span class="nav-number">6.2.</span> <span class="nav-text">Quiz: 2. Rare Blood</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-Common-Blood"><span class="nav-number">6.3.</span> <span class="nav-text">Quiz: 3. Common Blood</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-Type-A"><span class="nav-number">6.4.</span> <span class="nav-text">Quiz: 4. Type A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-Guesstimate"><span class="nav-number">6.5.</span> <span class="nav-text">Quiz: 5. Guesstimate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-Analyze-Stuff"><span class="nav-number">6.6.</span> <span class="nav-text">Quiz: 6. Analyze Stuff</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-Ode-to-n"><span class="nav-number">6.7.</span> <span class="nav-text">Quiz: 7. Ode to n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-Calculate-Percentages"><span class="nav-number">6.8.</span> <span class="nav-text">Quiz: 8. Calculate Percentages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-Common-Decade"><span class="nav-number">6.9.</span> <span class="nav-text">Quiz: 9. Common Decade</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-How-Old"><span class="nav-number">6.10.</span> <span class="nav-text">Quiz: 10. How Old?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Really-Old"><span class="nav-number">6.11.</span> <span class="nav-text">Quiz: 11. Really Old!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Birth-Year-Histogram"><span class="nav-number">6.12.</span> <span class="nav-text">Quiz: 12. Birth Year Histogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-Most-Common-Bin"><span class="nav-number">6.13.</span> <span class="nav-text">Quiz: 13. Most Common Bin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-When-Most-Were-Born"><span class="nav-number">6.14.</span> <span class="nav-text">Quiz: 14. When Most Were Born</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-15-Type-of-Data"><span class="nav-number">6.15.</span> <span class="nav-text">Quiz: 15. Type of Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-16-Heights-of-Bars"><span class="nav-number">6.16.</span> <span class="nav-text">Quiz: 16. Heights of Bars</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-17-Which-Region"><span class="nav-number">6.17.</span> <span class="nav-text">Quiz: 17. Which Region?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-18-Calculate-Bin-Size"><span class="nav-number">6.18.</span> <span class="nav-text">Quiz: 18. Calculate Bin Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-19-How-to-Find-n"><span class="nav-number">6.19.</span> <span class="nav-text">Quiz: 19. How to Find n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-20-How-to-Analyze-Shape"><span class="nav-number">6.20.</span> <span class="nav-text">Quiz: 20. How to Analyze Shape</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-21-Commute-Time"><span class="nav-number">6.21.</span> <span class="nav-text">Quiz: 21. Commute Time</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-22-Commute-an-Hour"><span class="nav-number">6.22.</span> <span class="nav-text">Quiz: 22. Commute an Hour</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-23-Find-Bin-Width"><span class="nav-number">6.23.</span> <span class="nav-text">Quiz: 23. Find Bin Width</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-24-Analyze-Histogram"><span class="nav-number">6.24.</span> <span class="nav-text">Quiz: 24. Analyze Histogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-25-Frequency-and-Bin-Size"><span class="nav-number">6.25.</span> <span class="nav-text">Quiz: 25. Frequency and Bin Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-26-Positively-Skewed"><span class="nav-number">6.26.</span> <span class="nav-text">Quiz: 26. Positively Skewed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-27-Distribution-of-What"><span class="nav-number">6.27.</span> <span class="nav-text">Quiz: 27. Distribution of What?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-28-Thinking-About-Distributions"><span class="nav-number">6.28.</span> <span class="nav-text">Quiz: 28. Thinking About Distributions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-29-Frequency-Axis"><span class="nav-number">6.29.</span> <span class="nav-text">Quiz: 29. Frequency Axis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-30-X-Axis-Represent"><span class="nav-number">6.30.</span> <span class="nav-text">Quiz: 30. X-Axis Represent!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-31-Skewness"><span class="nav-number">6.31.</span> <span class="nav-text">Quiz: 31. Skewness</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-32-Negatively-Skewed"><span class="nav-number">6.32.</span> <span class="nav-text">Quiz: 32. Negatively Skewed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-33-Normal-Distribution"><span class="nav-number">6.33.</span> <span class="nav-text">Quiz: 33. Normal Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-34-Table-vs-Histogram"><span class="nav-number">6.34.</span> <span class="nav-text">Quiz: 34. Table vs. Histogram</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Google-Spreadsheet-Tutorial"><span class="nav-number">7.</span> <span class="nav-text">Google Spreadsheet Tutorial</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tutorial"><span class="nav-number">7.1.</span> <span class="nav-text">Tutorial</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Central-tendency"><span class="nav-number">8.</span> <span class="nav-text">Central tendency</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Which-Major"><span class="nav-number">8.1.</span> <span class="nav-text">Quiz: Which Major?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-Number-to-Describe-Data"><span class="nav-number">8.2.</span> <span class="nav-text">One Number to Describe Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Which-Number-to-Choose"><span class="nav-number">8.3.</span> <span class="nav-text">Quiz: Which Number to Choose?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mode-of-Dataset"><span class="nav-number">8.4.</span> <span class="nav-text">Quiz: Mode of Dataset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mode-of-Distribution"><span class="nav-number">8.5.</span> <span class="nav-text">Quiz: Mode of Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mode-Negatively-Skewed-Distribution"><span class="nav-number">8.6.</span> <span class="nav-text">Quiz: Mode - Negatively Skewed Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mode-Uniform-Distribution"><span class="nav-number">8.7.</span> <span class="nav-text">Quiz: Mode - Uniform Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-More-than-One-Mode"><span class="nav-number">8.8.</span> <span class="nav-text">Quiz: More than One Mode?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mode-of-Categorical-Data"><span class="nav-number">8.9.</span> <span class="nav-text">Quiz: Mode of Categorical Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-More-o-39-Mode"><span class="nav-number">8.10.</span> <span class="nav-text">Quiz: More o' Mode!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Find-the-Mean"><span class="nav-number">8.11.</span> <span class="nav-text">Quiz: Find the Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Procedure-for-Finding-Mean"><span class="nav-number">8.12.</span> <span class="nav-text">Quiz: Procedure for Finding Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Iterative-Procedure"><span class="nav-number">8.13.</span> <span class="nav-text">Quiz: Iterative Procedure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Helpful-Symbols"><span class="nav-number">8.14.</span> <span class="nav-text">Helpful Symbols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Properties-of-the-Mean"><span class="nav-number">8.15.</span> <span class="nav-text">Quiz: Properties of the Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mean-with-Outlier"><span class="nav-number">8.16.</span> <span class="nav-text">Quiz: Mean with Outlier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-What-Can-You-Expect"><span class="nav-number">8.17.</span> <span class="nav-text">Quiz: What Can You Expect?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UNC"><span class="nav-number">8.18.</span> <span class="nav-text">UNC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Requirement-for-Median"><span class="nav-number">8.19.</span> <span class="nav-text">Quiz: Requirement for Median</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Find-the-Median"><span class="nav-number">8.20.</span> <span class="nav-text">Quiz: Find the Median</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Median-with-Outlier"><span class="nav-number">8.21.</span> <span class="nav-text">Quiz: Median with Outlier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Find-Median-with-Outlier"><span class="nav-number">8.22.</span> <span class="nav-text">Quiz: Find Median with Outlier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Measures-of-Center"><span class="nav-number">8.23.</span> <span class="nav-text">Measures of Center</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Order-Measures-of-Center-1"><span class="nav-number">8.24.</span> <span class="nav-text">Quiz: Order Measures of Center 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Order-Measures-of-Center-2"><span class="nav-number">8.25.</span> <span class="nav-text">Quiz: Order Measures of Center 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Measures-of-Center-to-Compare"><span class="nav-number">8.26.</span> <span class="nav-text">Use Measures of Center to Compare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Udacians-39-Facebook-Friends-Mean"><span class="nav-number">8.27.</span> <span class="nav-text">Quiz: Udacians' Facebook Friends - Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Udacians-39-Facebook-Friends-Median"><span class="nav-number">8.28.</span> <span class="nav-text">Quiz: Udacians' Facebook Friends - Median</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Formula-for-Location-of-Median"><span class="nav-number">8.29.</span> <span class="nav-text">Quiz: Formula for Location of Median</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Wrap-Up-Measures-of-Center"><span class="nav-number">8.30.</span> <span class="nav-text">Quiz: Wrap Up - Measures of Center</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Good-Job"><span class="nav-number">8.31.</span> <span class="nav-text">Good Job!</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-3-Central-tendency"><span class="nav-number">9.</span> <span class="nav-text">Problem Set 3: Central tendency</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-BBC-Memory-Scores"><span class="nav-number">9.1.</span> <span class="nav-text">Quiz: 1. BBC Memory Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-BBC-Memory-Scores"><span class="nav-number">9.2.</span> <span class="nav-text">Quiz: 2. BBC Memory Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-BBC-Memory-Scores"><span class="nav-number">9.3.</span> <span class="nav-text">Quiz: 3. BBC Memory Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-What-Distribution"><span class="nav-number">9.4.</span> <span class="nav-text">Quiz: 4. What Distribution?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-What-Distribution"><span class="nav-number">9.5.</span> <span class="nav-text">Quiz: 5. What Distribution?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-Normal-Distribution"><span class="nav-number">9.6.</span> <span class="nav-text">Quiz: 6. Normal Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-Positively-Skewed"><span class="nav-number">9.7.</span> <span class="nav-text">Quiz: 7. Positively Skewed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-Mean"><span class="nav-number">9.8.</span> <span class="nav-text">Quiz: 8. Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-Median"><span class="nav-number">9.9.</span> <span class="nav-text">Quiz: 9. Median</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-Mode"><span class="nav-number">9.10.</span> <span class="nav-text">Quiz: 10. Mode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Deal-or-No-Deal-Median"><span class="nav-number">9.11.</span> <span class="nav-text">Quiz: 11. Deal or No Deal? (Median)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Deal-or-No-Deal-Mode"><span class="nav-number">9.12.</span> <span class="nav-text">Quiz: 12. Deal or No Deal? (Mode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-Deal-or-No-Deal-Number"><span class="nav-number">9.13.</span> <span class="nav-text">Quiz: 13. Deal or No Deal? (Number)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-Deal-or-No-Deal-Mean-vs-Median"><span class="nav-number">9.14.</span> <span class="nav-text">Quiz: 14. Deal or No Deal? (Mean vs. Median)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-15-Deal-or-No-Deal-Mean"><span class="nav-number">9.15.</span> <span class="nav-text">Quiz: 15. Deal or No Deal? (Mean)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-16-Deal-or-No-Deal-Proportion"><span class="nav-number">9.16.</span> <span class="nav-text">Quiz: 16. Deal or No Deal? (Proportion)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-17-Deal-or-No-Deal-Frequency"><span class="nav-number">9.17.</span> <span class="nav-text">Quiz: 17. Deal or No Deal? (Frequency)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-18-Deal-or-No-Deal-Distribution"><span class="nav-number">9.18.</span> <span class="nav-text">Quiz: 18. Deal or No Deal? (Distribution)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-19-Deal-or-No-Deal-Center"><span class="nav-number">9.19.</span> <span class="nav-text">Quiz: 19. Deal or No Deal? (Center)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-20-NHL-Mean"><span class="nav-number">9.20.</span> <span class="nav-text">Quiz: 20. NHL (Mean)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-21-NHL-Mode"><span class="nav-number">9.21.</span> <span class="nav-text">Quiz: 21. NHL (Mode)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-22-NHL-Median"><span class="nav-number">9.22.</span> <span class="nav-text">Quiz: 22. NHL (Median)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-23-Which-Distributions"><span class="nav-number">9.23.</span> <span class="nav-text">Quiz: 23. Which Distributions?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-24-Median-Given-Histogram"><span class="nav-number">9.24.</span> <span class="nav-text">Quiz: 24. Median Given Histogram</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Variability"><span class="nav-number">10.</span> <span class="nav-text">Variability</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Social-Networkers-39-Salaries"><span class="nav-number">10.1.</span> <span class="nav-text">Quiz: Social Networkers' Salaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Should-You-Get-an-Account"><span class="nav-number">10.2.</span> <span class="nav-text">Quiz: Should You Get an Account?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-What-39-s-the-Difference"><span class="nav-number">10.3.</span> <span class="nav-text">Quiz: What's the Difference?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Quantify-Spread"><span class="nav-number">10.4.</span> <span class="nav-text">Quiz: Quantify Spread</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Does-Range-Change"><span class="nav-number">10.5.</span> <span class="nav-text">Quiz: Does Range Change?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mark-Z-the-Outlier"><span class="nav-number">10.6.</span> <span class="nav-text">Quiz: Mark Z the Outlier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chop-Off-the-Tails"><span class="nav-number">10.7.</span> <span class="nav-text">Chop Off the Tails</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Where-Is-Q1"><span class="nav-number">10.8.</span> <span class="nav-text">Quiz: Where Is Q1?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Q3-Q1"><span class="nav-number">10.9.</span> <span class="nav-text">Quiz: Q3 - Q1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-IQR"><span class="nav-number">10.10.</span> <span class="nav-text">Quiz: IQR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-What-Is-an-Outlier"><span class="nav-number">10.11.</span> <span class="nav-text">Quiz: What Is an Outlier?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Define-Outlier"><span class="nav-number">10.12.</span> <span class="nav-text">Quiz: Define Outlier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Match-Boxplots"><span class="nav-number">10.13.</span> <span class="nav-text">Quiz: Match Boxplots</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mean-Within-IQR"><span class="nav-number">10.14.</span> <span class="nav-text">Quiz: Mean Within IQR?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-with-IQR"><span class="nav-number">10.15.</span> <span class="nav-text">Problem with IQR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Measure-Variability"><span class="nav-number">10.16.</span> <span class="nav-text">Quiz: Measure Variability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Calculate-Mean"><span class="nav-number">10.17.</span> <span class="nav-text">Quiz: Calculate Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Deviation-from-Mean"><span class="nav-number">10.18.</span> <span class="nav-text">Quiz: Deviation from Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Average-Deviation"><span class="nav-number">10.19.</span> <span class="nav-text">Quiz: Average Deviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Equation-for-Average-Deviation"><span class="nav-number">10.20.</span> <span class="nav-text">Quiz: Equation for Average Deviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Be-Happy-and-Get-Rid-of-Negatives"><span class="nav-number">10.21.</span> <span class="nav-text">Quiz: Be Happy and Get Rid of Negatives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Absolute-Deviations"><span class="nav-number">10.22.</span> <span class="nav-text">Quiz: Absolute Deviations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Average-Absolute-Deviation"><span class="nav-number">10.23.</span> <span class="nav-text">Quiz: Average Absolute Deviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Formula-for-Avg-Abs-Dev"><span class="nav-number">10.24.</span> <span class="nav-text">Quiz: Formula for Avg. Abs. Dev.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Squared-Deviations"><span class="nav-number">10.25.</span> <span class="nav-text">Quiz: Squared Deviations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sum-of-Squares"><span class="nav-number">10.26.</span> <span class="nav-text">Quiz: Sum of Squares</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Average-Squared-Deviation"><span class="nav-number">10.27.</span> <span class="nav-text">Quiz: Average Squared Deviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Avg-Squared-Dev-in-Words"><span class="nav-number">10.28.</span> <span class="nav-text">Quiz: Avg. Squared Dev. in Words</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-One-Dimension"><span class="nav-number">10.29.</span> <span class="nav-text">Quiz: One Dimension</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Standard-Deviation"><span class="nav-number">10.30.</span> <span class="nav-text">Standard Deviation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Calculate-SD"><span class="nav-number">10.31.</span> <span class="nav-text">Quiz: Calculate SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-SD-Social-Networkers"><span class="nav-number">10.32.</span> <span class="nav-text">Quiz: SD Social Networkers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-SD-in-Words"><span class="nav-number">10.33.</span> <span class="nav-text">Quiz: SD in Words</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Spreadsheet-SD"><span class="nav-number">10.34.</span> <span class="nav-text">Quiz: Spreadsheet SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Point-of-SD"><span class="nav-number">10.35.</span> <span class="nav-text">Point of SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Find-Values"><span class="nav-number">10.36.</span> <span class="nav-text">Quiz: Find Values</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sample-SD"><span class="nav-number">10.37.</span> <span class="nav-text">Quiz: Sample SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Bessel-39-s-Correction"><span class="nav-number">10.38.</span> <span class="nav-text">Quiz: Bessel's Correction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clarifying-Sample-SD"><span class="nav-number">10.39.</span> <span class="nav-text">Clarifying Sample SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jelly-Beans"><span class="nav-number">10.40.</span> <span class="nav-text">Jelly Beans</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-4-Variability"><span class="nav-number">11.</span> <span class="nav-text">Problem Set 4: Variability</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-Udacians-39-Facebook-Friends-Mean"><span class="nav-number">11.1.</span> <span class="nav-text">Quiz: 1. Udacians' Facebook Friends (Mean)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-Udacians-39-Facebook-Friends-Avg-Dev"><span class="nav-number">11.2.</span> <span class="nav-text">Quiz: 2. Udacians' Facebook Friends (Avg. Dev)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-Udacians-39-Facebook-Friends-SS"><span class="nav-number">11.3.</span> <span class="nav-text">Quiz: 3. Udacians' Facebook Friends (SS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-Udacians-39-Facebook-Friends-Variance"><span class="nav-number">11.4.</span> <span class="nav-text">Quiz: 4. Udacians' Facebook Friends (Variance)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-Udacians-39-Facebook-Friends-Std-Dev"><span class="nav-number">11.5.</span> <span class="nav-text">Quiz: 5. Udacians' Facebook Friends (Std Dev)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-Udacians-39-Facebook-Friends-mean-std-dev"><span class="nav-number">11.6.</span> <span class="nav-text">Quiz: 6. Udacians' Facebook Friends (mean +/- std dev)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-Udacians-39-Facebook-Friends-proportion"><span class="nav-number">11.7.</span> <span class="nav-text">Quiz: 7. Udacians' Facebook Friends (proportion)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-Udacians-39-Facebook-Friends-sample-sd"><span class="nav-number">11.8.</span> <span class="nav-text">Quiz: 8. Udacians' Facebook Friends (sample sd)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-Class-Exam"><span class="nav-number">11.9.</span> <span class="nav-text">Quiz: 9. Class Exam</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-Where-39-s-Your-Score-sd-5"><span class="nav-number">11.10.</span> <span class="nav-text">Quiz: 10. Where's Your Score? (sd = 5)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Where-39-s-Your-Score-sd-2-5"><span class="nav-number">11.11.</span> <span class="nav-text">Quiz: 11. Where's Your Score? (sd = 2.5)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Where-39-s-Your-Score-sd-10"><span class="nav-number">11.12.</span> <span class="nav-text">Quiz: 12. Where's Your Score? (sd = 10)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-BBC-Sample-Scores-Std-Dev"><span class="nav-number">11.13.</span> <span class="nav-text">Quiz: 13. BBC Sample Scores (Std. Dev.)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-BBC-Sample-Scores-Variability"><span class="nav-number">11.14.</span> <span class="nav-text">Quiz: 14. BBC Sample Scores (Variability)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lessons-1-4-Review-Assessment"><span class="nav-number">12.</span> <span class="nav-text">Lessons 1-4 Review/Assessment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-I"><span class="nav-number">12.1.</span> <span class="nav-text">Quiz: I</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-II"><span class="nav-number">12.2.</span> <span class="nav-text">Quiz: II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-III"><span class="nav-number">12.3.</span> <span class="nav-text">Quiz: III</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-IV"><span class="nav-number">12.4.</span> <span class="nav-text">Quiz: IV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-V"><span class="nav-number">12.5.</span> <span class="nav-text">Quiz: V</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-VI"><span class="nav-number">12.6.</span> <span class="nav-text">Quiz: VI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-VII"><span class="nav-number">12.7.</span> <span class="nav-text">Quiz: VII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-VIII"><span class="nav-number">12.8.</span> <span class="nav-text">Quiz: VIII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-IX"><span class="nav-number">12.9.</span> <span class="nav-text">Quiz: IX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-X"><span class="nav-number">12.10.</span> <span class="nav-text">Quiz: X</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XI"><span class="nav-number">12.11.</span> <span class="nav-text">Quiz: XI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XII"><span class="nav-number">12.12.</span> <span class="nav-text">Quiz: XII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XIII"><span class="nav-number">12.13.</span> <span class="nav-text">Quiz: XIII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XIV"><span class="nav-number">12.14.</span> <span class="nav-text">Quiz: XIV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XV"><span class="nav-number">12.15.</span> <span class="nav-text">Quiz: XV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XVI"><span class="nav-number">12.16.</span> <span class="nav-text">Quiz: XVI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XVII"><span class="nav-number">12.17.</span> <span class="nav-text">Quiz: XVII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XVIII"><span class="nav-number">12.18.</span> <span class="nav-text">Quiz: XVIII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XIX"><span class="nav-number">12.19.</span> <span class="nav-text">Quiz: XIX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XX"><span class="nav-number">12.20.</span> <span class="nav-text">Quiz: XX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXI"><span class="nav-number">12.21.</span> <span class="nav-text">Quiz: XXI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXII"><span class="nav-number">12.22.</span> <span class="nav-text">Quiz: XXII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXIII"><span class="nav-number">12.23.</span> <span class="nav-text">Quiz: XXIII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXIV"><span class="nav-number">12.24.</span> <span class="nav-text">Quiz: XXIV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXV"><span class="nav-number">12.25.</span> <span class="nav-text">Quiz: XXV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXVI"><span class="nav-number">12.26.</span> <span class="nav-text">Quiz: XXVI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXVII"><span class="nav-number">12.27.</span> <span class="nav-text">Quiz: XXVII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXVIII"><span class="nav-number">12.28.</span> <span class="nav-text">Quiz: XXVIII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXIX"><span class="nav-number">12.29.</span> <span class="nav-text">Quiz: XXIX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXX"><span class="nav-number">12.30.</span> <span class="nav-text">Quiz: XXX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-XXXI"><span class="nav-number">12.31.</span> <span class="nav-text">Quiz: XXXI</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Standardizing"><span class="nav-number">13.</span> <span class="nav-text">Standardizing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Chess"><span class="nav-number">13.1.</span> <span class="nav-text">Quiz: Chess</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#USCF-Distribution"><span class="nav-number">13.2.</span> <span class="nav-text">USCF Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Absolute-or-Relative"><span class="nav-number">13.3.</span> <span class="nav-text">Quiz: Absolute or Relative</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Relative-Frequency-Histogram"><span class="nav-number">13.4.</span> <span class="nav-text">Quiz: Relative Frequency Histogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Proportion-Between-170-and-210"><span class="nav-number">13.5.</span> <span class="nav-text">Quiz: Proportion Between 170 and 210</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Proportion-Between-180-and-200"><span class="nav-number">13.6.</span> <span class="nav-text">Quiz: Proportion Between 180 and 200</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-More-Detail"><span class="nav-number">13.7.</span> <span class="nav-text">Quiz: More Detail</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Infinitely-Small"><span class="nav-number">13.8.</span> <span class="nav-text">Infinitely Small</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Continuous-Distribution"><span class="nav-number">13.9.</span> <span class="nav-text">Quiz: Continuous Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theoretical-Normal-Distribution"><span class="nav-number">13.10.</span> <span class="nav-text">Theoretical Normal Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Z"><span class="nav-number">13.11.</span> <span class="nav-text">Z</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unpopular"><span class="nav-number">13.12.</span> <span class="nav-text">Unpopular</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Katie-SDs-Below"><span class="nav-number">13.13.</span> <span class="nav-text">Quiz: Katie - SDs Below</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Andy-SDs-Below"><span class="nav-number">13.14.</span> <span class="nav-text">Quiz: Andy - SDs Below</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Who-39-s-More-Unpopular"><span class="nav-number">13.15.</span> <span class="nav-text">Quiz: Who's More Unpopular?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Formula-for-Number-of-SDs"><span class="nav-number">13.16.</span> <span class="nav-text">Quiz: Formula for Number of SDs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Z-Score"><span class="nav-number">13.17.</span> <span class="nav-text">Z-Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Negative-Z-Score"><span class="nav-number">13.18.</span> <span class="nav-text">Quiz: Negative Z-Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mean-of-Standardized-Distribution"><span class="nav-number">13.19.</span> <span class="nav-text">Quiz: Mean of Standardized Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-SD-of-Standardized-Distribution"><span class="nav-number">13.20.</span> <span class="nav-text">Quiz: SD of Standardized Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Standard-Normal-Distribution"><span class="nav-number">13.21.</span> <span class="nav-text">Standard Normal Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Popular-Chris"><span class="nav-number">13.22.</span> <span class="nav-text">Quiz: Popular Chris</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Convert-to-Z-Score"><span class="nav-number">13.23.</span> <span class="nav-text">Quiz: Convert to Z-Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Convert-to-Popularity-Score"><span class="nav-number">13.24.</span> <span class="nav-text">Quiz: Convert to Popularity Score</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-5-Standardizing"><span class="nav-number">14.</span> <span class="nav-text">Problem Set 5: Standardizing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-Which-Distribution-Is-Which"><span class="nav-number">14.1.</span> <span class="nav-text">Quiz: 1. Which Distribution Is Which?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-Z-Scores"><span class="nav-number">14.2.</span> <span class="nav-text">Quiz: 2. Z-Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-OkCupid"><span class="nav-number">14.3.</span> <span class="nav-text">Quiz: 3. OkCupid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-Social-Media"><span class="nav-number">14.4.</span> <span class="nav-text">Quiz: 4. Social Media</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-Z-Scores-of-Usage"><span class="nav-number">14.5.</span> <span class="nav-text">Quiz: 5. Z-Scores of Usage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-Where-on-the-Distribution"><span class="nav-number">14.6.</span> <span class="nav-text">Quiz: 6. Where on the Distribution?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-Mean-and-SD"><span class="nav-number">14.7.</span> <span class="nav-text">Quiz: 7. Mean and SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-IQ-125"><span class="nav-number">14.8.</span> <span class="nav-text">Quiz: 8. IQ 125</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-IQ-150"><span class="nav-number">14.9.</span> <span class="nav-text">Quiz: 9. IQ 150</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-Scores"><span class="nav-number">14.10.</span> <span class="nav-text">Quiz: 10. Scores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Grade-on-a-Curve"><span class="nav-number">14.11.</span> <span class="nav-text">Quiz: 11. Grade on a Curve</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Extreme"><span class="nav-number">14.12.</span> <span class="nav-text">Quiz: 12. Extreme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-SD"><span class="nav-number">14.13.</span> <span class="nav-text">Quiz: 13. SD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-SJSU-Football"><span class="nav-number">14.14.</span> <span class="nav-text">Quiz: 14. SJSU Football</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-15-Exams"><span class="nav-number">14.15.</span> <span class="nav-text">Quiz: 15. Exams</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-16-Which-SD"><span class="nav-number">14.16.</span> <span class="nav-text">Quiz: 16. Which SD?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-17-Closest-to-Mean"><span class="nav-number">14.17.</span> <span class="nav-text">Quiz: 17. Closest to Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-18-Farthest-from-Mean"><span class="nav-number">14.18.</span> <span class="nav-text">Quiz: 18. Farthest from Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-19-True-or-False"><span class="nav-number">14.19.</span> <span class="nav-text">Quiz: 19. True or False?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-20-BBC-Sleep"><span class="nav-number">14.20.</span> <span class="nav-text">Quiz: 20. BBC - Sleep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-21-BBC-Recognition"><span class="nav-number">14.21.</span> <span class="nav-text">Quiz: 21. BBC - Recognition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-22-BBC-Temporal"><span class="nav-number">14.22.</span> <span class="nav-text">Quiz: 22. BBC - Temporal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-23-BBC-What-Score"><span class="nav-number">14.23.</span> <span class="nav-text">Quiz: 23. BBC - What Score?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Normal-Distribution"><span class="nav-number">15.</span> <span class="nav-text">Normal Distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-the-PDF"><span class="nav-number">15.1.</span> <span class="nav-text">Intro to the PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Probability"><span class="nav-number">15.2.</span> <span class="nav-text">Quiz: Probability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-to-Know-the-PDF"><span class="nav-number">15.3.</span> <span class="nav-text">Get to Know the PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Probability-Greater"><span class="nav-number">15.4.</span> <span class="nav-text">Quiz: Probability Greater</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Probability-Less"><span class="nav-number">15.5.</span> <span class="nav-text">Quiz: Probability Less</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-SDs-Below-or-Above"><span class="nav-number">15.6.</span> <span class="nav-text">Quiz: 2 SDs Below or Above</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Proportion-of-Facebook-Friends"><span class="nav-number">15.7.</span> <span class="nav-text">Quiz: Proportion of Facebook Friends</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-More-than-262"><span class="nav-number">15.8.</span> <span class="nav-text">Quiz: More than 262</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Between-118-and-226"><span class="nav-number">15.9.</span> <span class="nav-text">Quiz: Between 118 and 226</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Less-than-240"><span class="nav-number">15.10.</span> <span class="nav-text">Quiz: Less than 240</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Z-Table"><span class="nav-number">15.11.</span> <span class="nav-text">Z-Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Using-the-Z-Table"><span class="nav-number">15.12.</span> <span class="nav-text">Quiz: Using the Z-Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Karma"><span class="nav-number">15.13.</span> <span class="nav-text">Karma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Average-Karma-Points-per-Post"><span class="nav-number">15.14.</span> <span class="nav-text">Quiz: Average Karma Points per Post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-SD-of-Karma-Points-per-Post"><span class="nav-number">15.15.</span> <span class="nav-text">Quiz: SD of Karma Points per Post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Integer-SDs"><span class="nav-number">15.16.</span> <span class="nav-text">Quiz: Integer SDs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Less-than-5"><span class="nav-number">15.17.</span> <span class="nav-text">Quiz: Less than 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-More-than-20"><span class="nav-number">15.18.</span> <span class="nav-text">Quiz: More than 20</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Between-10-and-16"><span class="nav-number">15.19.</span> <span class="nav-text">Quiz: Between 10 and 16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Top-5"><span class="nav-number">15.20.</span> <span class="nav-text">Quiz: Top 5%</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Great-Job"><span class="nav-number">15.21.</span> <span class="nav-text">Great Job!</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-6-Normal-Distribution"><span class="nav-number">16.</span> <span class="nav-text">Problem Set 6: Normal Distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-Heights"><span class="nav-number">16.1.</span> <span class="nav-text">Quiz: 1. Heights</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-CHALLENGE-2-Heights"><span class="nav-number">16.2.</span> <span class="nav-text">Quiz: CHALLENGE 2. Heights</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-Houses"><span class="nav-number">16.3.</span> <span class="nav-text">Quiz: 3. Houses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-Houses"><span class="nav-number">16.4.</span> <span class="nav-text">Quiz: 4. Houses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-Houses"><span class="nav-number">16.5.</span> <span class="nav-text">Quiz: 5. Houses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-Houses"><span class="nav-number">16.6.</span> <span class="nav-text">Quiz: 6. Houses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-Greater-than-108"><span class="nav-number">16.7.</span> <span class="nav-text">Quiz: 7. Greater than 108</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-Less-than-76"><span class="nav-number">16.8.</span> <span class="nav-text">Quiz: 8. Less than 76</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-Between-65-and-90"><span class="nav-number">16.9.</span> <span class="nav-text">Quiz: 9. Between 65 and 90</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-Between-80-and-95"><span class="nav-number">16.10.</span> <span class="nav-text">Quiz: 10. Between 80 and 95</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Top-30"><span class="nav-number">16.11.</span> <span class="nav-text">Quiz: 11. Top 30%</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Greater-than-1-64"><span class="nav-number">16.12.</span> <span class="nav-text">Quiz: 12. Greater than 1.64</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-Less-than-2-33"><span class="nav-number">16.13.</span> <span class="nav-text">Quiz: 13. Less than -2.33</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-Top-40"><span class="nav-number">16.14.</span> <span class="nav-text">Quiz: 14. Top 40%</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-15-Meanings"><span class="nav-number">16.15.</span> <span class="nav-text">Quiz: 15. Meanings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-16-64th-Percentile"><span class="nav-number">16.16.</span> <span class="nav-text">Quiz: 16. 64th Percentile</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sampling-Distributions"><span class="nav-number">17.</span> <span class="nav-text">Sampling Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Compare-Sample-Means"><span class="nav-number">17.1.</span> <span class="nav-text">Quiz: Compare Sample Means</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Gambling-in-Vegas"><span class="nav-number">17.2.</span> <span class="nav-text">Quiz: Gambling in Vegas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Tetrahedral-Die"><span class="nav-number">17.3.</span> <span class="nav-text">Quiz: Tetrahedral Die</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Total-Number-of-Samples"><span class="nav-number">17.4.</span> <span class="nav-text">Quiz: Total Number of Samples</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mean-of-Each-Sample"><span class="nav-number">17.5.</span> <span class="nav-text">Quiz: Mean of Each Sample</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Mean-of-Sample-Means"><span class="nav-number">17.6.</span> <span class="nav-text">Quiz: Mean of Sample Means</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sampling-Distribution"><span class="nav-number">17.7.</span> <span class="nav-text">Quiz: Sampling Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Probability-Mean-gt-or-3"><span class="nav-number">17.8.</span> <span class="nav-text">Quiz: Probability Mean > or = 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-What-We-Need-to-Compare-the-Means"><span class="nav-number">17.9.</span> <span class="nav-text">Quiz: What We Need to Compare the Means</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Calculate-SDs"><span class="nav-number">17.10.</span> <span class="nav-text">Quiz: Calculate SDs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Relationship-Between-SDs"><span class="nav-number">17.11.</span> <span class="nav-text">Quiz: Relationship Between SDs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Ratio-of-SDs"><span class="nav-number">17.12.</span> <span class="nav-text">Quiz: Ratio of SDs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-SD-of-Sampling-Distribution"><span class="nav-number">17.13.</span> <span class="nav-text">Quiz: SD of Sampling Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Central-Limit-Theorem"><span class="nav-number">17.14.</span> <span class="nav-text">The Central Limit Theorem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Roll-1-Die"><span class="nav-number">17.15.</span> <span class="nav-text">Quiz: Roll 1 Die</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Roll-2-Dice"><span class="nav-number">17.16.</span> <span class="nav-text">Quiz: Roll 2 Dice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Find-Standard-Error"><span class="nav-number">17.17.</span> <span class="nav-text">Quiz: Find Standard Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Roll-5-Dice"><span class="nav-number">17.18.</span> <span class="nav-text">Quiz: Roll 5 Dice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Standard-Error-for-Avg-of-5-Dice"><span class="nav-number">17.19.</span> <span class="nav-text">Quiz: Standard Error for Avg of 5 Dice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Standard-Error-When-n-Increases"><span class="nav-number">17.20.</span> <span class="nav-text">Quiz: Standard Error When n Increases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Shape-of-Distribution-When-n-Increases"><span class="nav-number">17.21.</span> <span class="nav-text">Quiz: Shape of Distribution When n Increases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Simulation-Applet"><span class="nav-number">17.22.</span> <span class="nav-text">Simulation Applet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#M-amp-Ms"><span class="nav-number">17.23.</span> <span class="nav-text">M&Ms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-M-amp-M-CLT"><span class="nav-number">17.24.</span> <span class="nav-text">Quiz: M&M CLT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Sampling-Distribution"><span class="nav-number">17.25.</span> <span class="nav-text">Using Sampling Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Klout"><span class="nav-number">17.26.</span> <span class="nav-text">Klout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Klout-Parameters"><span class="nav-number">17.27.</span> <span class="nav-text">Quiz: Klout Parameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Klout-Sampling-Distribution-Mean"><span class="nav-number">17.28.</span> <span class="nav-text">Quiz: Klout Sampling Distribution (Mean)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Klout-Sampling-Distribution-SD"><span class="nav-number">17.29.</span> <span class="nav-text">Quiz: Klout Sampling Distribution (SD)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Sampling-Distribution-Shape"><span class="nav-number">17.30.</span> <span class="nav-text">Quiz: Sampling Distribution Shape</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Do-You-Get-with-a-Good-Klout-Score"><span class="nav-number">17.31.</span> <span class="nav-text">What Do You Get with a Good Klout Score?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Location-of-Mean-on-Distribution"><span class="nav-number">17.32.</span> <span class="nav-text">Quiz: Location of Mean on Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Probability-of-Obtaining-Mean"><span class="nav-number">17.33.</span> <span class="nav-text">Quiz: Probability of Obtaining Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Does-Low-Probability-Causation"><span class="nav-number">17.34.</span> <span class="nav-text">Quiz: Does Low Probability = Causation?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Increase-Sample-Size"><span class="nav-number">17.35.</span> <span class="nav-text">Quiz: Increase Sample Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Location-of-Mean"><span class="nav-number">17.36.</span> <span class="nav-text">Quiz: Location of Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Probability-of-Mean"><span class="nav-number">17.37.</span> <span class="nav-text">Quiz: Probability of Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-Something-Fun"><span class="nav-number">17.38.</span> <span class="nav-text">Quiz: Something Fun</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Set-7-Sampling-Distributions"><span class="nav-number">18.</span> <span class="nav-text">Problem Set 7: Sampling Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-1-Central-Limit-Theorem"><span class="nav-number">18.1.</span> <span class="nav-text">Quiz: 1. Central Limit Theorem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-2-Location-of-Sample-Mean"><span class="nav-number">18.2.</span> <span class="nav-text">Quiz: 2. Location of Sample Mean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-3-Average-Difference"><span class="nav-number">18.3.</span> <span class="nav-text">Quiz: 3.  Average Difference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-4-Increase-Sample-Size"><span class="nav-number">18.4.</span> <span class="nav-text">Quiz: 4. Increase Sample Size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-5-Standard-Error"><span class="nav-number">18.5.</span> <span class="nav-text">Quiz: 5. Standard Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-6-n-and-σ"><span class="nav-number">18.6.</span> <span class="nav-text">Quiz: 6. n and σ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-7-n-and-x-bar"><span class="nav-number">18.7.</span> <span class="nav-text">Quiz: 7. n and x-bar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-8-Mean-of-Sample-Means"><span class="nav-number">18.8.</span> <span class="nav-text">Quiz: 8. Mean of Sample Means</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-9-Standard-Error"><span class="nav-number">18.9.</span> <span class="nav-text">Quiz: 9. Standard Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-10-Z-Score"><span class="nav-number">18.10.</span> <span class="nav-text">Quiz: 10. Z-Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-11-Probability"><span class="nav-number">18.11.</span> <span class="nav-text">Quiz: 11. Probability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-12-Mean-n-25"><span class="nav-number">18.12.</span> <span class="nav-text">Quiz: 12. Mean n = 25</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-13-Standard-Error"><span class="nav-number">18.13.</span> <span class="nav-text">Quiz: 13. Standard Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-14-Probability"><span class="nav-number">18.14.</span> <span class="nav-text">Quiz: 14. Probability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-15-Probability-Decreased"><span class="nav-number">18.15.</span> <span class="nav-text">Quiz: 15. Probability Decreased</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-16-Population-Distribution-Shape"><span class="nav-number">18.16.</span> <span class="nav-text">Quiz: 16. Population Distribution Shape</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-17-Sampling-Distribution-Shape"><span class="nav-number">18.17.</span> <span class="nav-text">Quiz: 17. Sampling Distribution Shape</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-18-Mean-of-Sampling-Distribution"><span class="nav-number">18.18.</span> <span class="nav-text">Quiz: 18. Mean of Sampling Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-19-SD-of-Sampling-Distribution"><span class="nav-number">18.19.</span> <span class="nav-text">Quiz: 19. SD of Sampling Distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-20-Which-Distribution"><span class="nav-number">18.20.</span> <span class="nav-text">Quiz: 20. Which Distribution?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-21-Greater-or-Less"><span class="nav-number">18.21.</span> <span class="nav-text">Quiz: 21. Greater or Less?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quiz-CHALLENGE-22-What-Sample-Size"><span class="nav-number">18.22.</span> <span class="nav-text">Quiz: CHALLENGE 22. What Sample Size?</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SSQ</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("MWlUL7cwf0gV4nd1BczDGmFm-gzGzoHsz", "YwuYEA1xBo0rm9hzIjUwOm2F");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

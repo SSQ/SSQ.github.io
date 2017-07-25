@@ -1,0 +1,1281 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Stanford,Machine Learning,Coursera,Matlab," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="For wrapping up and resume writingvideoLecture notesProgramming assignment 1">
+<meta name="keywords" content="Stanford,Machine Learning,Coursera,Matlab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coursera S Machine Learning Notebook">
+<meta property="og:url" content="https://ssq.github.io/2017/05/31/Coursera S Machine Learning Notebook/index.html">
+<meta property="og:site_name" content="SSQ">
+<meta property="og:description" content="For wrapping up and resume writingvideoLecture notesProgramming assignment 1">
+<meta property="og:updated_time" content="2017-07-24T07:57:24.145Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coursera S Machine Learning Notebook">
+<meta name="twitter:description" content="For wrapping up and resume writingvideoLecture notesProgramming assignment 1">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://ssq.github.io/2017/05/31/Coursera S Machine Learning Notebook/"/>
+
+
+
+
+
+  <title>Coursera S Machine Learning Notebook | SSQ</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-91307065-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3c8ad2ecdd2387b44044b1d7cd3536a9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SSQ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-friends">
+          <a href="/friends" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            friends
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://ssq.github.io/2017/05/31/Coursera S Machine Learning Notebook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SSQ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SSQ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Coursera S Machine Learning Notebook</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-31T09:58:40+08:00">
+                2017-05-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/31/Coursera S Machine Learning Notebook/" class="leancloud_visitors" data-flag-title="Coursera S Machine Learning Notebook">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note primary"><p>For wrapping up and resume writing<br><a href="https://www.youtube.com/watch?v=PPLop4L2eGk&amp;list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN&amp;index=1" target="_blank" rel="external">video</a><br><a href="https://github.com/SSQ/Coursera-ML-Lecture-Notes" target="_blank" rel="external">Lecture notes</a><br><a href="https://github.com/SSQ/Coursera-ML-Ex1-Linear-Regression" target="_blank" rel="external">Programming assignment 1</a></p>
+</div>
+<a id="more"></a>
+<h1 id="Week-1-Introduction-amp-Linear-Regression-with-One-Variable"><a href="#Week-1-Introduction-amp-Linear-Regression-with-One-Variable" class="headerlink" title="Week 1 Introduction &amp; Linear Regression with One Variable"></a>Week 1 Introduction &amp; Linear Regression with One Variable</h1><p>This method looks at every example in the entire training set on every step, and is called <strong>batch gradient descent</strong>.</p>
+<h2 id="Model-and-Cost-Function"><a href="#Model-and-Cost-Function" class="headerlink" title="Model and Cost Function"></a>Model and Cost Function</h2><h3 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h3><p><a href="https://www.coursera.org/learn/machine-learning/lecture/rkTp3/cost-function" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/lecture/rkTp3/cost-function</a></p>
+<h3 id="Cost-Function-1"><a href="#Cost-Function-1" class="headerlink" title="Cost Function"></a>Cost Function</h3><p><a href="https://www.coursera.org/learn/machine-learning/supplement/nhzyF/cost-function" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/nhzyF/cost-function</a></p>
+<h3 id="Cost-Function-Intuition-I"><a href="#Cost-Function-Intuition-I" class="headerlink" title="Cost Function - Intuition I"></a>Cost Function - Intuition I</h3><p><a href="https://www.coursera.org/learn/machine-learning/lecture/N09c6/cost-function-intuition-i" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/lecture/N09c6/cost-function-intuition-i</a></p>
+<h3 id="Cost-Function-Intuition-I-1"><a href="#Cost-Function-Intuition-I-1" class="headerlink" title="Cost Function - Intuition I"></a>Cost Function - Intuition I</h3><p><a href="https://www.coursera.org/learn/machine-learning/supplement/u3qF5/cost-function-intuition-i" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/u3qF5/cost-function-intuition-i</a></p>
+<h2 id="Parameter-Learning"><a href="#Parameter-Learning" class="headerlink" title="Parameter Learning"></a>Parameter Learning</h2><h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><p><a href="https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent</a></p>
+<h3 id="Gradient-Descent-1"><a href="#Gradient-Descent-1" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><p><a href="https://www.coursera.org/learn/machine-learning/supplement/2GnUg/gradient-descent" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/2GnUg/gradient-descent</a></p>
+<h3 id="Gradient-Descent-Intuition"><a href="#Gradient-Descent-Intuition" class="headerlink" title="Gradient Descent Intuition"></a>Gradient Descent Intuition</h3><p><a href="https://www.coursera.org/learn/machine-learning/supplement/QKEdR/gradient-descent-intuition" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/QKEdR/gradient-descent-intuition</a></p>
+<h3 id="Gradient-Descent-For-Linear-Regression"><a href="#Gradient-Descent-For-Linear-Regression" class="headerlink" title="Gradient Descent For Linear Regression"></a>Gradient Descent For Linear Regression</h3><p><a href="https://www.coursera.org/learn/machine-learning/supplement/U90DX/gradient-descent-for-linear-regression" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/U90DX/gradient-descent-for-linear-regression</a></p>
+<h1 id="Week-2"><a href="#Week-2" class="headerlink" title="Week 2"></a>Week 2</h1><p><strong>Feature scaling</strong> involves dividing the input values by the range (i.e. the maximum value minus the minimum value) of the input variable, resulting in a new range of just 1.<br><strong>Mean normalization</strong> involves subtracting the average value for an input variable from the values for that input variable resulting in a new average value for the input variable of just zero. To implement both of these techniques, adjust your input values as shown in this formula:<br>$x_i :=\frac{x_i - \mu_i}{s_i}$<br>Where $μ_i$ is the average of all the values for feature (i) and $s_i$ is the range of values (max - min), or $s_i$ is the standard deviation.</p>
+<h2 id="Linear-Regression-with-Multiple-Variables"><a href="#Linear-Regression-with-Multiple-Variables" class="headerlink" title="Linear Regression with Multiple Variables"></a>Linear Regression with Multiple Variables</h2><h3 id="Environment-Setup-Instructions"><a href="#Environment-Setup-Instructions" class="headerlink" title="Environment Setup Instructions"></a>Environment Setup Instructions</h3><h4 id="Setting-Up-Your-Programming-Assignment-Environment8-min"><a href="#Setting-Up-Your-Programming-Assignment-Environment8-min" class="headerlink" title="Setting Up Your Programming Assignment Environment8 min"></a>Setting Up Your Programming Assignment Environment8 min</h4><h4 id="Installing-MATLAB3-min"><a href="#Installing-MATLAB3-min" class="headerlink" title="Installing MATLAB3 min"></a>Installing MATLAB3 min</h4><h4 id="Installing-Octave-on-Windows3-min"><a href="#Installing-Octave-on-Windows3-min" class="headerlink" title="Installing Octave on Windows3 min"></a>Installing Octave on Windows3 min</h4><h4 id="Installing-Octave-on-Mac-OS-X-10-10-Yosemite-and-10-9-Mavericks-and-Later-10-min"><a href="#Installing-Octave-on-Mac-OS-X-10-10-Yosemite-and-10-9-Mavericks-and-Later-10-min" class="headerlink" title="Installing Octave on Mac OS X (10.10 Yosemite and 10.9 Mavericks and Later)10 min"></a>Installing Octave on Mac OS X (10.10 Yosemite and 10.9 Mavericks and Later)10 min</h4><h4 id="Installing-Octave-on-Mac-OS-X-10-8-Mountain-Lion-and-Earlier-3-min"><a href="#Installing-Octave-on-Mac-OS-X-10-8-Mountain-Lion-and-Earlier-3-min" class="headerlink" title="Installing Octave on Mac OS X (10.8 Mountain Lion and Earlier)3 min"></a>Installing Octave on Mac OS X (10.8 Mountain Lion and Earlier)3 min</h4><h4 id="Installing-Octave-on-GNU-Linux7-min"><a href="#Installing-Octave-on-GNU-Linux7-min" class="headerlink" title="Installing Octave on GNU/Linux7 min"></a>Installing Octave on GNU/Linux7 min</h4><h4 id="More-Octave-MATLAB-resources-10-min"><a href="#More-Octave-MATLAB-resources-10-min" class="headerlink" title="More Octave/MATLAB resources 10 min"></a>More Octave/MATLAB resources 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/Mlf3e/more-octave-matlab-resources" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/Mlf3e/more-octave-matlab-resources</a></p>
+<h3 id="Multivariate-Linear-Regression"><a href="#Multivariate-Linear-Regression" class="headerlink" title="Multivariate Linear Regression"></a>Multivariate Linear Regression</h3><h4 id="Multiple-Features8-min"><a href="#Multiple-Features8-min" class="headerlink" title="Multiple Features8 min"></a>Multiple Features8 min</h4><h4 id="Multiple-Features3-min"><a href="#Multiple-Features3-min" class="headerlink" title="Multiple Features3 min"></a>Multiple Features3 min</h4><h4 id="Gradient-Descent-for-Multiple-Variables5-min"><a href="#Gradient-Descent-for-Multiple-Variables5-min" class="headerlink" title="Gradient Descent for Multiple Variables5 min"></a>Gradient Descent for Multiple Variables5 min</h4><h4 id="Gradient-Descent-For-Multiple-Variables2-min"><a href="#Gradient-Descent-For-Multiple-Variables2-min" class="headerlink" title="Gradient Descent For Multiple Variables2 min"></a>Gradient Descent For Multiple Variables2 min</h4><h4 id="Gradient-Descent-in-Practice-I-Feature-Scaling8-min"><a href="#Gradient-Descent-in-Practice-I-Feature-Scaling8-min" class="headerlink" title="Gradient Descent in Practice I - Feature Scaling8 min"></a>Gradient Descent in Practice I - Feature Scaling8 min</h4><h4 id="Gradient-Descent-in-Practice-I-Feature-Scaling3-min"><a href="#Gradient-Descent-in-Practice-I-Feature-Scaling3-min" class="headerlink" title="Gradient Descent in Practice I - Feature Scaling3 min"></a>Gradient Descent in Practice I - Feature Scaling3 min</h4><h4 id="Gradient-Descent-in-Practice-II-Learning-Rate8-min"><a href="#Gradient-Descent-in-Practice-II-Learning-Rate8-min" class="headerlink" title="Gradient Descent in Practice II - Learning Rate8 min"></a>Gradient Descent in Practice II - Learning Rate8 min</h4><h4 id="Gradient-Descent-in-Practice-II-Learning-Rate4-min"><a href="#Gradient-Descent-in-Practice-II-Learning-Rate4-min" class="headerlink" title="Gradient Descent in Practice II - Learning Rate4 min"></a>Gradient Descent in Practice II - Learning Rate4 min</h4><h4 id="Features-and-Polynomial-Regression7-min"><a href="#Features-and-Polynomial-Regression7-min" class="headerlink" title="Features and Polynomial Regression7 min"></a>Features and Polynomial Regression7 min</h4><h4 id="Features-and-Polynomial-Regression3-min"><a href="#Features-and-Polynomial-Regression3-min" class="headerlink" title="Features and Polynomial Regression3 min"></a>Features and Polynomial Regression3 min</h4><h3 id="Computing-Parameters-Analytically"><a href="#Computing-Parameters-Analytically" class="headerlink" title="Computing Parameters Analytically"></a>Computing Parameters Analytically</h3><h4 id="Normal-Equation16-min"><a href="#Normal-Equation16-min" class="headerlink" title="Normal Equation16 min"></a>Normal Equation16 min</h4><h4 id="Normal-Equation3-min"><a href="#Normal-Equation3-min" class="headerlink" title="Normal Equation3 min"></a>Normal Equation3 min</h4><h4 id="Normal-Equation-Noninvertibility5-min"><a href="#Normal-Equation-Noninvertibility5-min" class="headerlink" title="Normal Equation Noninvertibility5 min"></a>Normal Equation Noninvertibility5 min</h4><h4 id="Normal-Equation-Noninvertibility2-min"><a href="#Normal-Equation-Noninvertibility2-min" class="headerlink" title="Normal Equation Noninvertibility2 min"></a>Normal Equation Noninvertibility2 min</h4><h3 id="Submitting-Programming-Assignments"><a href="#Submitting-Programming-Assignments" class="headerlink" title="Submitting Programming Assignments"></a>Submitting Programming Assignments</h3><h4 id="Working-on-and-Submitting-Programming-Assignments3-min"><a href="#Working-on-and-Submitting-Programming-Assignments3-min" class="headerlink" title="Working on and Submitting Programming Assignments3 min"></a>Working on and Submitting Programming Assignments3 min</h4><h4 id="Programming-tips-from-Mentors10-min"><a href="#Programming-tips-from-Mentors10-min" class="headerlink" title="Programming tips from Mentors10 min"></a>Programming tips from Mentors10 min</h4><h3 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides20-min"><a href="#Lecture-Slides20-min" class="headerlink" title="Lecture Slides20 min"></a>Lecture Slides20 min</h4><h4 id="Quiz-Linear-Regression-with-Multiple-Variables5-questions"><a href="#Quiz-Linear-Regression-with-Multiple-Variables5-questions" class="headerlink" title="Quiz: Linear Regression with Multiple Variables5 questions"></a>Quiz: Linear Regression with Multiple Variables5 questions</h4><h2 id="Octave-Matlab-Tutorial"><a href="#Octave-Matlab-Tutorial" class="headerlink" title="Octave/Matlab Tutorial"></a>Octave/Matlab Tutorial</h2><h3 id="Octave-Matlab-Tutorial-1"><a href="#Octave-Matlab-Tutorial-1" class="headerlink" title="Octave/Matlab Tutorial"></a>Octave/Matlab Tutorial</h3><h4 id="Basic-Operations13-min"><a href="#Basic-Operations13-min" class="headerlink" title="Basic Operations13 min"></a>Basic Operations13 min</h4><h4 id="Moving-Data-Around16-min"><a href="#Moving-Data-Around16-min" class="headerlink" title="Moving Data Around16 min"></a>Moving Data Around16 min</h4><h4 id="Computing-on-Data13-min"><a href="#Computing-on-Data13-min" class="headerlink" title="Computing on Data13 min"></a>Computing on Data13 min</h4><h4 id="Plotting-Data9-min"><a href="#Plotting-Data9-min" class="headerlink" title="Plotting Data9 min"></a>Plotting Data9 min</h4><h4 id="Control-Statements-for-while-if-statement12-min"><a href="#Control-Statements-for-while-if-statement12-min" class="headerlink" title="Control Statements: for, while, if statement12 min"></a>Control Statements: for, while, if statement12 min</h4><h4 id="Vectorization13-min"><a href="#Vectorization13-min" class="headerlink" title="Vectorization13 min"></a>Vectorization13 min</h4><h3 id="Review-1"><a href="#Review-1" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides10-min"><a href="#Lecture-Slides10-min" class="headerlink" title="Lecture Slides10 min"></a>Lecture Slides10 min</h4><h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Octave-Matlab-Tutorial5-questions"><a href="#Quiz-Octave-Matlab-Tutorial5-questions" class="headerlink" title="Quiz: Octave/Matlab Tutorial5 questions"></a>Quiz: Octave/Matlab Tutorial5 questions</h4><h4 id="Programming-Assignment-Linear-Regression3h"><a href="#Programming-Assignment-Linear-Regression3h" class="headerlink" title="Programming Assignment: Linear Regression3h"></a>Programming Assignment: Linear Regression3h</h4><h1 id="Week-3"><a href="#Week-3" class="headerlink" title="Week 3"></a>Week 3</h1><h2 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h2><h3 id="Classification-and-Representation"><a href="#Classification-and-Representation" class="headerlink" title="Classification and Representation"></a>Classification and Representation</h3><h4 id="Classification8-min"><a href="#Classification8-min" class="headerlink" title="Classification8 min"></a>Classification8 min</h4><h4 id="Classification2-min"><a href="#Classification2-min" class="headerlink" title="Classification2 min"></a>Classification2 min</h4><h4 id="Hypothesis-Representation7-min"><a href="#Hypothesis-Representation7-min" class="headerlink" title="Hypothesis Representation7 min"></a>Hypothesis Representation7 min</h4><h4 id="Hypothesis-Representation3-min"><a href="#Hypothesis-Representation3-min" class="headerlink" title="Hypothesis Representation3 min"></a>Hypothesis Representation3 min</h4><h4 id="Decision-Boundary14-min"><a href="#Decision-Boundary14-min" class="headerlink" title="Decision Boundary14 min"></a>Decision Boundary14 min</h4><h4 id="Decision-Boundary3-min"><a href="#Decision-Boundary3-min" class="headerlink" title="Decision Boundary3 min"></a>Decision Boundary3 min</h4><h3 id="Logistic-Regression-Model"><a href="#Logistic-Regression-Model" class="headerlink" title="Logistic Regression Model"></a>Logistic Regression Model</h3><h4 id="Cost-Function10-min"><a href="#Cost-Function10-min" class="headerlink" title="Cost Function10 min"></a>Cost Function10 min</h4><h4 id="Cost-Function3-min"><a href="#Cost-Function3-min" class="headerlink" title="Cost Function3 min"></a>Cost Function3 min</h4><h4 id="Simplified-Cost-Function-and-Gradient-Descent10-min"><a href="#Simplified-Cost-Function-and-Gradient-Descent10-min" class="headerlink" title="Simplified Cost Function and Gradient Descent10 min"></a>Simplified Cost Function and Gradient Descent10 min</h4><h4 id="Simplified-Cost-Function-and-Gradient-Descent3-min"><a href="#Simplified-Cost-Function-and-Gradient-Descent3-min" class="headerlink" title="Simplified Cost Function and Gradient Descent3 min"></a>Simplified Cost Function and Gradient Descent3 min</h4><h4 id="Advanced-Optimization14-min"><a href="#Advanced-Optimization14-min" class="headerlink" title="Advanced Optimization14 min"></a>Advanced Optimization14 min</h4><h4 id="Advanced-Optimization3-min"><a href="#Advanced-Optimization3-min" class="headerlink" title="Advanced Optimization3 min"></a>Advanced Optimization3 min</h4><h3 id="Multiclass-Classification"><a href="#Multiclass-Classification" class="headerlink" title="Multiclass Classification"></a>Multiclass Classification</h3><h4 id="Multiclass-Classification-One-vs-all6-min"><a href="#Multiclass-Classification-One-vs-all6-min" class="headerlink" title="Multiclass Classification: One-vs-all6 min"></a>Multiclass Classification: One-vs-all6 min</h4><h4 id="Multiclass-Classification-One-vs-all3-min"><a href="#Multiclass-Classification-One-vs-all3-min" class="headerlink" title="Multiclass Classification: One-vs-all3 min"></a>Multiclass Classification: One-vs-all3 min</h4><h3 id="Review-2"><a href="#Review-2" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min"><a href="#Lecture-Slides-10-min" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/QEYX8/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/QEYX8/lecture-slides</a></p>
+<h4 id="Quiz-Logistic-Regression-5-questions"><a href="#Quiz-Logistic-Regression-5-questions" class="headerlink" title="Quiz: Logistic Regression 5 questions"></a>Quiz: Logistic Regression 5 questions</h4><h2 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h2><h3 id="Solving-the-Problem-of-Overfitting"><a href="#Solving-the-Problem-of-Overfitting" class="headerlink" title="Solving the Problem of Overfitting"></a>Solving the Problem of Overfitting</h3><h4 id="The-Problem-of-Overfitting9-min"><a href="#The-Problem-of-Overfitting9-min" class="headerlink" title="The Problem of Overfitting9 min"></a>The Problem of Overfitting9 min</h4><h4 id="The-Problem-of-Overfitting3-min"><a href="#The-Problem-of-Overfitting3-min" class="headerlink" title="The Problem of Overfitting3 min"></a>The Problem of Overfitting3 min</h4><h4 id="Cost-Function10-min-1"><a href="#Cost-Function10-min-1" class="headerlink" title="Cost Function10 min"></a>Cost Function10 min</h4><h4 id="Cost-Function3-min-1"><a href="#Cost-Function3-min-1" class="headerlink" title="Cost Function3 min"></a>Cost Function3 min</h4><h4 id="Regularized-Linear-Regression10-min"><a href="#Regularized-Linear-Regression10-min" class="headerlink" title="Regularized Linear Regression10 min"></a>Regularized Linear Regression10 min</h4><h4 id="Regularized-Linear-Regression3-min"><a href="#Regularized-Linear-Regression3-min" class="headerlink" title="Regularized Linear Regression3 min"></a>Regularized Linear Regression3 min</h4><h4 id="Regularized-Logistic-Regression8-min"><a href="#Regularized-Logistic-Regression8-min" class="headerlink" title="Regularized Logistic Regression8 min"></a>Regularized Logistic Regression8 min</h4><h4 id="Regularized-Logistic-Regression3-min"><a href="#Regularized-Logistic-Regression3-min" class="headerlink" title="Regularized Logistic Regression3 min"></a>Regularized Logistic Regression3 min</h4><h3 id="Review-3"><a href="#Review-3" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides10-min-1"><a href="#Lecture-Slides10-min-1" class="headerlink" title="Lecture Slides10 min"></a>Lecture Slides10 min</h4><h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-1"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-1" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Regularization5-questions"><a href="#Quiz-Regularization5-questions" class="headerlink" title="Quiz: Regularization5 questions"></a>Quiz: Regularization5 questions</h4><h4 id="Programming-Assignment-Logistic-Regression3h"><a href="#Programming-Assignment-Logistic-Regression3h" class="headerlink" title="Programming Assignment: Logistic Regression3h"></a>Programming Assignment: Logistic Regression3h</h4><h1 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h1><h2 id="Neural-Networks-Representation"><a href="#Neural-Networks-Representation" class="headerlink" title="Neural Networks: Representation"></a>Neural Networks: Representation</h2><h3 id="Motivations"><a href="#Motivations" class="headerlink" title="Motivations"></a>Motivations</h3><h4 id="Non-linear-Hypotheses9-min"><a href="#Non-linear-Hypotheses9-min" class="headerlink" title="Non-linear Hypotheses9 min"></a>Non-linear Hypotheses9 min</h4><h4 id="Neurons-and-the-Brain7-min"><a href="#Neurons-and-the-Brain7-min" class="headerlink" title="Neurons and the Brain7 min"></a>Neurons and the Brain7 min</h4><h3 id="Neural-Networks"><a href="#Neural-Networks" class="headerlink" title="Neural Networks"></a>Neural Networks</h3><h4 id="Model-Representation-I12-min"><a href="#Model-Representation-I12-min" class="headerlink" title="Model Representation I12 min"></a>Model Representation I12 min</h4><h4 id="Model-Representation-I6-min"><a href="#Model-Representation-I6-min" class="headerlink" title="Model Representation I6 min"></a>Model Representation I6 min</h4><h4 id="Model-Representation-II11-min"><a href="#Model-Representation-II11-min" class="headerlink" title="Model Representation II11 min"></a>Model Representation II11 min</h4><h4 id="Model-Representation-II6-min"><a href="#Model-Representation-II6-min" class="headerlink" title="Model Representation II6 min"></a>Model Representation II6 min</h4><h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h3><h4 id="Examples-and-Intuitions-I7-min"><a href="#Examples-and-Intuitions-I7-min" class="headerlink" title="Examples and Intuitions I7 min"></a>Examples and Intuitions I7 min</h4><h4 id="Examples-and-Intuitions-I2-min"><a href="#Examples-and-Intuitions-I2-min" class="headerlink" title="Examples and Intuitions I2 min"></a>Examples and Intuitions I2 min</h4><h4 id="Examples-and-Intuitions-II10-min"><a href="#Examples-and-Intuitions-II10-min" class="headerlink" title="Examples and Intuitions II10 min"></a>Examples and Intuitions II10 min</h4><h4 id="Examples-and-Intuitions-II3-min"><a href="#Examples-and-Intuitions-II3-min" class="headerlink" title="Examples and Intuitions II3 min"></a>Examples and Intuitions II3 min</h4><h4 id="Multiclass-Classification3-min"><a href="#Multiclass-Classification3-min" class="headerlink" title="Multiclass Classification3 min"></a>Multiclass Classification3 min</h4><h4 id="Multiclass-Classification3-min-1"><a href="#Multiclass-Classification3-min-1" class="headerlink" title="Multiclass Classification3 min"></a>Multiclass Classification3 min</h4><h3 id="Review-4"><a href="#Review-4" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides10-min-2"><a href="#Lecture-Slides10-min-2" class="headerlink" title="Lecture Slides10 min"></a>Lecture Slides10 min</h4><h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-2"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-2" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Neural-Networks-Representation5-questions"><a href="#Quiz-Neural-Networks-Representation5-questions" class="headerlink" title="Quiz: Neural Networks: Representation5 questions"></a>Quiz: Neural Networks: Representation5 questions</h4><h4 id="Programming-Assignment-Multi-class-Classification-and-Neural-Networks3h"><a href="#Programming-Assignment-Multi-class-Classification-and-Neural-Networks3h" class="headerlink" title="Programming Assignment: Multi-class Classification and Neural Networks3h"></a>Programming Assignment: Multi-class Classification and Neural Networks3h</h4><h1 id="Week-5"><a href="#Week-5" class="headerlink" title="Week 5"></a>Week 5</h1><h2 id="Neural-Networks-Learning"><a href="#Neural-Networks-Learning" class="headerlink" title="Neural Networks: Learning"></a>Neural Networks: Learning</h2><h3 id="Cost-Function-and-Backpropagation"><a href="#Cost-Function-and-Backpropagation" class="headerlink" title="Cost Function and Backpropagation"></a>Cost Function and Backpropagation</h3><h4 id="Cost-Function6-min"><a href="#Cost-Function6-min" class="headerlink" title="Cost Function6 min"></a>Cost Function6 min</h4><h4 id="Cost-Function4-min"><a href="#Cost-Function4-min" class="headerlink" title="Cost Function4 min"></a>Cost Function4 min</h4><h4 id="Backpropagation-Algorithm11-min"><a href="#Backpropagation-Algorithm11-min" class="headerlink" title="Backpropagation Algorithm11 min"></a>Backpropagation Algorithm11 min</h4><h4 id="Backpropagation-Algorithm10-min"><a href="#Backpropagation-Algorithm10-min" class="headerlink" title="Backpropagation Algorithm10 min"></a>Backpropagation Algorithm10 min</h4><h4 id="Backpropagation-Intuition12-min"><a href="#Backpropagation-Intuition12-min" class="headerlink" title="Backpropagation Intuition12 min"></a>Backpropagation Intuition12 min</h4><h4 id="Backpropagation-Intuition4-min"><a href="#Backpropagation-Intuition4-min" class="headerlink" title="Backpropagation Intuition4 min"></a>Backpropagation Intuition4 min</h4><h3 id="Backpropagation-in-Practice"><a href="#Backpropagation-in-Practice" class="headerlink" title="Backpropagation in Practice"></a>Backpropagation in Practice</h3><h4 id="Implementation-Note-Unrolling-Parameters7-min"><a href="#Implementation-Note-Unrolling-Parameters7-min" class="headerlink" title="Implementation Note: Unrolling Parameters7 min"></a>Implementation Note: Unrolling Parameters7 min</h4><h4 id="Implementation-Note-Unrolling-Parameters3-min"><a href="#Implementation-Note-Unrolling-Parameters3-min" class="headerlink" title="Implementation Note: Unrolling Parameters3 min"></a>Implementation Note: Unrolling Parameters3 min</h4><h4 id="Gradient-Checking11-min"><a href="#Gradient-Checking11-min" class="headerlink" title="Gradient Checking11 min"></a>Gradient Checking11 min</h4><h4 id="Gradient-Checking3-min"><a href="#Gradient-Checking3-min" class="headerlink" title="Gradient Checking3 min"></a>Gradient Checking3 min</h4><h4 id="Random-Initialization6-min"><a href="#Random-Initialization6-min" class="headerlink" title="Random Initialization6 min"></a>Random Initialization6 min</h4><h4 id="Random-Initialization3-min"><a href="#Random-Initialization3-min" class="headerlink" title="Random Initialization3 min"></a>Random Initialization3 min</h4><h4 id="Putting-It-Together13-min"><a href="#Putting-It-Together13-min" class="headerlink" title="Putting It Together13 min"></a>Putting It Together13 min</h4><h4 id="Putting-It-Together4-min"><a href="#Putting-It-Together4-min" class="headerlink" title="Putting It Together4 min"></a>Putting It Together4 min</h4><h3 id="Application-of-Neural-Networks"><a href="#Application-of-Neural-Networks" class="headerlink" title="Application of Neural Networks"></a>Application of Neural Networks</h3><h4 id="Autonomous-Driving6-min"><a href="#Autonomous-Driving6-min" class="headerlink" title="Autonomous Driving6 min"></a>Autonomous Driving6 min</h4><h3 id="Review-5"><a href="#Review-5" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides10-min-3"><a href="#Lecture-Slides10-min-3" class="headerlink" title="Lecture Slides10 min"></a>Lecture Slides10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/FklyY/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/FklyY/lecture-slides</a></p>
+<h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-3"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-3" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Neural-Networks-Learning5-questions"><a href="#Quiz-Neural-Networks-Learning5-questions" class="headerlink" title="Quiz: Neural Networks: Learning5 questions"></a>Quiz: Neural Networks: Learning5 questions</h4><h4 id="Programming-Assignment-Neural-Network-Learning3h"><a href="#Programming-Assignment-Neural-Network-Learning3h" class="headerlink" title="Programming Assignment: Neural Network Learning3h"></a>Programming Assignment: Neural Network Learning3h</h4><h1 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h1><h2 id="Advice-for-Applying-Machine-Learning"><a href="#Advice-for-Applying-Machine-Learning" class="headerlink" title="Advice for Applying Machine Learning"></a>Advice for Applying Machine Learning</h2><h3 id="Evaluating-a-Learning-Algorithm"><a href="#Evaluating-a-Learning-Algorithm" class="headerlink" title="Evaluating a Learning Algorithm"></a>Evaluating a Learning Algorithm</h3><h4 id="Deciding-What-to-Try-Next5-min"><a href="#Deciding-What-to-Try-Next5-min" class="headerlink" title="Deciding What to Try Next5 min"></a>Deciding What to Try Next5 min</h4><h4 id="Evaluating-a-Hypothesis7-min"><a href="#Evaluating-a-Hypothesis7-min" class="headerlink" title="Evaluating a Hypothesis7 min"></a>Evaluating a Hypothesis7 min</h4><h4 id="Evaluating-a-Hypothesis4-min"><a href="#Evaluating-a-Hypothesis4-min" class="headerlink" title="Evaluating a Hypothesis4 min"></a>Evaluating a Hypothesis4 min</h4><h4 id="Model-Selection-and-Train-Validation-Test-Sets12-min"><a href="#Model-Selection-and-Train-Validation-Test-Sets12-min" class="headerlink" title="Model Selection and Train/Validation/Test Sets12 min"></a>Model Selection and Train/Validation/Test Sets12 min</h4><h4 id="Model-Selection-and-Train-Validation-Test-Sets3-min"><a href="#Model-Selection-and-Train-Validation-Test-Sets3-min" class="headerlink" title="Model Selection and Train/Validation/Test Sets3 min"></a>Model Selection and Train/Validation/Test Sets3 min</h4><h3 id="Bias-vs-Variance"><a href="#Bias-vs-Variance" class="headerlink" title="Bias vs. Variance"></a>Bias vs. Variance</h3><h4 id="Diagnosing-Bias-vs-Variance7-min"><a href="#Diagnosing-Bias-vs-Variance7-min" class="headerlink" title="Diagnosing Bias vs. Variance7 min"></a>Diagnosing Bias vs. Variance7 min</h4><h4 id="Diagnosing-Bias-vs-Variance3-min"><a href="#Diagnosing-Bias-vs-Variance3-min" class="headerlink" title="Diagnosing Bias vs. Variance3 min"></a>Diagnosing Bias vs. Variance3 min</h4><h4 id="Regularization-and-Bias-Variance11-min"><a href="#Regularization-and-Bias-Variance11-min" class="headerlink" title="Regularization and Bias/Variance11 min"></a>Regularization and Bias/Variance11 min</h4><h4 id="Regularization-and-Bias-Variance3-min"><a href="#Regularization-and-Bias-Variance3-min" class="headerlink" title="Regularization and Bias/Variance3 min"></a>Regularization and Bias/Variance3 min</h4><h4 id="Learning-Curves11-min"><a href="#Learning-Curves11-min" class="headerlink" title="Learning Curves11 min"></a>Learning Curves11 min</h4><h4 id="Learning-Curves3-min"><a href="#Learning-Curves3-min" class="headerlink" title="Learning Curves3 min"></a>Learning Curves3 min</h4><h4 id="Deciding-What-to-Do-Next-Revisited6-min"><a href="#Deciding-What-to-Do-Next-Revisited6-min" class="headerlink" title="Deciding What to Do Next Revisited6 min"></a>Deciding What to Do Next Revisited6 min</h4><h4 id="Deciding-What-to-do-Next-Revisited3-min"><a href="#Deciding-What-to-do-Next-Revisited3-min" class="headerlink" title="Deciding What to do Next Revisited3 min"></a>Deciding What to do Next Revisited3 min</h4><h3 id="Review-6"><a href="#Review-6" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-1"><a href="#Lecture-Slides-10-min-1" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/7BHrF/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/7BHrF/lecture-slides</a></p>
+<h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-4"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-4" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Advice-for-Applying-Machine-Learning5-questions"><a href="#Quiz-Advice-for-Applying-Machine-Learning5-questions" class="headerlink" title="Quiz: Advice for Applying Machine Learning5 questions"></a>Quiz: Advice for Applying Machine Learning5 questions</h4><h4 id="Programming-Assignment-Regularized-Linear-Regression-and-Bias-Variance3h"><a href="#Programming-Assignment-Regularized-Linear-Regression-and-Bias-Variance3h" class="headerlink" title="Programming Assignment: Regularized Linear Regression and Bias/Variance3h"></a>Programming Assignment: Regularized Linear Regression and Bias/Variance3h</h4><h2 id="Machine-Learning-System-Design"><a href="#Machine-Learning-System-Design" class="headerlink" title="Machine Learning System Design"></a>Machine Learning System Design</h2><h3 id="Building-a-Spam-Classifier"><a href="#Building-a-Spam-Classifier" class="headerlink" title="Building a Spam Classifier"></a>Building a Spam Classifier</h3><h4 id="Prioritizing-What-to-Work-On9-min"><a href="#Prioritizing-What-to-Work-On9-min" class="headerlink" title="Prioritizing What to Work On9 min"></a>Prioritizing What to Work On9 min</h4><h4 id="Prioritizing-What-to-Work-On3-min"><a href="#Prioritizing-What-to-Work-On3-min" class="headerlink" title="Prioritizing What to Work On3 min"></a>Prioritizing What to Work On3 min</h4><h4 id="Error-Analysis13-min"><a href="#Error-Analysis13-min" class="headerlink" title="Error Analysis13 min"></a>Error Analysis13 min</h4><h4 id="Error-Analysis3-min"><a href="#Error-Analysis3-min" class="headerlink" title="Error Analysis3 min"></a>Error Analysis3 min</h4><h3 id="Handling-Skewed-Data"><a href="#Handling-Skewed-Data" class="headerlink" title="Handling Skewed Data"></a>Handling Skewed Data</h3><h4 id="Error-Metrics-for-Skewed-Classes11-min"><a href="#Error-Metrics-for-Skewed-Classes11-min" class="headerlink" title="Error Metrics for Skewed Classes11 min"></a>Error Metrics for Skewed Classes11 min</h4><h4 id="Trading-Off-Precision-and-Recall14-min"><a href="#Trading-Off-Precision-and-Recall14-min" class="headerlink" title="Trading Off Precision and Recall14 min"></a>Trading Off Precision and Recall14 min</h4><h3 id="Using-Large-Data-Sets"><a href="#Using-Large-Data-Sets" class="headerlink" title="Using Large Data Sets"></a>Using Large Data Sets</h3><h4 id="Data-For-Machine-Learning11-min"><a href="#Data-For-Machine-Learning11-min" class="headerlink" title="Data For Machine Learning11 min"></a>Data For Machine Learning11 min</h4><h3 id="Review-7"><a href="#Review-7" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-2"><a href="#Lecture-Slides-10-min-2" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/gFC7y/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/gFC7y/lecture-slides</a></p>
+<h4 id="Quiz-Machine-Learning-System-Design5-questions"><a href="#Quiz-Machine-Learning-System-Design5-questions" class="headerlink" title="Quiz: Machine Learning System Design5 questions"></a>Quiz: Machine Learning System Design5 questions</h4><h1 id="Week-7"><a href="#Week-7" class="headerlink" title="Week 7"></a>Week 7</h1><h2 id="Support-Vector-Machines"><a href="#Support-Vector-Machines" class="headerlink" title="Support Vector Machines"></a>Support Vector Machines</h2><h3 id="Large-Margin-Classification"><a href="#Large-Margin-Classification" class="headerlink" title="Large Margin Classification"></a>Large Margin Classification</h3><h4 id="Optimization-Objective14-min"><a href="#Optimization-Objective14-min" class="headerlink" title="Optimization Objective14 min"></a>Optimization Objective14 min</h4><h4 id="Large-Margin-Intuition10-min"><a href="#Large-Margin-Intuition10-min" class="headerlink" title="Large Margin Intuition10 min"></a>Large Margin Intuition10 min</h4><h4 id="Mathematics-Behind-Large-Margin-Classification19-min"><a href="#Mathematics-Behind-Large-Margin-Classification19-min" class="headerlink" title="Mathematics Behind Large Margin Classification19 min"></a>Mathematics Behind Large Margin Classification19 min</h4><h3 id="Kernels"><a href="#Kernels" class="headerlink" title="Kernels"></a>Kernels</h3><h4 id="Kernels-I15-min"><a href="#Kernels-I15-min" class="headerlink" title="Kernels I15 min"></a>Kernels I15 min</h4><h4 id="Kernels-II15-min"><a href="#Kernels-II15-min" class="headerlink" title="Kernels II15 min"></a>Kernels II15 min</h4><h3 id="SVMs-in-Practice"><a href="#SVMs-in-Practice" class="headerlink" title="SVMs in Practice"></a>SVMs in Practice</h3><h4 id="Using-An-SVM21-min"><a href="#Using-An-SVM21-min" class="headerlink" title="Using An SVM21 min"></a>Using An SVM21 min</h4><h3 id="Review-8"><a href="#Review-8" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-3"><a href="#Lecture-Slides-10-min-3" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/pSe2X/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/pSe2X/lecture-slides</a></p>
+<h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-5"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-5" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Support-Vector-Machines5-questions"><a href="#Quiz-Support-Vector-Machines5-questions" class="headerlink" title="Quiz: Support Vector Machines5 questions"></a>Quiz: Support Vector Machines5 questions</h4><h4 id="Programming-Assignment-Support-Vector-Machines3h"><a href="#Programming-Assignment-Support-Vector-Machines3h" class="headerlink" title="Programming Assignment: Support Vector Machines3h"></a>Programming Assignment: Support Vector Machines3h</h4><h1 id="Week-8"><a href="#Week-8" class="headerlink" title="Week 8"></a>Week 8</h1><h2 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning"></a>Unsupervised Learning</h2><h3 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a>Clustering</h3><h4 id="Unsupervised-Learning-Introduction3-min"><a href="#Unsupervised-Learning-Introduction3-min" class="headerlink" title="Unsupervised Learning: Introduction3 min"></a>Unsupervised Learning: Introduction3 min</h4><h4 id="K-Means-Algorithm12-min"><a href="#K-Means-Algorithm12-min" class="headerlink" title="K-Means Algorithm12 min"></a>K-Means Algorithm12 min</h4><h4 id="Optimization-Objective7-min"><a href="#Optimization-Objective7-min" class="headerlink" title="Optimization Objective7 min"></a>Optimization Objective7 min</h4><h4 id="Random-Initialization7-min"><a href="#Random-Initialization7-min" class="headerlink" title="Random Initialization7 min"></a>Random Initialization7 min</h4><h4 id="Choosing-the-Number-of-Clusters8-min"><a href="#Choosing-the-Number-of-Clusters8-min" class="headerlink" title="Choosing the Number of Clusters8 min"></a>Choosing the Number of Clusters8 min</h4><h3 id="Review-9"><a href="#Review-9" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-4"><a href="#Lecture-Slides-10-min-4" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/hFF7A/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/hFF7A/lecture-slides</a></p>
+<h4 id="Quiz-Unsupervised-Learning5-questions"><a href="#Quiz-Unsupervised-Learning5-questions" class="headerlink" title="Quiz: Unsupervised Learning5 questions"></a>Quiz: Unsupervised Learning5 questions</h4><h2 id="Dimensionality-Reduction"><a href="#Dimensionality-Reduction" class="headerlink" title="Dimensionality Reduction"></a>Dimensionality Reduction</h2><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><h4 id="Motivation-I-Data-Compression10-min"><a href="#Motivation-I-Data-Compression10-min" class="headerlink" title="Motivation I: Data Compression10 min"></a>Motivation I: Data Compression10 min</h4><h4 id="Motivation-II-Visualization5-min"><a href="#Motivation-II-Visualization5-min" class="headerlink" title="Motivation II: Visualization5 min"></a>Motivation II: Visualization5 min</h4><h3 id="Principal-Component-Analysis"><a href="#Principal-Component-Analysis" class="headerlink" title="Principal Component Analysis"></a>Principal Component Analysis</h3><h4 id="Principal-Component-Analysis-Problem-Formulation9-min"><a href="#Principal-Component-Analysis-Problem-Formulation9-min" class="headerlink" title="Principal Component Analysis Problem Formulation9 min"></a>Principal Component Analysis Problem Formulation9 min</h4><h4 id="Principal-Component-Analysis-Algorithm15-min"><a href="#Principal-Component-Analysis-Algorithm15-min" class="headerlink" title="Principal Component Analysis Algorithm15 min"></a>Principal Component Analysis Algorithm15 min</h4><h3 id="Applying-PCA"><a href="#Applying-PCA" class="headerlink" title="Applying PCA"></a>Applying PCA</h3><h4 id="Reconstruction-from-Compressed-Representation3-min"><a href="#Reconstruction-from-Compressed-Representation3-min" class="headerlink" title="Reconstruction from Compressed Representation3 min"></a>Reconstruction from Compressed Representation3 min</h4><h4 id="Choosing-the-Number-of-Principal-Components10-min"><a href="#Choosing-the-Number-of-Principal-Components10-min" class="headerlink" title="Choosing the Number of Principal Components10 min"></a>Choosing the Number of Principal Components10 min</h4><h4 id="Advice-for-Applying-PCA12-min"><a href="#Advice-for-Applying-PCA12-min" class="headerlink" title="Advice for Applying PCA12 min"></a>Advice for Applying PCA12 min</h4><h3 id="Review-10"><a href="#Review-10" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-5"><a href="#Lecture-Slides-10-min-5" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/SCJi4/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/SCJi4/lecture-slides</a></p>
+<h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-6"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-6" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Principal-Component-Analysis5-questions"><a href="#Quiz-Principal-Component-Analysis5-questions" class="headerlink" title="Quiz: Principal Component Analysis5 questions"></a>Quiz: Principal Component Analysis5 questions</h4><h4 id="Programming-Assignment-K-Means-Clustering-and-PCA-3h"><a href="#Programming-Assignment-K-Means-Clustering-and-PCA-3h" class="headerlink" title="Programming Assignment: K-Means Clustering and PCA 3h"></a>Programming Assignment: K-Means Clustering and PCA 3h</h4><h1 id="Week-9"><a href="#Week-9" class="headerlink" title="Week 9"></a>Week 9</h1><h2 id="Anomaly-Detection"><a href="#Anomaly-Detection" class="headerlink" title="Anomaly Detection"></a>Anomaly Detection</h2><h3 id="Density-Estimation"><a href="#Density-Estimation" class="headerlink" title="Density Estimation"></a>Density Estimation</h3><h4 id="Problem-Motivation7-min"><a href="#Problem-Motivation7-min" class="headerlink" title="Problem Motivation7 min"></a>Problem Motivation7 min</h4><h4 id="Gaussian-Distribution10-min"><a href="#Gaussian-Distribution10-min" class="headerlink" title="Gaussian Distribution10 min"></a>Gaussian Distribution10 min</h4><h4 id="Algorithm12-min"><a href="#Algorithm12-min" class="headerlink" title="Algorithm12 min"></a>Algorithm12 min</h4><h3 id="Building-an-Anomaly-Detection-System"><a href="#Building-an-Anomaly-Detection-System" class="headerlink" title="Building an Anomaly Detection System"></a>Building an Anomaly Detection System</h3><h4 id="Developing-and-Evaluating-an-Anomaly-Detection-System13-min"><a href="#Developing-and-Evaluating-an-Anomaly-Detection-System13-min" class="headerlink" title="Developing and Evaluating an Anomaly Detection System13 min"></a>Developing and Evaluating an Anomaly Detection System13 min</h4><h4 id="Anomaly-Detection-vs-Supervised-Learning7-min"><a href="#Anomaly-Detection-vs-Supervised-Learning7-min" class="headerlink" title="Anomaly Detection vs. Supervised Learning7 min"></a>Anomaly Detection vs. Supervised Learning7 min</h4><h4 id="Choosing-What-Features-to-Use12-min"><a href="#Choosing-What-Features-to-Use12-min" class="headerlink" title="Choosing What Features to Use12 min"></a>Choosing What Features to Use12 min</h4><h3 id="Multivariate-Gaussian-Distribution-Optional"><a href="#Multivariate-Gaussian-Distribution-Optional" class="headerlink" title="Multivariate Gaussian Distribution (Optional)"></a>Multivariate Gaussian Distribution (Optional)</h3><h4 id="Multivariate-Gaussian-Distribution13-min"><a href="#Multivariate-Gaussian-Distribution13-min" class="headerlink" title="Multivariate Gaussian Distribution13 min"></a>Multivariate Gaussian Distribution13 min</h4><h4 id="Anomaly-Detection-using-the-Multivariate-Gaussian-Distribution14-min"><a href="#Anomaly-Detection-using-the-Multivariate-Gaussian-Distribution14-min" class="headerlink" title="Anomaly Detection using the Multivariate Gaussian Distribution14 min"></a>Anomaly Detection using the Multivariate Gaussian Distribution14 min</h4><h3 id="Review-11"><a href="#Review-11" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-6"><a href="#Lecture-Slides-10-min-6" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/pB0Jq/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/pB0Jq/lecture-slides</a></p>
+<h4 id="Quiz-Anomaly-Detection5-questions"><a href="#Quiz-Anomaly-Detection5-questions" class="headerlink" title="Quiz: Anomaly Detection5 questions"></a>Quiz: Anomaly Detection5 questions</h4><h2 id="Recommender-Systems"><a href="#Recommender-Systems" class="headerlink" title="Recommender Systems"></a>Recommender Systems</h2><h3 id="Predicting-Movie-Ratings"><a href="#Predicting-Movie-Ratings" class="headerlink" title="Predicting Movie Ratings"></a>Predicting Movie Ratings</h3><h4 id="Problem-Formulation7-min"><a href="#Problem-Formulation7-min" class="headerlink" title="Problem Formulation7 min"></a>Problem Formulation7 min</h4><h4 id="Content-Based-Recommendations14-min"><a href="#Content-Based-Recommendations14-min" class="headerlink" title="Content Based Recommendations14 min"></a>Content Based Recommendations14 min</h4><h3 id="Collaborative-Filtering"><a href="#Collaborative-Filtering" class="headerlink" title="Collaborative Filtering"></a>Collaborative Filtering</h3><h4 id="Collaborative-Filtering10-min"><a href="#Collaborative-Filtering10-min" class="headerlink" title="Collaborative Filtering10 min"></a>Collaborative Filtering10 min</h4><h4 id="Collaborative-Filtering-Algorithm8-min"><a href="#Collaborative-Filtering-Algorithm8-min" class="headerlink" title="Collaborative Filtering Algorithm8 min"></a>Collaborative Filtering Algorithm8 min</h4><h3 id="Low-Rank-Matrix-Factorization"><a href="#Low-Rank-Matrix-Factorization" class="headerlink" title="Low Rank Matrix Factorization"></a>Low Rank Matrix Factorization</h3><h4 id="Vectorization-Low-Rank-Matrix-Factorization8-min"><a href="#Vectorization-Low-Rank-Matrix-Factorization8-min" class="headerlink" title="Vectorization: Low Rank Matrix Factorization8 min"></a>Vectorization: Low Rank Matrix Factorization8 min</h4><h4 id="Implementational-Detail-Mean-Normalization8-min"><a href="#Implementational-Detail-Mean-Normalization8-min" class="headerlink" title="Implementational Detail: Mean Normalization8 min"></a>Implementational Detail: Mean Normalization8 min</h4><h3 id="Review-12"><a href="#Review-12" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides10-min-4"><a href="#Lecture-Slides10-min-4" class="headerlink" title="Lecture Slides10 min"></a>Lecture Slides10 min</h4><h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-7"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-7" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Recommender-Systems5-questions"><a href="#Quiz-Recommender-Systems5-questions" class="headerlink" title="Quiz: Recommender Systems5 questions"></a>Quiz: Recommender Systems5 questions</h4><h4 id="Programming-Assignment-Anomaly-Detection-and-Recommender-Systems-3h"><a href="#Programming-Assignment-Anomaly-Detection-and-Recommender-Systems-3h" class="headerlink" title="Programming Assignment: Anomaly Detection and Recommender Systems 3h"></a>Programming Assignment: Anomaly Detection and Recommender Systems 3h</h4><h1 id="Week-10"><a href="#Week-10" class="headerlink" title="Week 10"></a>Week 10</h1><h2 id="Large-Scale-Machine-Learning"><a href="#Large-Scale-Machine-Learning" class="headerlink" title="Large Scale Machine Learning"></a>Large Scale Machine Learning</h2><h3 id="Gradient-Descent-with-Large-Datasets"><a href="#Gradient-Descent-with-Large-Datasets" class="headerlink" title="Gradient Descent with Large Datasets"></a>Gradient Descent with Large Datasets</h3><h4 id="Learning-With-Large-Datasets5-min"><a href="#Learning-With-Large-Datasets5-min" class="headerlink" title="Learning With Large Datasets5 min"></a>Learning With Large Datasets5 min</h4><h4 id="Stochastic-Gradient-Descent13-min"><a href="#Stochastic-Gradient-Descent13-min" class="headerlink" title="Stochastic Gradient Descent13 min"></a>Stochastic Gradient Descent13 min</h4><h4 id="Mini-Batch-Gradient-Descent6-min"><a href="#Mini-Batch-Gradient-Descent6-min" class="headerlink" title="Mini-Batch Gradient Descent6 min"></a>Mini-Batch Gradient Descent6 min</h4><h4 id="Stochastic-Gradient-Descent-Convergence11-min"><a href="#Stochastic-Gradient-Descent-Convergence11-min" class="headerlink" title="Stochastic Gradient Descent Convergence11 min"></a>Stochastic Gradient Descent Convergence11 min</h4><h3 id="Advanced-Topics"><a href="#Advanced-Topics" class="headerlink" title="Advanced Topics"></a>Advanced Topics</h3><h4 id="Online-Learning12-min"><a href="#Online-Learning12-min" class="headerlink" title="Online Learning12 min"></a>Online Learning12 min</h4><h4 id="Map-Reduce-and-Data-Parallelism14-min"><a href="#Map-Reduce-and-Data-Parallelism14-min" class="headerlink" title="Map Reduce and Data Parallelism14 min"></a>Map Reduce and Data Parallelism14 min</h4><h3 id="Review-13"><a href="#Review-13" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-7"><a href="#Lecture-Slides-10-min-7" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><h4 id="Quiz-Large-Scale-Machine-Learning5-questions"><a href="#Quiz-Large-Scale-Machine-Learning5-questions" class="headerlink" title="Quiz: Large Scale Machine Learning5 questions"></a>Quiz: Large Scale Machine Learning5 questions</h4><h1 id="Week-11"><a href="#Week-11" class="headerlink" title="Week 11"></a>Week 11</h1><h2 id="Application-Example-Photo-OCR"><a href="#Application-Example-Photo-OCR" class="headerlink" title="Application Example: Photo OCR"></a>Application Example: Photo OCR</h2><h3 id="Photo-OCR"><a href="#Photo-OCR" class="headerlink" title="Photo OCR"></a>Photo OCR</h3><h4 id="Problem-Description-and-Pipeline7-min"><a href="#Problem-Description-and-Pipeline7-min" class="headerlink" title="Problem Description and Pipeline7 min"></a>Problem Description and Pipeline7 min</h4><h4 id="Sliding-Windows14-min"><a href="#Sliding-Windows14-min" class="headerlink" title="Sliding Windows14 min"></a>Sliding Windows14 min</h4><h4 id="Getting-Lots-of-Data-and-Artificial-Data16-min"><a href="#Getting-Lots-of-Data-and-Artificial-Data16-min" class="headerlink" title="Getting Lots of Data and Artificial Data16 min"></a>Getting Lots of Data and Artificial Data16 min</h4><h4 id="Ceiling-Analysis-What-Part-of-the-Pipeline-to-Work-on-Next13-min"><a href="#Ceiling-Analysis-What-Part-of-the-Pipeline-to-Work-on-Next13-min" class="headerlink" title="Ceiling Analysis: What Part of the Pipeline to Work on Next13 min"></a>Ceiling Analysis: What Part of the Pipeline to Work on Next13 min</h4><h3 id="Review-14"><a href="#Review-14" class="headerlink" title="Review"></a>Review</h3><h4 id="Lecture-Slides-10-min-8"><a href="#Lecture-Slides-10-min-8" class="headerlink" title="Lecture Slides 10 min"></a>Lecture Slides 10 min</h4><p><a href="https://www.coursera.org/learn/machine-learning/supplement/Q32e6/lecture-slides" target="_blank" rel="external">https://www.coursera.org/learn/machine-learning/supplement/Q32e6/lecture-slides</a></p>
+<h4 id="The-course-has-ended-Assignments-may-not-be-resubmitted-8"><a href="#The-course-has-ended-Assignments-may-not-be-resubmitted-8" class="headerlink" title="The course has ended. Assignments may not be resubmitted."></a>The course has ended. Assignments may not be resubmitted.</h4><h4 id="Quiz-Application-Photo-OCR5-questions"><a href="#Quiz-Application-Photo-OCR5-questions" class="headerlink" title="Quiz: Application: Photo OCR5 questions"></a>Quiz: Application: Photo OCR5 questions</h4><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><h4 id="Summary-and-Thank-You4-min"><a href="#Summary-and-Thank-You4-min" class="headerlink" title="Summary and Thank You4 min"></a>Summary and Thank You4 min</h4>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Stanford/" rel="tag"># Stanford</a>
+          
+            <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+          
+            <a href="/tags/Coursera/" rel="tag"># Coursera</a>
+          
+            <a href="/tags/Matlab/" rel="tag"># Matlab</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/25/Jupyter Notebook Note/" rel="next" title="Jupyter Notebook Note">
+                <i class="fa fa-chevron-left"></i> Jupyter Notebook Note
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/04/Udacity FEND Notebook/" rel="prev" title="Udacity FEND Notebook">
+                Udacity FEND Notebook <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  
+    <div class="sidebar-toggle">
+      <div class="sidebar-toggle-line-wrap">
+        <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      </div>
+    </div>
+  
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          
+            
+          
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SSQ" />
+          <p class="site-author-name" itemprop="name">SSQ</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SSQ" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-1-Introduction-amp-Linear-Regression-with-One-Variable"><span class="nav-number">1.</span> <span class="nav-text">Week 1 Introduction & Linear Regression with One Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Model-and-Cost-Function"><span class="nav-number">1.1.</span> <span class="nav-text">Model and Cost Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function"><span class="nav-number">1.1.1.</span> <span class="nav-text">Cost Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function-1"><span class="nav-number">1.1.2.</span> <span class="nav-text">Cost Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function-Intuition-I"><span class="nav-number">1.1.3.</span> <span class="nav-text">Cost Function - Intuition I</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function-Intuition-I-1"><span class="nav-number">1.1.4.</span> <span class="nav-text">Cost Function - Intuition I</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Parameter-Learning"><span class="nav-number">1.2.</span> <span class="nav-text">Parameter Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-number">1.2.1.</span> <span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent-Intuition"><span class="nav-number">1.2.3.</span> <span class="nav-text">Gradient Descent Intuition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent-For-Linear-Regression"><span class="nav-number">1.2.4.</span> <span class="nav-text">Gradient Descent For Linear Regression</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-2"><span class="nav-number">2.</span> <span class="nav-text">Week 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-Regression-with-Multiple-Variables"><span class="nav-number">2.1.</span> <span class="nav-text">Linear Regression with Multiple Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment-Setup-Instructions"><span class="nav-number">2.1.1.</span> <span class="nav-text">Environment Setup Instructions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Setting-Up-Your-Programming-Assignment-Environment8-min"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">Setting Up Your Programming Assignment Environment8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Installing-MATLAB3-min"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">Installing MATLAB3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Installing-Octave-on-Windows3-min"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">Installing Octave on Windows3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Installing-Octave-on-Mac-OS-X-10-10-Yosemite-and-10-9-Mavericks-and-Later-10-min"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">Installing Octave on Mac OS X (10.10 Yosemite and 10.9 Mavericks and Later)10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Installing-Octave-on-Mac-OS-X-10-8-Mountain-Lion-and-Earlier-3-min"><span class="nav-number">2.1.1.5.</span> <span class="nav-text">Installing Octave on Mac OS X (10.8 Mountain Lion and Earlier)3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Installing-Octave-on-GNU-Linux7-min"><span class="nav-number">2.1.1.6.</span> <span class="nav-text">Installing Octave on GNU/Linux7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#More-Octave-MATLAB-resources-10-min"><span class="nav-number">2.1.1.7.</span> <span class="nav-text">More Octave/MATLAB resources 10 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multivariate-Linear-Regression"><span class="nav-number">2.1.2.</span> <span class="nav-text">Multivariate Linear Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiple-Features8-min"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">Multiple Features8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiple-Features3-min"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">Multiple Features3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-for-Multiple-Variables5-min"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">Gradient Descent for Multiple Variables5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-For-Multiple-Variables2-min"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">Gradient Descent For Multiple Variables2 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-in-Practice-I-Feature-Scaling8-min"><span class="nav-number">2.1.2.5.</span> <span class="nav-text">Gradient Descent in Practice I - Feature Scaling8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-in-Practice-I-Feature-Scaling3-min"><span class="nav-number">2.1.2.6.</span> <span class="nav-text">Gradient Descent in Practice I - Feature Scaling3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-in-Practice-II-Learning-Rate8-min"><span class="nav-number">2.1.2.7.</span> <span class="nav-text">Gradient Descent in Practice II - Learning Rate8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-in-Practice-II-Learning-Rate4-min"><span class="nav-number">2.1.2.8.</span> <span class="nav-text">Gradient Descent in Practice II - Learning Rate4 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Features-and-Polynomial-Regression7-min"><span class="nav-number">2.1.2.9.</span> <span class="nav-text">Features and Polynomial Regression7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Features-and-Polynomial-Regression3-min"><span class="nav-number">2.1.2.10.</span> <span class="nav-text">Features and Polynomial Regression3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Computing-Parameters-Analytically"><span class="nav-number">2.1.3.</span> <span class="nav-text">Computing Parameters Analytically</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Normal-Equation16-min"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">Normal Equation16 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Normal-Equation3-min"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">Normal Equation3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Normal-Equation-Noninvertibility5-min"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">Normal Equation Noninvertibility5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Normal-Equation-Noninvertibility2-min"><span class="nav-number">2.1.3.4.</span> <span class="nav-text">Normal Equation Noninvertibility2 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Submitting-Programming-Assignments"><span class="nav-number">2.1.4.</span> <span class="nav-text">Submitting Programming Assignments</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Working-on-and-Submitting-Programming-Assignments3-min"><span class="nav-number">2.1.4.1.</span> <span class="nav-text">Working on and Submitting Programming Assignments3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-tips-from-Mentors10-min"><span class="nav-number">2.1.4.2.</span> <span class="nav-text">Programming tips from Mentors10 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review"><span class="nav-number">2.1.5.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides20-min"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">Lecture Slides20 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Linear-Regression-with-Multiple-Variables5-questions"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">Quiz: Linear Regression with Multiple Variables5 questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Octave-Matlab-Tutorial"><span class="nav-number">2.2.</span> <span class="nav-text">Octave/Matlab Tutorial</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Octave-Matlab-Tutorial-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Octave/Matlab Tutorial</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic-Operations13-min"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">Basic Operations13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Moving-Data-Around16-min"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">Moving Data Around16 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Computing-on-Data13-min"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">Computing on Data13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plotting-Data9-min"><span class="nav-number">2.2.1.4.</span> <span class="nav-text">Plotting Data9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Control-Statements-for-while-if-statement12-min"><span class="nav-number">2.2.1.5.</span> <span class="nav-text">Control Statements: for, while, if statement12 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorization13-min"><span class="nav-number">2.2.1.6.</span> <span class="nav-text">Vectorization13 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides10-min"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">Lecture Slides10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Octave-Matlab-Tutorial5-questions"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">Quiz: Octave/Matlab Tutorial5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Linear-Regression3h"><span class="nav-number">2.2.2.4.</span> <span class="nav-text">Programming Assignment: Linear Regression3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-3"><span class="nav-number">3.</span> <span class="nav-text">Week 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Logistic-Regression"><span class="nav-number">3.1.</span> <span class="nav-text">Logistic Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Classification-and-Representation"><span class="nav-number">3.1.1.</span> <span class="nav-text">Classification and Representation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Classification8-min"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">Classification8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Classification2-min"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">Classification2 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hypothesis-Representation7-min"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">Hypothesis Representation7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hypothesis-Representation3-min"><span class="nav-number">3.1.1.4.</span> <span class="nav-text">Hypothesis Representation3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decision-Boundary14-min"><span class="nav-number">3.1.1.5.</span> <span class="nav-text">Decision Boundary14 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decision-Boundary3-min"><span class="nav-number">3.1.1.6.</span> <span class="nav-text">Decision Boundary3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logistic-Regression-Model"><span class="nav-number">3.1.2.</span> <span class="nav-text">Logistic Regression Model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cost-Function10-min"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">Cost Function10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cost-Function3-min"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">Cost Function3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Simplified-Cost-Function-and-Gradient-Descent10-min"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">Simplified Cost Function and Gradient Descent10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Simplified-Cost-Function-and-Gradient-Descent3-min"><span class="nav-number">3.1.2.4.</span> <span class="nav-text">Simplified Cost Function and Gradient Descent3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advanced-Optimization14-min"><span class="nav-number">3.1.2.5.</span> <span class="nav-text">Advanced Optimization14 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advanced-Optimization3-min"><span class="nav-number">3.1.2.6.</span> <span class="nav-text">Advanced Optimization3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiclass-Classification"><span class="nav-number">3.1.3.</span> <span class="nav-text">Multiclass Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiclass-Classification-One-vs-all6-min"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">Multiclass Classification: One-vs-all6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiclass-Classification-One-vs-all3-min"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">Multiclass Classification: One-vs-all3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-2"><span class="nav-number">3.1.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Logistic-Regression-5-questions"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">Quiz: Logistic Regression 5 questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Regularization"><span class="nav-number">3.2.</span> <span class="nav-text">Regularization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solving-the-Problem-of-Overfitting"><span class="nav-number">3.2.1.</span> <span class="nav-text">Solving the Problem of Overfitting</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Problem-of-Overfitting9-min"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">The Problem of Overfitting9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Problem-of-Overfitting3-min"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">The Problem of Overfitting3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cost-Function10-min-1"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">Cost Function10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cost-Function3-min-1"><span class="nav-number">3.2.1.4.</span> <span class="nav-text">Cost Function3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regularized-Linear-Regression10-min"><span class="nav-number">3.2.1.5.</span> <span class="nav-text">Regularized Linear Regression10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regularized-Linear-Regression3-min"><span class="nav-number">3.2.1.6.</span> <span class="nav-text">Regularized Linear Regression3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regularized-Logistic-Regression8-min"><span class="nav-number">3.2.1.7.</span> <span class="nav-text">Regularized Logistic Regression8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regularized-Logistic-Regression3-min"><span class="nav-number">3.2.1.8.</span> <span class="nav-text">Regularized Logistic Regression3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-3"><span class="nav-number">3.2.2.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides10-min-1"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">Lecture Slides10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-1"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Regularization5-questions"><span class="nav-number">3.2.2.3.</span> <span class="nav-text">Quiz: Regularization5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Logistic-Regression3h"><span class="nav-number">3.2.2.4.</span> <span class="nav-text">Programming Assignment: Logistic Regression3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-4"><span class="nav-number">4.</span> <span class="nav-text">Week 4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Neural-Networks-Representation"><span class="nav-number">4.1.</span> <span class="nav-text">Neural Networks: Representation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Motivations"><span class="nav-number">4.1.1.</span> <span class="nav-text">Motivations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Non-linear-Hypotheses9-min"><span class="nav-number">4.1.1.1.</span> <span class="nav-text">Non-linear Hypotheses9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Neurons-and-the-Brain7-min"><span class="nav-number">4.1.1.2.</span> <span class="nav-text">Neurons and the Brain7 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Neural-Networks"><span class="nav-number">4.1.2.</span> <span class="nav-text">Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Representation-I12-min"><span class="nav-number">4.1.2.1.</span> <span class="nav-text">Model Representation I12 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Representation-I6-min"><span class="nav-number">4.1.2.2.</span> <span class="nav-text">Model Representation I6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Representation-II11-min"><span class="nav-number">4.1.2.3.</span> <span class="nav-text">Model Representation II11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Representation-II6-min"><span class="nav-number">4.1.2.4.</span> <span class="nav-text">Model Representation II6 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Applications"><span class="nav-number">4.1.3.</span> <span class="nav-text">Applications</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Examples-and-Intuitions-I7-min"><span class="nav-number">4.1.3.1.</span> <span class="nav-text">Examples and Intuitions I7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Examples-and-Intuitions-I2-min"><span class="nav-number">4.1.3.2.</span> <span class="nav-text">Examples and Intuitions I2 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Examples-and-Intuitions-II10-min"><span class="nav-number">4.1.3.3.</span> <span class="nav-text">Examples and Intuitions II10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Examples-and-Intuitions-II3-min"><span class="nav-number">4.1.3.4.</span> <span class="nav-text">Examples and Intuitions II3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiclass-Classification3-min"><span class="nav-number">4.1.3.5.</span> <span class="nav-text">Multiclass Classification3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiclass-Classification3-min-1"><span class="nav-number">4.1.3.6.</span> <span class="nav-text">Multiclass Classification3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-4"><span class="nav-number">4.1.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides10-min-2"><span class="nav-number">4.1.4.1.</span> <span class="nav-text">Lecture Slides10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-2"><span class="nav-number">4.1.4.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Neural-Networks-Representation5-questions"><span class="nav-number">4.1.4.3.</span> <span class="nav-text">Quiz: Neural Networks: Representation5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Multi-class-Classification-and-Neural-Networks3h"><span class="nav-number">4.1.4.4.</span> <span class="nav-text">Programming Assignment: Multi-class Classification and Neural Networks3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-5"><span class="nav-number">5.</span> <span class="nav-text">Week 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Neural-Networks-Learning"><span class="nav-number">5.1.</span> <span class="nav-text">Neural Networks: Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function-and-Backpropagation"><span class="nav-number">5.1.1.</span> <span class="nav-text">Cost Function and Backpropagation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Cost-Function6-min"><span class="nav-number">5.1.1.1.</span> <span class="nav-text">Cost Function6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cost-Function4-min"><span class="nav-number">5.1.1.2.</span> <span class="nav-text">Cost Function4 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backpropagation-Algorithm11-min"><span class="nav-number">5.1.1.3.</span> <span class="nav-text">Backpropagation Algorithm11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backpropagation-Algorithm10-min"><span class="nav-number">5.1.1.4.</span> <span class="nav-text">Backpropagation Algorithm10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backpropagation-Intuition12-min"><span class="nav-number">5.1.1.5.</span> <span class="nav-text">Backpropagation Intuition12 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backpropagation-Intuition4-min"><span class="nav-number">5.1.1.6.</span> <span class="nav-text">Backpropagation Intuition4 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Backpropagation-in-Practice"><span class="nav-number">5.1.2.</span> <span class="nav-text">Backpropagation in Practice</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementation-Note-Unrolling-Parameters7-min"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">Implementation Note: Unrolling Parameters7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementation-Note-Unrolling-Parameters3-min"><span class="nav-number">5.1.2.2.</span> <span class="nav-text">Implementation Note: Unrolling Parameters3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Checking11-min"><span class="nav-number">5.1.2.3.</span> <span class="nav-text">Gradient Checking11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Checking3-min"><span class="nav-number">5.1.2.4.</span> <span class="nav-text">Gradient Checking3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random-Initialization6-min"><span class="nav-number">5.1.2.5.</span> <span class="nav-text">Random Initialization6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random-Initialization3-min"><span class="nav-number">5.1.2.6.</span> <span class="nav-text">Random Initialization3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Putting-It-Together13-min"><span class="nav-number">5.1.2.7.</span> <span class="nav-text">Putting It Together13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Putting-It-Together4-min"><span class="nav-number">5.1.2.8.</span> <span class="nav-text">Putting It Together4 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Application-of-Neural-Networks"><span class="nav-number">5.1.3.</span> <span class="nav-text">Application of Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Autonomous-Driving6-min"><span class="nav-number">5.1.3.1.</span> <span class="nav-text">Autonomous Driving6 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-5"><span class="nav-number">5.1.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides10-min-3"><span class="nav-number">5.1.4.1.</span> <span class="nav-text">Lecture Slides10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-3"><span class="nav-number">5.1.4.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Neural-Networks-Learning5-questions"><span class="nav-number">5.1.4.3.</span> <span class="nav-text">Quiz: Neural Networks: Learning5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Neural-Network-Learning3h"><span class="nav-number">5.1.4.4.</span> <span class="nav-text">Programming Assignment: Neural Network Learning3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-6"><span class="nav-number">6.</span> <span class="nav-text">Week 6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Advice-for-Applying-Machine-Learning"><span class="nav-number">6.1.</span> <span class="nav-text">Advice for Applying Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Evaluating-a-Learning-Algorithm"><span class="nav-number">6.1.1.</span> <span class="nav-text">Evaluating a Learning Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Deciding-What-to-Try-Next5-min"><span class="nav-number">6.1.1.1.</span> <span class="nav-text">Deciding What to Try Next5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Evaluating-a-Hypothesis7-min"><span class="nav-number">6.1.1.2.</span> <span class="nav-text">Evaluating a Hypothesis7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Evaluating-a-Hypothesis4-min"><span class="nav-number">6.1.1.3.</span> <span class="nav-text">Evaluating a Hypothesis4 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Selection-and-Train-Validation-Test-Sets12-min"><span class="nav-number">6.1.1.4.</span> <span class="nav-text">Model Selection and Train/Validation/Test Sets12 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Model-Selection-and-Train-Validation-Test-Sets3-min"><span class="nav-number">6.1.1.5.</span> <span class="nav-text">Model Selection and Train/Validation/Test Sets3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bias-vs-Variance"><span class="nav-number">6.1.2.</span> <span class="nav-text">Bias vs. Variance</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Diagnosing-Bias-vs-Variance7-min"><span class="nav-number">6.1.2.1.</span> <span class="nav-text">Diagnosing Bias vs. Variance7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Diagnosing-Bias-vs-Variance3-min"><span class="nav-number">6.1.2.2.</span> <span class="nav-text">Diagnosing Bias vs. Variance3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regularization-and-Bias-Variance11-min"><span class="nav-number">6.1.2.3.</span> <span class="nav-text">Regularization and Bias/Variance11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Regularization-and-Bias-Variance3-min"><span class="nav-number">6.1.2.4.</span> <span class="nav-text">Regularization and Bias/Variance3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Learning-Curves11-min"><span class="nav-number">6.1.2.5.</span> <span class="nav-text">Learning Curves11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Learning-Curves3-min"><span class="nav-number">6.1.2.6.</span> <span class="nav-text">Learning Curves3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deciding-What-to-Do-Next-Revisited6-min"><span class="nav-number">6.1.2.7.</span> <span class="nav-text">Deciding What to Do Next Revisited6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deciding-What-to-do-Next-Revisited3-min"><span class="nav-number">6.1.2.8.</span> <span class="nav-text">Deciding What to do Next Revisited3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-6"><span class="nav-number">6.1.3.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-1"><span class="nav-number">6.1.3.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-4"><span class="nav-number">6.1.3.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Advice-for-Applying-Machine-Learning5-questions"><span class="nav-number">6.1.3.3.</span> <span class="nav-text">Quiz: Advice for Applying Machine Learning5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Regularized-Linear-Regression-and-Bias-Variance3h"><span class="nav-number">6.1.3.4.</span> <span class="nav-text">Programming Assignment: Regularized Linear Regression and Bias/Variance3h</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Machine-Learning-System-Design"><span class="nav-number">6.2.</span> <span class="nav-text">Machine Learning System Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Building-a-Spam-Classifier"><span class="nav-number">6.2.1.</span> <span class="nav-text">Building a Spam Classifier</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prioritizing-What-to-Work-On9-min"><span class="nav-number">6.2.1.1.</span> <span class="nav-text">Prioritizing What to Work On9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prioritizing-What-to-Work-On3-min"><span class="nav-number">6.2.1.2.</span> <span class="nav-text">Prioritizing What to Work On3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-Analysis13-min"><span class="nav-number">6.2.1.3.</span> <span class="nav-text">Error Analysis13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-Analysis3-min"><span class="nav-number">6.2.1.4.</span> <span class="nav-text">Error Analysis3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handling-Skewed-Data"><span class="nav-number">6.2.2.</span> <span class="nav-text">Handling Skewed Data</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-Metrics-for-Skewed-Classes11-min"><span class="nav-number">6.2.2.1.</span> <span class="nav-text">Error Metrics for Skewed Classes11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Trading-Off-Precision-and-Recall14-min"><span class="nav-number">6.2.2.2.</span> <span class="nav-text">Trading Off Precision and Recall14 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-Large-Data-Sets"><span class="nav-number">6.2.3.</span> <span class="nav-text">Using Large Data Sets</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-For-Machine-Learning11-min"><span class="nav-number">6.2.3.1.</span> <span class="nav-text">Data For Machine Learning11 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-7"><span class="nav-number">6.2.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-2"><span class="nav-number">6.2.4.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Machine-Learning-System-Design5-questions"><span class="nav-number">6.2.4.2.</span> <span class="nav-text">Quiz: Machine Learning System Design5 questions</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-7"><span class="nav-number">7.</span> <span class="nav-text">Week 7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Support-Vector-Machines"><span class="nav-number">7.1.</span> <span class="nav-text">Support Vector Machines</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Large-Margin-Classification"><span class="nav-number">7.1.1.</span> <span class="nav-text">Large Margin Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Optimization-Objective14-min"><span class="nav-number">7.1.1.1.</span> <span class="nav-text">Optimization Objective14 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Large-Margin-Intuition10-min"><span class="nav-number">7.1.1.2.</span> <span class="nav-text">Large Margin Intuition10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mathematics-Behind-Large-Margin-Classification19-min"><span class="nav-number">7.1.1.3.</span> <span class="nav-text">Mathematics Behind Large Margin Classification19 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kernels"><span class="nav-number">7.1.2.</span> <span class="nav-text">Kernels</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Kernels-I15-min"><span class="nav-number">7.1.2.1.</span> <span class="nav-text">Kernels I15 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Kernels-II15-min"><span class="nav-number">7.1.2.2.</span> <span class="nav-text">Kernels II15 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SVMs-in-Practice"><span class="nav-number">7.1.3.</span> <span class="nav-text">SVMs in Practice</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Using-An-SVM21-min"><span class="nav-number">7.1.3.1.</span> <span class="nav-text">Using An SVM21 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-8"><span class="nav-number">7.1.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-3"><span class="nav-number">7.1.4.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-5"><span class="nav-number">7.1.4.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Support-Vector-Machines5-questions"><span class="nav-number">7.1.4.3.</span> <span class="nav-text">Quiz: Support Vector Machines5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Support-Vector-Machines3h"><span class="nav-number">7.1.4.4.</span> <span class="nav-text">Programming Assignment: Support Vector Machines3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-8"><span class="nav-number">8.</span> <span class="nav-text">Week 8</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unsupervised-Learning"><span class="nav-number">8.1.</span> <span class="nav-text">Unsupervised Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Clustering"><span class="nav-number">8.1.1.</span> <span class="nav-text">Clustering</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Unsupervised-Learning-Introduction3-min"><span class="nav-number">8.1.1.1.</span> <span class="nav-text">Unsupervised Learning: Introduction3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#K-Means-Algorithm12-min"><span class="nav-number">8.1.1.2.</span> <span class="nav-text">K-Means Algorithm12 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Optimization-Objective7-min"><span class="nav-number">8.1.1.3.</span> <span class="nav-text">Optimization Objective7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random-Initialization7-min"><span class="nav-number">8.1.1.4.</span> <span class="nav-text">Random Initialization7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Choosing-the-Number-of-Clusters8-min"><span class="nav-number">8.1.1.5.</span> <span class="nav-text">Choosing the Number of Clusters8 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-9"><span class="nav-number">8.1.2.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-4"><span class="nav-number">8.1.2.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Unsupervised-Learning5-questions"><span class="nav-number">8.1.2.2.</span> <span class="nav-text">Quiz: Unsupervised Learning5 questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dimensionality-Reduction"><span class="nav-number">8.2.</span> <span class="nav-text">Dimensionality Reduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Motivation"><span class="nav-number">8.2.1.</span> <span class="nav-text">Motivation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Motivation-I-Data-Compression10-min"><span class="nav-number">8.2.1.1.</span> <span class="nav-text">Motivation I: Data Compression10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Motivation-II-Visualization5-min"><span class="nav-number">8.2.1.2.</span> <span class="nav-text">Motivation II: Visualization5 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Principal-Component-Analysis"><span class="nav-number">8.2.2.</span> <span class="nav-text">Principal Component Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Principal-Component-Analysis-Problem-Formulation9-min"><span class="nav-number">8.2.2.1.</span> <span class="nav-text">Principal Component Analysis Problem Formulation9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Principal-Component-Analysis-Algorithm15-min"><span class="nav-number">8.2.2.2.</span> <span class="nav-text">Principal Component Analysis Algorithm15 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Applying-PCA"><span class="nav-number">8.2.3.</span> <span class="nav-text">Applying PCA</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Reconstruction-from-Compressed-Representation3-min"><span class="nav-number">8.2.3.1.</span> <span class="nav-text">Reconstruction from Compressed Representation3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Choosing-the-Number-of-Principal-Components10-min"><span class="nav-number">8.2.3.2.</span> <span class="nav-text">Choosing the Number of Principal Components10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Advice-for-Applying-PCA12-min"><span class="nav-number">8.2.3.3.</span> <span class="nav-text">Advice for Applying PCA12 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-10"><span class="nav-number">8.2.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-5"><span class="nav-number">8.2.4.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-6"><span class="nav-number">8.2.4.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Principal-Component-Analysis5-questions"><span class="nav-number">8.2.4.3.</span> <span class="nav-text">Quiz: Principal Component Analysis5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-K-Means-Clustering-and-PCA-3h"><span class="nav-number">8.2.4.4.</span> <span class="nav-text">Programming Assignment: K-Means Clustering and PCA 3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-9"><span class="nav-number">9.</span> <span class="nav-text">Week 9</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Anomaly-Detection"><span class="nav-number">9.1.</span> <span class="nav-text">Anomaly Detection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Density-Estimation"><span class="nav-number">9.1.1.</span> <span class="nav-text">Density Estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Motivation7-min"><span class="nav-number">9.1.1.1.</span> <span class="nav-text">Problem Motivation7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gaussian-Distribution10-min"><span class="nav-number">9.1.1.2.</span> <span class="nav-text">Gaussian Distribution10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Algorithm12-min"><span class="nav-number">9.1.1.3.</span> <span class="nav-text">Algorithm12 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Building-an-Anomaly-Detection-System"><span class="nav-number">9.1.2.</span> <span class="nav-text">Building an Anomaly Detection System</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Developing-and-Evaluating-an-Anomaly-Detection-System13-min"><span class="nav-number">9.1.2.1.</span> <span class="nav-text">Developing and Evaluating an Anomaly Detection System13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Anomaly-Detection-vs-Supervised-Learning7-min"><span class="nav-number">9.1.2.2.</span> <span class="nav-text">Anomaly Detection vs. Supervised Learning7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Choosing-What-Features-to-Use12-min"><span class="nav-number">9.1.2.3.</span> <span class="nav-text">Choosing What Features to Use12 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multivariate-Gaussian-Distribution-Optional"><span class="nav-number">9.1.3.</span> <span class="nav-text">Multivariate Gaussian Distribution (Optional)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Multivariate-Gaussian-Distribution13-min"><span class="nav-number">9.1.3.1.</span> <span class="nav-text">Multivariate Gaussian Distribution13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Anomaly-Detection-using-the-Multivariate-Gaussian-Distribution14-min"><span class="nav-number">9.1.3.2.</span> <span class="nav-text">Anomaly Detection using the Multivariate Gaussian Distribution14 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-11"><span class="nav-number">9.1.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-6"><span class="nav-number">9.1.4.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Anomaly-Detection5-questions"><span class="nav-number">9.1.4.2.</span> <span class="nav-text">Quiz: Anomaly Detection5 questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recommender-Systems"><span class="nav-number">9.2.</span> <span class="nav-text">Recommender Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Predicting-Movie-Ratings"><span class="nav-number">9.2.1.</span> <span class="nav-text">Predicting Movie Ratings</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Formulation7-min"><span class="nav-number">9.2.1.1.</span> <span class="nav-text">Problem Formulation7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Content-Based-Recommendations14-min"><span class="nav-number">9.2.1.2.</span> <span class="nav-text">Content Based Recommendations14 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collaborative-Filtering"><span class="nav-number">9.2.2.</span> <span class="nav-text">Collaborative Filtering</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Collaborative-Filtering10-min"><span class="nav-number">9.2.2.1.</span> <span class="nav-text">Collaborative Filtering10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Collaborative-Filtering-Algorithm8-min"><span class="nav-number">9.2.2.2.</span> <span class="nav-text">Collaborative Filtering Algorithm8 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Low-Rank-Matrix-Factorization"><span class="nav-number">9.2.3.</span> <span class="nav-text">Low Rank Matrix Factorization</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorization-Low-Rank-Matrix-Factorization8-min"><span class="nav-number">9.2.3.1.</span> <span class="nav-text">Vectorization: Low Rank Matrix Factorization8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Implementational-Detail-Mean-Normalization8-min"><span class="nav-number">9.2.3.2.</span> <span class="nav-text">Implementational Detail: Mean Normalization8 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-12"><span class="nav-number">9.2.4.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides10-min-4"><span class="nav-number">9.2.4.1.</span> <span class="nav-text">Lecture Slides10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-7"><span class="nav-number">9.2.4.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Recommender-Systems5-questions"><span class="nav-number">9.2.4.3.</span> <span class="nav-text">Quiz: Recommender Systems5 questions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Anomaly-Detection-and-Recommender-Systems-3h"><span class="nav-number">9.2.4.4.</span> <span class="nav-text">Programming Assignment: Anomaly Detection and Recommender Systems 3h</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-10"><span class="nav-number">10.</span> <span class="nav-text">Week 10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Large-Scale-Machine-Learning"><span class="nav-number">10.1.</span> <span class="nav-text">Large Scale Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent-with-Large-Datasets"><span class="nav-number">10.1.1.</span> <span class="nav-text">Gradient Descent with Large Datasets</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Learning-With-Large-Datasets5-min"><span class="nav-number">10.1.1.1.</span> <span class="nav-text">Learning With Large Datasets5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stochastic-Gradient-Descent13-min"><span class="nav-number">10.1.1.2.</span> <span class="nav-text">Stochastic Gradient Descent13 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mini-Batch-Gradient-Descent6-min"><span class="nav-number">10.1.1.3.</span> <span class="nav-text">Mini-Batch Gradient Descent6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stochastic-Gradient-Descent-Convergence11-min"><span class="nav-number">10.1.1.4.</span> <span class="nav-text">Stochastic Gradient Descent Convergence11 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advanced-Topics"><span class="nav-number">10.1.2.</span> <span class="nav-text">Advanced Topics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Online-Learning12-min"><span class="nav-number">10.1.2.1.</span> <span class="nav-text">Online Learning12 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Map-Reduce-and-Data-Parallelism14-min"><span class="nav-number">10.1.2.2.</span> <span class="nav-text">Map Reduce and Data Parallelism14 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-13"><span class="nav-number">10.1.3.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-7"><span class="nav-number">10.1.3.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Large-Scale-Machine-Learning5-questions"><span class="nav-number">10.1.3.2.</span> <span class="nav-text">Quiz: Large Scale Machine Learning5 questions</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-11"><span class="nav-number">11.</span> <span class="nav-text">Week 11</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Application-Example-Photo-OCR"><span class="nav-number">11.1.</span> <span class="nav-text">Application Example: Photo OCR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Photo-OCR"><span class="nav-number">11.1.1.</span> <span class="nav-text">Photo OCR</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Description-and-Pipeline7-min"><span class="nav-number">11.1.1.1.</span> <span class="nav-text">Problem Description and Pipeline7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sliding-Windows14-min"><span class="nav-number">11.1.1.2.</span> <span class="nav-text">Sliding Windows14 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Getting-Lots-of-Data-and-Artificial-Data16-min"><span class="nav-number">11.1.1.3.</span> <span class="nav-text">Getting Lots of Data and Artificial Data16 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Ceiling-Analysis-What-Part-of-the-Pipeline-to-Work-on-Next13-min"><span class="nav-number">11.1.1.4.</span> <span class="nav-text">Ceiling Analysis: What Part of the Pipeline to Work on Next13 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-14"><span class="nav-number">11.1.2.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lecture-Slides-10-min-8"><span class="nav-number">11.1.2.1.</span> <span class="nav-text">Lecture Slides 10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-course-has-ended-Assignments-may-not-be-resubmitted-8"><span class="nav-number">11.1.2.2.</span> <span class="nav-text">The course has ended. Assignments may not be resubmitted.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Application-Photo-OCR5-questions"><span class="nav-number">11.1.2.3.</span> <span class="nav-text">Quiz: Application: Photo OCR5 questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclusion"><span class="nav-number">11.1.3.</span> <span class="nav-text">Conclusion</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary-and-Thank-You4-min"><span class="nav-number">11.1.3.1.</span> <span class="nav-text">Summary and Thank You4 min</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SSQ</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("MWlUL7cwf0gV4nd1BczDGmFm-gzGzoHsz", "YwuYEA1xBo0rm9hzIjUwOm2F");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
