@@ -97,7 +97,7 @@
 <meta property="og:url" content="https://ssq.github.io/2017/08/11/Python Functions Notebook/index.html">
 <meta property="og:site_name" content="SSQ">
 <meta property="og:description" content="Notation for errors I met.For quick search">
-<meta property="og:updated_time" content="2017-08-12T05:37:01.364Z">
+<meta property="og:updated_time" content="2017-08-15T01:45:37.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Functions Notebook">
 <meta name="twitter:description" content="Notation for errors I met.For quick search">
@@ -420,12 +420,17 @@
         <div class="note primary"><p>Notation for errors I met.<br>For quick search</p>
 </div>
 <a id="more"></a>
-<h1 id="Build-in-function"><a href="#Build-in-function" class="headerlink" title="Build in function"></a>Build in function</h1><h2 id="R"><a href="#R" class="headerlink" title="R"></a>R</h2><h3 id="readline"><a href="#readline" class="headerlink" title="readline()"></a>readline()</h3><p>read the first line and begin with second line<br>data:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Title,Released,Label,UK Chart Position,US Chart Position,BPI Certification,RIAA Certification</div><div class="line">Please Please Me,22 March 1963,Parlophone(UK),1,-,Gold,Platinum</div></pre></td></tr></table></figure></p>
+<h1 id="Build-in-function"><a href="#Build-in-function" class="headerlink" title="Build in function"></a>Build in function</h1><h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><h3 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h3><p>code:<br><code>assert statement</code><br>explanation:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if statement == True:</div><div class="line">    continue</div><div class="line">else:</div><div class="line">    report AssertionError</div></pre></td></tr></table></figure></p>
+<h2 id="R"><a href="#R" class="headerlink" title="R"></a>R</h2><h3 id="readline"><a href="#readline" class="headerlink" title="readline()"></a>readline()</h3><p>read the first line and begin with second line<br>data:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Title,Released,Label,UK Chart Position,US Chart Position,BPI Certification,RIAA Certification</div><div class="line">Please Please Me,22 March 1963,Parlophone(UK),1,-,Gold,Platinum</div></pre></td></tr></table></figure></p>
 <p>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">with open(datafile, &quot;r&quot;) as f:</div><div class="line">    header = f.readline().split(&quot;,&quot;)</div><div class="line">        for line in f:</div><div class="line">        ...</div></pre></td></tr></table></figure></p>
 <p><code>header</code>:<br><code>[&#39;Title&#39;, &#39;Released&#39;, &#39;Label&#39;, &#39;UK Chart Position&#39;, &#39;US Chart Position&#39;, &#39;BPI Certification&#39;, &#39;RIAA Certification\n&#39;]</code><br><code>line</code>:<br><code>Please Please Me,22 March 1963,Parlophone(UK),1,-,Gold,Platinum</code></p>
 <h2 id="S"><a href="#S" class="headerlink" title="S"></a>S</h2><h3 id="strip"><a href="#strip" class="headerlink" title="strip()"></a>strip()</h3><p>can be used to delete the <code>\n</code> code<br>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">header = f.readline().split(&quot;,&quot;)</div><div class="line">print header</div><div class="line">print header[-1]</div><div class="line">print header[-1].strip()</div></pre></td></tr></table></figure></p>
 <p>output:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[&apos;Title&apos;, &apos;Released&apos;, &apos;Label&apos;, &apos;UK Chart Position&apos;, &apos;US Chart Position&apos;, &apos;BPI Certification&apos;, &apos;RIAA Certification\n&apos;]</div><div class="line">RIAA Certification</div><div class="line"></div><div class="line">RIAA Certification</div></pre></td></tr></table></figure></p>
-<h1 id="Imported-modules"><a href="#Imported-modules" class="headerlink" title="Imported modules"></a>Imported modules</h1><h2 id="csv"><a href="#csv" class="headerlink" title="csv"></a>csv</h2><h3 id="csv-DictReader"><a href="#csv-DictReader" class="headerlink" title="csv.DictReader()"></a>csv.DictReader()</h3><p>default denote the first row as the field labels<br>convert to <code>dict</code> data type<br>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">with open(datafile, &apos;rb&apos;) as sd:</div><div class="line">    r = csv.DictReader(sd)</div><div class="line">    for line in r:</div><div class="line">    ...</div></pre></td></tr></table></figure></p>
+<h1 id="Imported-modules"><a href="#Imported-modules" class="headerlink" title="Imported modules"></a>Imported modules</h1><h2 id="csv"><a href="#csv" class="headerlink" title="csv"></a>csv</h2><h3 id="csv-DictReader"><a href="#csv-DictReader" class="headerlink" title="csv.DictReader()"></a>csv.DictReader()</h3><p>read <code>csv</code> file,<br>default denote the first row as the field labels,<br><code>line</code> is <code>dict</code> data type<br>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">import csv</div><div class="line">with open(datafile, &apos;rb&apos;) as sd:</div><div class="line">    r = csv.DictReader(sd)</div><div class="line">    for line in r:</div><div class="line">    ...</div></pre></td></tr></table></figure></p>
+<p>more details can be found in <a href="">ud032 Using CSV Module</a></p>
+<h2 id="xlrd"><a href="#xlrd" class="headerlink" title="xlrd"></a>xlrd</h2><h3 id="xlrd-open-workbook"><a href="#xlrd-open-workbook" class="headerlink" title="xlrd.open_workbook()"></a>xlrd.open_workbook()</h3><p>read <code>xls</code> file<br>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import xlrd</div><div class="line">datafile = &quot;2013_ERCOT_Hourly_Load_Data.xls&quot;</div><div class="line">workbook = xlrd.open_workbook(datafile)</div><div class="line">sheet = workbook.sheet_by_index(0)</div><div class="line">data = [[sheet.cell_value(r, col) </div><div class="line">                for col in range(sheet.ncols)] </div><div class="line">                    for r in range(sheet.nrows)]</div></pre></td></tr></table></figure></p>
+<p>details can be found in <a href="https://ssq.github.io/2017/08/11/Udacity%20ud032%20Data%20Wrangling%20with%20MongoDB%20Notebook/">ud032 Notebook</a></p>
+<h2 id="ZipFile"><a href="#ZipFile" class="headerlink" title="ZipFile"></a>ZipFile</h2><p>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">from zipfile import ZipFile</div><div class="line">datafile = &quot;2013_ERCOT_Hourly_Load_Data.xls&quot;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -477,6 +482,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/14/Udacity DLND Notebook/" rel="prev" title="Udacity DLND Notebook">
+                Udacity DLND Notebook <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -557,7 +566,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -579,7 +588,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -625,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Build-in-function"><span class="nav-number">1.</span> <span class="nav-text">Build in function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#R"><span class="nav-number">1.1.</span> <span class="nav-text">R</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#readline"><span class="nav-number">1.1.1.</span> <span class="nav-text">readline()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S"><span class="nav-number">1.2.</span> <span class="nav-text">S</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#strip"><span class="nav-number">1.2.1.</span> <span class="nav-text">strip()</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Imported-modules"><span class="nav-number">2.</span> <span class="nav-text">Imported modules</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#csv"><span class="nav-number">2.1.</span> <span class="nav-text">csv</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#csv-DictReader"><span class="nav-number">2.1.1.</span> <span class="nav-text">csv.DictReader()</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Build-in-function"><span class="nav-number">1.</span> <span class="nav-text">Build in function</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A"><span class="nav-number">1.1.</span> <span class="nav-text">A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#assert"><span class="nav-number">1.1.1.</span> <span class="nav-text">assert</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#R"><span class="nav-number">1.2.</span> <span class="nav-text">R</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#readline"><span class="nav-number">1.2.1.</span> <span class="nav-text">readline()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S"><span class="nav-number">1.3.</span> <span class="nav-text">S</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#strip"><span class="nav-number">1.3.1.</span> <span class="nav-text">strip()</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Imported-modules"><span class="nav-number">2.</span> <span class="nav-text">Imported modules</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#csv"><span class="nav-number">2.1.</span> <span class="nav-text">csv</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#csv-DictReader"><span class="nav-number">2.1.1.</span> <span class="nav-text">csv.DictReader()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xlrd"><span class="nav-number">2.2.</span> <span class="nav-text">xlrd</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#xlrd-open-workbook"><span class="nav-number">2.2.1.</span> <span class="nav-text">xlrd.open_workbook()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZipFile"><span class="nav-number">2.3.</span> <span class="nav-text">ZipFile</span></a></li></ol></li></ol></div>
             
 
           </div>
