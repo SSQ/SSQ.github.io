@@ -96,7 +96,7 @@
 <meta property="og:url" content="https://ssq.github.io/2017/08/26/2018校招笔试题解答/index.html">
 <meta property="og:site_name" content="SSQ">
 <meta property="og:description" content="抛砖引玉">
-<meta property="og:updated_time" content="2017-08-25T16:17:06.512Z">
+<meta property="og:updated_time" content="2017-08-26T01:35:25.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018校招笔试题解答">
 <meta name="twitter:description" content="抛砖引玉">
@@ -417,7 +417,7 @@
 
       
         <p>抛砖引玉<br><a id="more"></a></p>
-<h1 id="2018阿里校招笔试："><a href="#2018阿里校招笔试：" class="headerlink" title="2018阿里校招笔试："></a>2018阿里校招笔试：</h1><h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">N = 9</div><div class="line">intersections = np.array([[0,3],[1,5],[2,7],[3,3],[4,5],[5,7],[6,9],[7,3],[8,5]])</div><div class="line">M = 14</div><div class="line">roads = np.array([[0,1,4],[0,7,8],[1,2,8],[1,7,11],[2,3,7],[2,5,4],[2,8,2],[3,4,9],[3,5,14],[4,5,10],[5,6,2],[6,8,6],[6,7,1],[7,8,7]])</div><div class="line">s = 0</div><div class="line">t = 4</div><div class="line"></div><div class="line">def WaitTime(CurrentTime,permision):</div><div class="line">    if CurrentTime % (2*permision) in [x for x in range(permision)]: # Green light</div><div class="line">        return 0</div><div class="line">    else:</div><div class="line">        return (2*permision) - CurrentTime % (2*permision)</div><div class="line"></div><div class="line">    </div><div class="line">def CanGo(source):</div><div class="line">    NodeWithTime = &#123;&#125;</div><div class="line">    for i in range(len(roads[roads[:,0] == source])):</div><div class="line">        NodeWithTime[roads[roads[:,0] == source][i,1]] = roads[roads[:,0] == source][i,2]</div><div class="line">    for i in range(len(roads[roads[:,1] == source])):</div><div class="line">        NodeWithTime[roads[roads[:,1] == source][i,0]] = roads[roads[:,1] == source][i,2]    </div><div class="line">    return NodeWithTime</div><div class="line">    </div><div class="line">    </div><div class="line">def minTravelTime(N,intersections,M,roads,s,t):</div><div class="line">    Nodes = [s]</div><div class="line">    A = &#123;&#125;</div><div class="line">    A[s] = 0</div><div class="line">    </div><div class="line">    for source in Nodes:</div><div class="line">        permision = intersections[source][1]         </div><div class="line">        NodeWithTime = CanGo(source)</div><div class="line"></div><div class="line">        for determination in NodeWithTime.keys():</div><div class="line">            value = A[source] + WaitTime(A[source],permision) + NodeWithTime[determination]</div><div class="line">            if determination in A.keys():                    </div><div class="line">                A[determination] = min(value,  A[determination])</div><div class="line">            else:</div><div class="line">                A[determination] = value</div><div class="line">            if determination not in Nodes:</div><div class="line">                Nodes.extend([determination])</div><div class="line">        #print Nodes</div><div class="line">        #print A      </div><div class="line">    return A[t]                           </div><div class="line"></div><div class="line">print minTravelTime(N,intersections,M,roads,s,t)</div><div class="line"># 28</div></pre></td></tr></table></figure>
+<h1 id="2018阿里校招笔试"><a href="#2018阿里校招笔试" class="headerlink" title="2018阿里校招笔试"></a>2018阿里校招笔试</h1><h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">import numpy as np</div><div class="line">N = 9</div><div class="line">intersections = np.array([[0,3],[1,5],[2,7],[3,3],[4,5],[5,7],[6,9],[7,3],[8,5]])</div><div class="line">M = 14</div><div class="line">roads = np.array([[0,1,4],[0,7,8],[1,2,8],[1,7,11],[2,3,7],[2,5,4],[2,8,2],[3,4,9],[3,5,14],[4,5,10],[5,6,2],[6,8,6],[6,7,1],[7,8,7]])</div><div class="line">s = 0</div><div class="line">t = 4</div><div class="line"></div><div class="line">def WaitTime(CurrentTime,permision):</div><div class="line">    if CurrentTime % (2*permision) in [x for x in range(permision)]: # Green light</div><div class="line">        return 0</div><div class="line">    else:</div><div class="line">        return (2*permision) - CurrentTime % (2*permision)</div><div class="line"></div><div class="line">    </div><div class="line">def CanGo(source):</div><div class="line">    NodeWithTime = &#123;&#125;</div><div class="line">    for i in range(len(roads[roads[:,0] == source])):</div><div class="line">        NodeWithTime[roads[roads[:,0] == source][i,1]] = roads[roads[:,0] == source][i,2]</div><div class="line">    for i in range(len(roads[roads[:,1] == source])):</div><div class="line">        NodeWithTime[roads[roads[:,1] == source][i,0]] = roads[roads[:,1] == source][i,2]    </div><div class="line">    return NodeWithTime</div><div class="line">    </div><div class="line">    </div><div class="line">def minTravelTime(N,intersections,M,roads,s,t):</div><div class="line">    Nodes = [s]</div><div class="line">    A = &#123;&#125;</div><div class="line">    A[s] = 0</div><div class="line">    </div><div class="line">    for source in Nodes:</div><div class="line">        permision = intersections[source][1]         </div><div class="line">        NodeWithTime = CanGo(source)</div><div class="line"></div><div class="line">        for determination in NodeWithTime.keys():</div><div class="line">            value = A[source] + WaitTime(A[source],permision) + NodeWithTime[determination]</div><div class="line">            if determination in A.keys():                    </div><div class="line">                A[determination] = min(value,  A[determination])</div><div class="line">            else:</div><div class="line">                A[determination] = value</div><div class="line">            if determination not in Nodes:</div><div class="line">                Nodes.extend([determination])</div><div class="line">        #print Nodes</div><div class="line">        #print A      </div><div class="line">    return A[t]                           </div><div class="line"></div><div class="line">print minTravelTime(N,intersections,M,roads,s,t)</div><div class="line"># 28</div></pre></td></tr></table></figure>
 <h2 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">def number(k):</div><div class="line">    count = 1</div><div class="line">    iteration = 1</div><div class="line">    while count &lt; k:</div><div class="line">        count += iteration +1</div><div class="line">        iteration += 1</div><div class="line">        </div><div class="line">    startposition = count - iteration </div><div class="line"></div><div class="line">    return k - startposition</div></pre></td></tr></table></figure>
       
     </div>
@@ -454,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/19/Coursera UW Machine Learning Specialization Notebook/" rel="next" title="Coursera UW Machine Learning Specialization Notebook">
-                <i class="fa fa-chevron-left"></i> Coursera UW Machine Learning Specialization Notebook
+              <a href="/2017/08/14/Udacity DLND Notebook/" rel="next" title="Udacity DLND Notebook">
+                <i class="fa fa-chevron-left"></i> Udacity DLND Notebook
               </a>
             
           </div>
@@ -543,7 +543,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -554,7 +554,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -565,7 +565,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -611,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018阿里校招笔试："><span class="nav-number">1.</span> <span class="nav-text">2018阿里校招笔试：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-1"><span class="nav-number">1.1.</span> <span class="nav-text">Question 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-2"><span class="nav-number">1.2.</span> <span class="nav-text">Question 2</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018阿里校招笔试"><span class="nav-number">1.</span> <span class="nav-text">2018阿里校招笔试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-1"><span class="nav-number">1.1.</span> <span class="nav-text">Question 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-2"><span class="nav-number">1.2.</span> <span class="nav-text">Question 2</span></a></li></ol></li></ol></div>
             
 
           </div>
