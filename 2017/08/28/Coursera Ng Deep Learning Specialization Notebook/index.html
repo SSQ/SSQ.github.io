@@ -1,0 +1,1589 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Coursera,Deep Learning," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="For quick searchingCourse can be found here">
+<meta name="keywords" content="Coursera,Deep Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coursera Ng Deep Learning Specialization Notebook">
+<meta property="og:url" content="https://ssq.github.io/2017/08/28/Coursera Ng Deep Learning Specialization Notebook/index.html">
+<meta property="og:site_name" content="SSQ">
+<meta property="og:description" content="For quick searchingCourse can be found here">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/FalVl3ygEeegaQ4NYTdESg_7a0184575b8bdc47f8c3f29601302cb8_Screen-Shot-2017-08-08-at-6.13.59-PM.png?expiry=1504569600000&hmac=uWXZskb7eRFun_bk4BaE6QQwKxtTjtSfkklSBiV2coA">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/rDlJVXGkEeeOXQ7jdzu9Bg_ebe829e5a35b0a8d44b8fe85c7b28f9a_figure-1.png?expiry=1504569600000&hmac=_ol5eWFofWOkGg8Y3KvzhTCQooT6p7cv9Xd8v9LPX0Q">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/fwrRT3GkEee1BBJ2zgI9PA_c3a9e3d21c9e6cad5bb938ba596f94e3_Figure-2.png?expiry=1504569600000&hmac=DPPpdu3lxfELEsw7k2otFGWI7DKottJCLuDHBxnlXnE">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/sBkbVnGkEee1BBJ2zgI9PA_2e3410579d847b4df4c2cf2691d63d3e_figure3.png?expiry=1504569600000&hmac=5fDT-yCwAB_2PKkfmlyTg80H0kk3mahjElo5fS6QQiY">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/0GhwpHGkEeewexKhHrUb5g_2e64af1a0d0520a05f4b366bd77328ff_figure4.png?expiry=1504569600000&hmac=SSHLhM17aXeMC2YDBkHqZEwaZLdJzHJIK_FzZjZw0_Y">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/JP--G3ooEeeJIwrF5BVsIg_b60d752c05bec0881d8ca08cfc2646d2_Screen-Shot-2017-08-05-at-2.30.09-PM.png?expiry=1504569600000&hmac=LlZfv82Dvnm25Wb7Bf-VoWSs-8OWiqka5jZ3wtW3Pzc">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/CLczrXpHEeeA3RJRlG3Uqg_3c66355aff0ae7db9e27206f188267f0_Screen-Shot-2017-08-05-at-6.30.51-PM.png?expiry=1505174400000&hmac=yx2s4_BOyjIpa4MF_MVOUfMDq-xVcKJSwGhW9kJbLn4">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/3GDwQXrhEee6mw7xN92yoA_c36b695905cda00b9b2b04db81566c24_Screen-Shot-2017-08-06-at-12.59.40-PM.png?expiry=1505174400000&hmac=fBnyjSHIdKEAye-Zv8Ira3ha3Eccz11PhkVw8MDOkU0">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/svogd3rcEeeA3RJRlG3Uqg_76207ca9fa3c209fbf43892870e5338f_1layer.png?expiry=1505779200000&hmac=9yi9CQI82fBzhBGRKrB4cjWsDc1eLIrHg8UJo_WW02A">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/cwmw1nrfEeeJIwrF5BVsIg_e9a22da9e380c0350d2dfd47dcf34503_Screen-Shot-2017-08-06-at-12.42.46-PM.png?expiry=1506988800000&hmac=2qaEHVE1QmVtNY3jS4Hh9E409Zjp3lkQ7zkBfsub-QQ">
+<meta property="og:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/8sF12nrfEeeumw4MySoK5g_36df26a0659f76c6566ff4f3706e6ad2_Screen-Shot-2017-08-05-at-12.50.32-PM.png?expiry=1506988800000&hmac=vdsczlNoZ-ORXuBV3w6f4OiuQskiCNYPuIAGQgruldc">
+<meta property="og:updated_time" content="2017-10-06T04:35:31.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coursera Ng Deep Learning Specialization Notebook">
+<meta name="twitter:description" content="For quick searchingCourse can be found here">
+<meta name="twitter:image" content="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/FalVl3ygEeegaQ4NYTdESg_7a0184575b8bdc47f8c3f29601302cb8_Screen-Shot-2017-08-08-at-6.13.59-PM.png?expiry=1504569600000&hmac=uWXZskb7eRFun_bk4BaE6QQwKxtTjtSfkklSBiV2coA">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://ssq.github.io/2017/08/28/Coursera Ng Deep Learning Specialization Notebook/"/>
+
+
+
+
+
+  <title>Coursera Ng Deep Learning Specialization Notebook | SSQ</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-91307065-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3c8ad2ecdd2387b44044b1d7cd3536a9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SSQ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-friends">
+          <a href="/friends" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            friends
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://ssq.github.io/2017/08/28/Coursera Ng Deep Learning Specialization Notebook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SSQ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SSQ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Coursera Ng Deep Learning Specialization Notebook</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-28T14:02:13+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/28/Coursera Ng Deep Learning Specialization Notebook/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/08/28/Coursera Ng Deep Learning Specialization Notebook/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/08/28/Coursera Ng Deep Learning Specialization Notebook/" class="leancloud_visitors" data-flag-title="Coursera Ng Deep Learning Specialization Notebook">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note primary"><p>For quick searching<br>Course can be found <a href="https://www.coursera.org/specializations/deep-learning" target="_blank" rel="external">here</a></p>
+</div>
+<a id="more"></a>
+<div class="note primary"><p>If you want to break into AI, this Specialization will help you do so. Deep Learning is one of the most highly sought after skills in tech. We will help you become good at Deep Learning.</p>
+<p>In five courses, you will learn the foundations of Deep Learning, understand how to build neural networks, and learn how to lead successful machine learning projects. You will learn about Convolutional networks, RNNs, LSTM, Adam, Dropout, BatchNorm, Xavier/He initialization, and more. You will work on case studies from healthcare, autonomous driving, sign language reading, music generation, and natural language processing. You will master not only the theory, but also see how it is applied in industry. You will practice all these ideas in Python and in TensorFlow, which we will teach.</p>
+<p>You will also hear from many top leaders in Deep Learning, who will share with you their personal stories and give you career advice.</p>
+<p>AI is transforming multiple industries. After finishing this specialization, you will likely find creative ways to apply it to your work.</p>
+<p>We will help you master Deep Learning, understand how to apply it, and build a career in AI.</p>
+</div>
+<h1 id="Neural-Networks-and-Deep-Learning"><a href="#Neural-Networks-and-Deep-Learning" class="headerlink" title="Neural Networks and Deep Learning"></a>Neural Networks and Deep Learning</h1><div class="note primary"><p>Course can be found <a href="https://www.coursera.org/learn/neural-networks-deep-learning" target="_blank" rel="external">here</a></p>
+<p><strong>About this course:</strong> If you want to break into cutting-edge AI, this course will help you do so. Deep learning engineers are highly sought after, and mastering deep learning will give you numerous new career opportunities. Deep learning is also a new “superpower” that will let you build AI systems that just weren’t possible a few years ago. </p>
+<p>In this course, you will learn the foundations of deep learning. When you finish this class, you will:</p>
+<ul>
+<li>Understand the major technology trends driving Deep Learning</li>
+<li>Be able to build, train and apply fully connected deep neural networks </li>
+<li>Know how to implement efficient (vectorized) neural networks </li>
+<li>Understand the key parameters in a neural network’s architecture </li>
+</ul>
+<p>This course also teaches you how Deep Learning actually works, rather than presenting only a cursory or surface-level description. So after completing it, you will be able to apply deep learning to a your own applications. If you are looking for a job in AI, after this course you will also be able to answer basic interview questions. </p>
+<p>This is the first course of the Deep Learning Specialization.</p>
+<p><strong>Who is this class for:</strong> Prerequisites: Expected: - Programming: Basic Python programming skills, with the capability to work effectively with data structures. Recommended: - Mathematics: Matrix vector operations and notation. - Machine Learning: Understanding how to frame a machine learning problem, including how data is represented will be beneficial. If you have taken my Machine Learning Course here, you have much more than the needed level of knowledge.</p>
+</div>
+<h2 id="Week-1-Introduction-to-deep-learning"><a href="#Week-1-Introduction-to-deep-learning" class="headerlink" title="Week 1 Introduction to deep learning"></a>Week 1 Introduction to deep learning</h2><div class="note primary"><p>Be able to explain the major trends driving the rise of deep learning, and understand where and how it is applied today.</p>
+</div>
+<div class="note primary"><p>Learning Objectives</p>
+<p>Understand the major trends driving the rise of deep learning.<br>Be able to explain how deep learning is applied to supervised learning.<br>Understand what are the major categories of models (such as CNNs and RNNs), and when they should be applied.<br>Be able to recognize the basics of when deep learning will (or will not) work well.</p>
+</div>
+<h3 id="Welcome-to-the-Deep-Learning-Specialization"><a href="#Welcome-to-the-Deep-Learning-Specialization" class="headerlink" title="Welcome to the Deep Learning Specialization"></a>Welcome to the Deep Learning Specialization</h3><h4 id="Welcome5-min"><a href="#Welcome5-min" class="headerlink" title="Welcome5 min"></a>Welcome5 min</h4><h3 id="Introduction-to-Deep-Learning"><a href="#Introduction-to-Deep-Learning" class="headerlink" title="Introduction to Deep Learning"></a>Introduction to Deep Learning</h3><h4 id="What-is-a-neural-network-7-min"><a href="#What-is-a-neural-network-7-min" class="headerlink" title="What is a neural network?7 min"></a>What is a neural network?7 min</h4><h4 id="Supervised-Learning-with-Neural-Networks8-min"><a href="#Supervised-Learning-with-Neural-Networks8-min" class="headerlink" title="Supervised Learning with Neural Networks8 min"></a>Supervised Learning with Neural Networks8 min</h4><h4 id="Why-is-Deep-Learning-taking-off-10-min"><a href="#Why-is-Deep-Learning-taking-off-10-min" class="headerlink" title="Why is Deep Learning taking off?10 min"></a>Why is Deep Learning taking off?10 min</h4><h4 id="About-this-Course2-min"><a href="#About-this-Course2-min" class="headerlink" title="About this Course2 min"></a>About this Course2 min</h4><h4 id="Frequently-Asked-Questions10-min"><a href="#Frequently-Asked-Questions10-min" class="headerlink" title="Frequently Asked Questions10 min"></a>Frequently Asked Questions10 min</h4><h4 id="Course-Resources1-min"><a href="#Course-Resources1-min" class="headerlink" title="Course Resources1 min"></a>Course Resources1 min</h4><h4 id="How-to-use-Discussion-Forums10-min"><a href="#How-to-use-Discussion-Forums10-min" class="headerlink" title="How to use Discussion Forums10 min"></a>How to use Discussion Forums10 min</h4><h3 id="Practice-Questions"><a href="#Practice-Questions" class="headerlink" title="Practice Questions"></a>Practice Questions</h3><h4 id="Quiz-Introduction-to-deep-learning10-questions"><a href="#Quiz-Introduction-to-deep-learning10-questions" class="headerlink" title="Quiz: Introduction to deep learning10 questions"></a>Quiz: Introduction to deep learning10 questions</h4><div class="note primary"><p>QUIZ<br>Introduction to deep learning<br>10 questions<br>To Pass80% or higher<br>Attempts3 every 8 hours<br>Deadline<br>September 17, 11:59 PM PDT</p>
+</div>
+<p>1 point<br>1.What does the analogy “AI is the new electricity” refer to?</p>
+<p><input type="radio" disabled><label>AI is powering personal devices in our homes and offices, similar to electricity.</label></p>
+<p><input type="radio" disabled><label>AI runs on computers and is thus powered by electricity, but it is letting computers do things not possible before.</label></p>
+<p><input type="radio" disabled><label>Through the “smart grid”, AI is delivering a new wave of electricity.</label></p>
+<p><input type="radio" disabled checked><label>Similar to electricity starting about 100 years ago, AI is transforming multiple industries.</label><br><br><br><div class="note success"><p>Correct<br>Yes. AI is transforming many fields from the car industry to agriculture to supply-chain…</p>
+</div><br>1 point<br>2.Which of these are reasons for Deep Learning recently taking off? (Check the three options that apply.)</p>
+<p><input type="checkbox" disabled checked><label>Deep learning has resulted in significant improvements in important applications such as online advertising, speech recognition, and image recognition.</label><br><div class="note success"><p>Correct<br>These were all examples discussed in lecture 3.</p>
+</div></p>
+<p><input type="checkbox" disabled><label>Neural Networks are a brand new field.</label><br><div class="note success"><p>Un-selected is correct </p>
+</div></p>
+<p><input type="checkbox" disabled checked><label>We have access to a lot more data.</label><br><div class="note success"><p>Correct<br>Yes! The digitalization of our society has played a huge role in this.</p>
+</div></p>
+<p><input type="checkbox" disabled checked><label>We have access to a lot more computational power.</label><br><div class="note success"><p>Correct<br>Yes! The development of hardware, perhaps especially GPU computing, has significantly improved deep learning algorithms’ performance.</p>
+</div><br><br><br>1 point<br>3.Recall this diagram of iterating over different ML ideas. Which of the statements below are true? (Check all that apply.)<br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/FalVl3ygEeegaQ4NYTdESg_7a0184575b8bdc47f8c3f29601302cb8_Screen-Shot-2017-08-08-at-6.13.59-PM.png?expiry=1504569600000&amp;hmac=uWXZskb7eRFun_bk4BaE6QQwKxtTjtSfkklSBiV2coA" alt=""></p>
+<p><input type="checkbox" disabled checked><label>Being able to try out ideas quickly allows deep learning engineers to iterate more quickly.</label></p>
+<p><input type="checkbox" disabled checked><label>Faster computation can help speed up how long a team takes to iterate to a good idea.</label></p>
+<p><input type="checkbox" disabled><label>It is faster to train on a big dataset than a small dataset.</label></p>
+<p><input type="checkbox" disabled checked><label>Recent progress in deep learning algorithms has allowed us to train good models faster (even without changing the CPU/GPU hardware).</label><br><br><br>1 point<br>4.When an experienced deep learning engineer works on a new problem, they can usually use insight from previous problems to train a good model on the first try, without needing to iterate multiple times through different models. True/False?</p>
+<p><input type="radio" disabled><label>True</label><br><div class="note danger"><p>This should not be selected<br>No. Finding the characteristics of a model is key to have good performance. Although experience can help, it requires multiple iterations to build a good model.</p>
+</div></p>
+<p><input type="radio" disabled checked><label>False</label><br><br><br>1 point<br>5.Which one of these plots represents a ReLU activation function?</p>
+<p><input type="radio" disabled><label>Figure 1:</label><br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/rDlJVXGkEeeOXQ7jdzu9Bg_ebe829e5a35b0a8d44b8fe85c7b28f9a_figure-1.png?expiry=1504569600000&amp;hmac=_ol5eWFofWOkGg8Y3KvzhTCQooT6p7cv9Xd8v9LPX0Q" alt=""></p>
+<p><input type="radio" disabled><label>Figure 2:</label><br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/fwrRT3GkEee1BBJ2zgI9PA_c3a9e3d21c9e6cad5bb938ba596f94e3_Figure-2.png?expiry=1504569600000&amp;hmac=DPPpdu3lxfELEsw7k2otFGWI7DKottJCLuDHBxnlXnE" alt=""></p>
+<p><input type="radio" disabled checked><label>Figure 3:</label><br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/sBkbVnGkEee1BBJ2zgI9PA_2e3410579d847b4df4c2cf2691d63d3e_figure3.png?expiry=1504569600000&amp;hmac=5fDT-yCwAB_2PKkfmlyTg80H0kk3mahjElo5fS6QQiY" alt=""></p>
+<p><input type="radio" disabled><label>Figure 4:</label><br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/0GhwpHGkEeewexKhHrUb5g_2e64af1a0d0520a05f4b366bd77328ff_figure4.png?expiry=1504569600000&amp;hmac=SSHLhM17aXeMC2YDBkHqZEwaZLdJzHJIK_FzZjZw0_Y" alt=""><br><br><br>1 point<br>6.Images for cat recognition is an example of “structured” data, because it is represented as a structured array in a computer. True/False?</p>
+<p><input type="radio" disabled><label>True</label><br><div class="note danger"><p>This should not be selected<br>No. Images for cat recognition is an example of “unstructured” data.</p>
+</div></p>
+<p><input type="radio" disabled checked><label>False</label><br><br><br>1 point<br>7.A demographic dataset with statistics on different cities’ population, GDP per capita, economic growth is an example of “unstructured” data because it contains data coming from different sources. True/False?</p>
+<p><input type="radio" disabled><label>True</label></p>
+<p><input type="radio" disabled checked><label>False</label><br><br><br>1 point<br>8.Why is an RNN (Recurrent Neural Network) used for machine translation, say translating English to French? (Check all that apply.)</p>
+<p><input type="checkbox" disabled checked><label>It can be trained as a supervised learning problem.</label><br><div class="note success"><p>Correct<br>Yes. We can train it on many pairs of sentences x (English) and y (French).</p>
+</div></p>
+<p><input type="checkbox" disabled><label>It is strictly more powerful than a Convolutional Neural Network (CNN).</label><br><div class="note danger"><p>This should not be selected<br>No. RNN and CNN are two distinct classes of models, with their own advantages and disadvantages.</p>
+</div></p>
+<p><input type="checkbox" disabled checked><label>It is applicable when the input/output is a sequence (e.g., a sequence of words).</label><br><div class="note success"><p>Correct<br>Yes. An RNN can map from a sequence of english words to a sequence of french words.</p>
+</div></p>
+<p><input type="checkbox" disabled><label>RNNs represent the recurrent process of Idea-&gt;Code-&gt;Experiment-&gt;Idea-&gt;….</label></p>
+<p>1 point<br>9.In this diagram which we hand-drew in lecture, what do the horizontal axis (x-axis) and vertical axis (y-axis) represent?<br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/JP--G3ooEeeJIwrF5BVsIg_b60d752c05bec0881d8ca08cfc2646d2_Screen-Shot-2017-08-05-at-2.30.09-PM.png?expiry=1504569600000&amp;hmac=LlZfv82Dvnm25Wb7Bf-VoWSs-8OWiqka5jZ3wtW3Pzc" alt=""></p>
+<p><input type="radio" disabled checked><label>x-axis is the amount of data<br>y-axis (vertical axis) is the performance of the algorithm.</label></p>
+<p><input type="radio" disabled><label>x-axis is the performance of the algorithm<br>y-axis (vertical axis) is the amount of data.</label></p>
+<p><input type="radio" disabled><label>x-axis is the amount of data<br>y-axis is the size of the model you train.</label></p>
+<p><input type="radio" disabled><label>x-axis is the input to the algorithm<br>y-axis is outputs.</label><br><br><br>1 point<br>10.Assuming the trends described in the previous question’s figure are accurate (and hoping you got the axis labels right), which of the following are true? (Check all that apply.)</p>
+<p><input type="checkbox" disabled checked><label>Increasing the size of a neural network generally does not hurt an algorithm’s performance, and it may help significantly.</label></p>
+<p><input type="checkbox" disabled><label>Decreasing the size of a neural network generally does not hurt an algorithm’s performance, and it may help significantly.</label></p>
+<p><input type="checkbox" disabled checked><label>Increasing the training set size generally does not hurt an algorithm’s performance, and it may help significantly.</label></p>
+<p><input type="checkbox" disabled><label>Decreasing the training set size generally does not hurt an algorithm’s performance, and it may help significantly.</label><br><br></p>
+<h3 id="Heroes-of-Deep-Learning-Optional"><a href="#Heroes-of-Deep-Learning-Optional" class="headerlink" title="Heroes of Deep Learning (Optional)"></a>Heroes of Deep Learning (Optional)</h3><h4 id="Geoffrey-Hinton-interview40-min"><a href="#Geoffrey-Hinton-interview40-min" class="headerlink" title="Geoffrey Hinton interview40 min"></a>Geoffrey Hinton interview40 min</h4><h2 id="Week-2-Neural-Networks-Basics"><a href="#Week-2-Neural-Networks-Basics" class="headerlink" title="Week 2 Neural Networks Basics"></a>Week 2 Neural Networks Basics</h2><div class="note primary"><p>Learn to set up a machine learning problem with a neural network mindset. Learn to use vectorization to speed up your models.</p>
+</div>
+<div class="note primary"><p>Learning Objectives</p>
+<p>Build a logistic regression model, structured as a shallow neural network<br>Implement the main steps of an ML algorithm, including making predictions, derivative computation, and gradient descent.<br>Implement computationally efficient, highly vectorized, versions of models.<br>Understand how to compute derivatives for logistic regression, using a backpropagation mindset.<br>Become familiar with Python and Numpy<br>Work with iPython Notebooks<br>Be able to implement vectorization across multiple training examples</p>
+</div>
+<h3 id="Logistic-Regression-as-a-Neural-Network"><a href="#Logistic-Regression-as-a-Neural-Network" class="headerlink" title="Logistic Regression as a Neural Network"></a>Logistic Regression as a Neural Network</h3><h4 id="Binary-Classification8-min"><a href="#Binary-Classification8-min" class="headerlink" title="Binary Classification8 min"></a>Binary Classification8 min</h4><h4 id="Logistic-Regression5-min"><a href="#Logistic-Regression5-min" class="headerlink" title="Logistic Regression5 min"></a>Logistic Regression5 min</h4><h4 id="Logistic-Regression-Cost-Function8-min"><a href="#Logistic-Regression-Cost-Function8-min" class="headerlink" title="Logistic Regression Cost Function8 min"></a>Logistic Regression Cost Function8 min</h4><h4 id="Gradient-Descent11-min"><a href="#Gradient-Descent11-min" class="headerlink" title="Gradient Descent11 min"></a>Gradient Descent11 min</h4><h4 id="Derivatives7-min"><a href="#Derivatives7-min" class="headerlink" title="Derivatives7 min"></a>Derivatives7 min</h4><h4 id="More-Derivative-Examples10-min"><a href="#More-Derivative-Examples10-min" class="headerlink" title="More Derivative Examples10 min"></a>More Derivative Examples10 min</h4><h4 id="Computation-graph3-min"><a href="#Computation-graph3-min" class="headerlink" title="Computation graph3 min"></a>Computation graph3 min</h4><h4 id="Derivatives-with-a-Computation-Graph14-min"><a href="#Derivatives-with-a-Computation-Graph14-min" class="headerlink" title="Derivatives with a Computation Graph14 min"></a>Derivatives with a Computation Graph14 min</h4><h4 id="Logistic-Regression-Gradient-Descent6-min"><a href="#Logistic-Regression-Gradient-Descent6-min" class="headerlink" title="Logistic Regression Gradient Descent6 min"></a>Logistic Regression Gradient Descent6 min</h4><h4 id="Gradient-Descent-on-m-Examples8-min"><a href="#Gradient-Descent-on-m-Examples8-min" class="headerlink" title="Gradient Descent on m Examples8 min"></a>Gradient Descent on m Examples8 min</h4><h3 id="Python-and-Vectorization"><a href="#Python-and-Vectorization" class="headerlink" title="Python and Vectorization"></a>Python and Vectorization</h3><h4 id="Vectorization8-min"><a href="#Vectorization8-min" class="headerlink" title="Vectorization8 min"></a>Vectorization8 min</h4><h4 id="More-Vectorization-Examples6-min"><a href="#More-Vectorization-Examples6-min" class="headerlink" title="More Vectorization Examples6 min"></a>More Vectorization Examples6 min</h4><h4 id="Vectorizing-Logistic-Regression7-min"><a href="#Vectorizing-Logistic-Regression7-min" class="headerlink" title="Vectorizing Logistic Regression7 min"></a>Vectorizing Logistic Regression7 min</h4><h4 id="Vectorizing-Logistic-Regression’s-Gradient-Output9-min"><a href="#Vectorizing-Logistic-Regression’s-Gradient-Output9-min" class="headerlink" title="Vectorizing Logistic Regression’s Gradient Output9 min"></a>Vectorizing Logistic Regression’s Gradient Output9 min</h4><h4 id="Broadcasting-in-Python11-min"><a href="#Broadcasting-in-Python11-min" class="headerlink" title="Broadcasting in Python11 min"></a>Broadcasting in Python11 min</h4><h4 id="A-note-on-python-numpy-vectors6-min"><a href="#A-note-on-python-numpy-vectors6-min" class="headerlink" title="A note on python/numpy vectors6 min"></a>A note on python/numpy vectors6 min</h4><h4 id="Quick-tour-of-Jupyter-iPython-Notebooks3-min"><a href="#Quick-tour-of-Jupyter-iPython-Notebooks3-min" class="headerlink" title="Quick tour of Jupyter/iPython Notebooks3 min"></a>Quick tour of Jupyter/iPython Notebooks3 min</h4><h4 id="Explanation-of-logistic-regression-cost-function-optional-7-min"><a href="#Explanation-of-logistic-regression-cost-function-optional-7-min" class="headerlink" title="Explanation of logistic regression cost function (optional)7 min"></a>Explanation of logistic regression cost function (optional)7 min</h4><h3 id="Practice-Questions-1"><a href="#Practice-Questions-1" class="headerlink" title="Practice Questions"></a>Practice Questions</h3><h4 id="Quiz-Neural-Network-Basics10-questions"><a href="#Quiz-Neural-Network-Basics10-questions" class="headerlink" title="Quiz: Neural Network Basics10 questions"></a>Quiz: Neural Network Basics10 questions</h4><div class="note primary"><p>QUIZ<br>Neural Network Basics<br>10 questions<br>To Pass80% or higher<br>Deadline<br>September 24, 11:59 PM PDT</p>
+</div>
+<p>1 point<br>1.What does a neuron compute?</p>
+<p><input type="radio" disabled><label>A neuron computes an activation function followed by a linear function (z = Wx + b)</label></p>
+<p><input type="radio" disabled><label>A neuron computes a function g that scales the input x linearly (Wx + b)</label></p>
+<p><input type="radio" disabled checked><label>A neuron computes a linear function (z = Wx + b) followed by an activation function</label></p>
+<p><input type="radio" disabled><label>A neuron computes the mean of all features before applying the output to an activation function</label><br><br><br>1 point<br>2.Which of these is the “Logistic Loss”?</p>
+<p><input type="radio" disabled checked><label>$\mathcal{L}^{(i)}(\hat{y}^{(i)}, y^{(i)}) = -( y^{(i)}\log(\hat{y}^{(i)}) + (1- y^{(i)})\log(1-\hat{y}^{(i)}))$</label></p>
+<p><input type="radio" disabled><label>$\mathcal{L}^{(i)}(\hat{y}^{(i)}, y^{(i)}) = \mid y^{(i)} - \hat{y}^{(i)} \mid$</label></p>
+<p><input type="radio" disabled><label>$\mathcal{L}^{(i)}(\hat{y}^{(i)}, y^{(i)}) = \mid y^{(i)} - \hat{y}^{(i)} \mid^{2}$</label></p>
+<p><input type="radio" disabled><label>$\mathcal{L}^{(i)}(\hat{y}^{(i)}, y^{(i)}) = max(0, y^{(i)} - \hat{y}^{(i)})$</label><br><br><br>1 point<br>3.Suppose img is a (32,32,3) array, representing a 32x32 image with 3 color channels red, green and blue. How do you reshape this into a column vector?</p>
+<p><input type="radio" disabled><label>x = img.reshape((1,32<em>32,</em>3))</label></p>
+<p><input type="radio" disabled><label>x = img.reshape((32*32,3))</label></p>
+<p><input type="radio" disabled checked><label>x = img.reshape((32<em>32</em>3,1))</label></p>
+<p><input type="radio" disabled><label>x = img.reshape((3,32*32))</label><br><br><br>1 point<br>4.Consider the two following random arrays “a” and “b”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = np.random.randn(2, 3) # a.shape = (2, 3)</div><div class="line">b = np.random.randn(2, 1) # b.shape = (2, 1)</div><div class="line">c = a + b</div></pre></td></tr></table></figure></p>
+<p>What will be the shape of “c”?</p>
+<p><input type="radio" disabled><label>c.shape = (2, 1)</label></p>
+<p><input type="radio" disabled checked><label>c.shape = (2, 3)</label></p>
+<p><input type="radio" disabled><label>The computation cannot happen because the sizes don’t match. It’s going to be “Error”!</label></p>
+<p><input type="radio" disabled><label>c.shape = (3, 2)</label><br><br><br>1 point<br>5.Consider the two following random arrays “a” and “b”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = np.random.randn(4, 3) # a.shape = (4, 3)</div><div class="line">b = np.random.randn(3, 2) # b.shape = (3, 2)</div><div class="line">c = a*b</div></pre></td></tr></table></figure></p>
+<p>What will be the shape of “c”?</p>
+<p><input type="radio" disabled checked><label>The computation cannot happen because the sizes don’t match. It’s going to be “Error”!</label></p>
+<p><input type="radio" disabled><label>c.shape = (4,2)</label></p>
+<p><input type="radio" disabled><label>c.shape = (3, 3)</label></p>
+<p><input type="radio" disabled><label>c.shape = (4, 3)</label><br><br><br>1 point<br>6.Suppose you have $$n_x$$ input features per example. Recall that $$X = [x^{(1)} x^{(2)} … x^{(m)}]$$. What is the dimension of X?</p>
+<p><input type="radio" disabled><label>$$(m,n_x)$$</label></p>
+<p><input type="radio" disabled><label>$$(m,1)$$</label></p>
+<p><input type="radio" disabled checked><label>$$(n_x, m)$$</label></p>
+<p><input type="radio" disabled><label>$$(1,m)$$</label><br><br><br>1 point<br>7.Recall that “np.dot(a,b)” performs a matrix multiplication on a and b, whereas “a*b” performs an element-wise multiplication.</p>
+<p>Consider the two following random arrays “a” and “b”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = np.random.randn(12288, 150) # a.shape = (12288, 150)</div><div class="line">b = np.random.randn(150, 45) # b.shape = (150, 45)</div><div class="line">c = np.dot(a,b)</div></pre></td></tr></table></figure></p>
+<p>What is the shape of c?</p>
+<p><input type="radio" disabled><label>The computation cannot happen because the sizes don’t match. It’s going to be “Error”!</label></p>
+<p><input type="radio" disabled checked><label>c.shape = (12288, 45)</label></p>
+<p><input type="radio" disabled><label>c.shape = (12288, 150)</label></p>
+<p><input type="radio" disabled><label>c.shape = (150,150)</label><br><br><br>1 point<br>8.Consider the following code snippet:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># a.shape = (3,4)</div><div class="line"># b.shape = (4,1)</div><div class="line">for i in range(3):</div><div class="line">  for j in range(4):</div><div class="line">    c[i][j] = a[i][j] + b[j]</div></pre></td></tr></table></figure></p>
+<p>How do you vectorize this?</p>
+<p><input type="radio" disabled><label>c = a.T + b.T</label></p>
+<p><input type="radio" disabled checked><label>c = a + b.T</label></p>
+<p><input type="radio" disabled><label>c = a + b</label></p>
+<p><input type="radio" disabled><label>c = a.T + b</label><br><br><br>1 point<br>9.Consider the following code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = np.random.randn(3, 3)</div><div class="line">b = np.random.randn(3, 1)</div><div class="line">c = a*b</div></pre></td></tr></table></figure></p>
+<p>What will be c? (If you’re not sure, feel free to run this in python to find out).</p>
+<p><input type="radio" disabled checked><label>This will invoke broadcasting, so b is copied three times to become (3,3), and $$*$$ is an element-wise product so c.shape will be (3, 3)</label></p>
+<p><input type="radio" disabled><label>This will invoke broadcasting, so b is copied three times to become (3, 3), and $$*$$ invokes a matrix multiplication operation of two 3x3 matrices so c.shape will be (3, 3)</label></p>
+<p><input type="radio" disabled><label>This will multiply a 3x3 matrix a with a 3x1 vector, thus resulting in a 3x1 vector. That is, c.shape = (3,1).</label></p>
+<p><input type="radio" disabled><label>It will lead to an error since you cannot use “*” to operate on these two matrices. You need to instead use np.dot(a,b)</label><br><br><br>1 point<br>10.Consider the following computation graph.</p>
+<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/CLczrXpHEeeA3RJRlG3Uqg_3c66355aff0ae7db9e27206f188267f0_Screen-Shot-2017-08-05-at-6.30.51-PM.png?expiry=1505174400000&amp;hmac=yx2s4_BOyjIpa4MF_MVOUfMDq-xVcKJSwGhW9kJbLn4" alt=""><br>What is the output J?</p>
+<p><input type="radio" disabled><label>J = (c - 1)*(b + a)</label></p>
+<p><input type="radio" disabled checked><label>J = (a - 1) * (b + c)</label></p>
+<p><input type="radio" disabled><label>J = a<em>b + b</em>c + a*c</label></p>
+<p><input type="radio" disabled><label>J = (b - 1) * (c + a)</label><br><br></p>
+<h3 id="Programming-Assignments"><a href="#Programming-Assignments" class="headerlink" title="Programming Assignments"></a>Programming Assignments</h3><h4 id="Deep-Learning-Honor-Code2-min"><a href="#Deep-Learning-Honor-Code2-min" class="headerlink" title="Deep Learning Honor Code2 min"></a>Deep Learning Honor Code2 min</h4><p>Deep Learning Honor Code</p>
+<p>We strongly encourage students to form study groups, and discuss the lecture videos (including in-video questions). We also encourage you to get together with friends to watch the videos together as a group. However, the answers that you submit for the review questions should be your own work. For the programming exercises, you are welcome to discuss them with other students, discuss specific algorithms, properties of algorithms, etc.; we ask only that you not look at any source code written by a different student, nor show your solution code to other students.</p>
+<p>You are also not allowed to post your code publicly on github.</p>
+<h4 id="Programming-Assignment-FAQ10-min"><a href="#Programming-Assignment-FAQ10-min" class="headerlink" title="Programming Assignment FAQ10 min"></a>Programming Assignment FAQ10 min</h4><h4 id="Python-Basics-with-numpy-optional-1h"><a href="#Python-Basics-with-numpy-optional-1h" class="headerlink" title="Python Basics with numpy (optional)1h"></a>Python Basics with numpy (optional)1h</h4><p>Python Basics with numpy (optional)<br>Welcome to your first (Optional) programming exercise of the deep learning specialization. In this assignment you will:</p>
+<ul>
+<li><p>Learn how to use numpy.</p>
+</li>
+<li><p>Implement some basic core deep learning functions such as the softmax, sigmoid, dsigmoid, etc…</p>
+</li>
+<li><p>Learn how to handle data by normalizing inputs and reshaping images.</p>
+</li>
+<li><p>Recognize the importance of vectorization.</p>
+</li>
+<li><p>Understand how python broadcasting works.</p>
+</li>
+</ul>
+<p>This assignment prepares you well for the upcoming assignment. Take your time to complete it and make sure you get the expected outputs when working through the different exercises. In some code blocks, you will find a “#GRADED FUNCTION: functionName” comment. Please do not modify it. After you are done, submit your work and check your results. You need to score 70% to pass. Good luck :) !<br><a href="https://hub.coursera-notebooks.org/hub/coursera_login?token=fC323rppQ0Kt9t66aXNCqQ&amp;next=%2Fnotebooks%2FWeek%202%2FPython%20Basics%20with%20Numpy%2FPython%20Basics%20With%20Numpy%20v3.ipynb" target="_blank" rel="external">Open Notebook</a><br><br></p>
+<h4 id="Practice-Programming-Assignment-Python-Basics-with-numpy-optional-1h"><a href="#Practice-Programming-Assignment-Python-Basics-with-numpy-optional-1h" class="headerlink" title="Practice Programming Assignment: Python Basics with numpy (optional)1h"></a>Practice Programming Assignment: Python Basics with numpy (optional)1h</h4><h4 id="Logistic-Regression-with-a-Neural-Network-mindset2h"><a href="#Logistic-Regression-with-a-Neural-Network-mindset2h" class="headerlink" title="Logistic Regression with a Neural Network mindset2h"></a>Logistic Regression with a Neural Network mindset2h</h4><p>Logistic Regression with a Neural Network mindset<br>Welcome to the first (required) programming exercise of the deep learning specialization. In this notebook you will build your first image recognition algorithm. You will build a cat classifier that recognizes cats with 70% accuracy!<br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/3GDwQXrhEee6mw7xN92yoA_c36b695905cda00b9b2b04db81566c24_Screen-Shot-2017-08-06-at-12.59.40-PM.png?expiry=1505174400000&amp;hmac=fBnyjSHIdKEAye-Zv8Ira3ha3Eccz11PhkVw8MDOkU0" alt=""></p>
+<p>As you keep learning new techniques you will increase it to 80+ % accuracy on cat vs. non-cat datasets. By completing this assignment you will:</p>
+<ul>
+<li><p>Work with logistic regression in a way that builds intuition relevant to neural networks.</p>
+</li>
+<li><p>Learn how to minimize the cost function.</p>
+</li>
+<li><p>Understand how derivatives of the cost are used to update parameters.</p>
+</li>
+</ul>
+<p>Take your time to complete this assignment and make sure you get the expected outputs when working through the different exercises. In some code blocks, you will find a “#GRADED FUNCTION: functionName” comment. Please do not modify these comments. After you are done, submit your work and check your results. You need to score 70% to pass. Good luck :) !<br><a href="https://hub.coursera-notebooks.org/hub/coursera_login?token=3aLCsCxYQyaiwrAsWBMmiA&amp;next=%2Fnotebooks%2FWeek%202%2FLogistic%20Regression%20as%20a%20Neural%20Network%2FLogistic%20Regression%20with%20a%20Neural%20Network%20mindset%20v3.ipynb" target="_blank" rel="external">Open Notebook</a></p>
+<h4 id="Programming-Assignment-Logistic-Regression-with-a-Neural-Network-mindset"><a href="#Programming-Assignment-Logistic-Regression-with-a-Neural-Network-mindset" class="headerlink" title="Programming Assignment: Logistic Regression with a Neural Network mindset"></a>Programming Assignment: Logistic Regression with a Neural Network mindset</h4><h3 id="Heroes-of-Deep-Learning-Optional-1"><a href="#Heroes-of-Deep-Learning-Optional-1" class="headerlink" title="Heroes of Deep Learning (Optional)"></a>Heroes of Deep Learning (Optional)</h3><h4 id="Pieter-Abbeel-interview16-min"><a href="#Pieter-Abbeel-interview16-min" class="headerlink" title="Pieter Abbeel interview16 min"></a>Pieter Abbeel interview16 min</h4><h2 id="Week-3-Shallow-neural-networks"><a href="#Week-3-Shallow-neural-networks" class="headerlink" title="Week 3 Shallow neural networks"></a>Week 3 Shallow neural networks</h2><div class="note primary"><p>Learn to build a neural network with one hidden layer, using forward propagation and backpropagation.</p>
+</div>
+<div class="note primary"><p>Learning Objectives</p>
+<p>Understand hidden units and hidden layers<br>Be able to apply a variety of activation functions in a neural network.<br>Build your first forward and backward propagation with a hidden layer<br>Apply random initialization to your neural network<br>Become fluent with Deep Learning notations and Neural Network Representations<br>Build and train a neural network with one hidden layer.</p>
+</div>
+<h3 id="Shallow-Neural-Network"><a href="#Shallow-Neural-Network" class="headerlink" title="Shallow Neural Network"></a>Shallow Neural Network</h3><h4 id="Neural-Networks-Overview4-min"><a href="#Neural-Networks-Overview4-min" class="headerlink" title="Neural Networks Overview4 min"></a>Neural Networks Overview4 min</h4><h4 id="Neural-Network-Representation5-min"><a href="#Neural-Network-Representation5-min" class="headerlink" title="Neural Network Representation5 min"></a>Neural Network Representation5 min</h4><h4 id="Computing-a-Neural-Network’s-Output9-min"><a href="#Computing-a-Neural-Network’s-Output9-min" class="headerlink" title="Computing a Neural Network’s Output9 min"></a>Computing a Neural Network’s Output9 min</h4><h4 id="Vectorizing-across-multiple-examples9-min"><a href="#Vectorizing-across-multiple-examples9-min" class="headerlink" title="Vectorizing across multiple examples9 min"></a>Vectorizing across multiple examples9 min</h4><h4 id="Explanation-for-Vectorized-Implementation7-min"><a href="#Explanation-for-Vectorized-Implementation7-min" class="headerlink" title="Explanation for Vectorized Implementation7 min"></a>Explanation for Vectorized Implementation7 min</h4><h4 id="Activation-functions10-min"><a href="#Activation-functions10-min" class="headerlink" title="Activation functions10 min"></a>Activation functions10 min</h4><h4 id="Why-do-you-need-non-linear-activation-functions-5-min"><a href="#Why-do-you-need-non-linear-activation-functions-5-min" class="headerlink" title="Why do you need non-linear activation functions?5 min"></a>Why do you need non-linear activation functions?5 min</h4><h4 id="Derivatives-of-activation-functions7-min"><a href="#Derivatives-of-activation-functions7-min" class="headerlink" title="Derivatives of activation functions7 min"></a>Derivatives of activation functions7 min</h4><h4 id="Gradient-descent-for-Neural-Networks9-min"><a href="#Gradient-descent-for-Neural-Networks9-min" class="headerlink" title="Gradient descent for Neural Networks9 min"></a>Gradient descent for Neural Networks9 min</h4><h4 id="Backpropagation-intuition-optional-15-min"><a href="#Backpropagation-intuition-optional-15-min" class="headerlink" title="Backpropagation intuition (optional)15 min"></a>Backpropagation intuition (optional)15 min</h4><h4 id="Random-Initialization7-min"><a href="#Random-Initialization7-min" class="headerlink" title="Random Initialization7 min"></a>Random Initialization7 min</h4><h3 id="Practice-Questions-2"><a href="#Practice-Questions-2" class="headerlink" title="Practice Questions"></a>Practice Questions</h3><h4 id="Quiz-Shallow-Neural-Networks10-questions"><a href="#Quiz-Shallow-Neural-Networks10-questions" class="headerlink" title="Quiz: Shallow Neural Networks10 questions"></a>Quiz: Shallow Neural Networks10 questions</h4><div class="note primary"><p>QUIZ<br>Shallow Neural Networks<br>10 questions<br>To Pass80% or higher<br>Attempts3 every 8 hours<br>Deadline<br>October 1, 11:59 PM PDT</p>
+</div>
+<p>1 point<br>1.Which of the following are true? (Check all that apply.)</p>
+<p><input type="checkbox" disabled checked><label>X is a matrix in which each column is one training example.</label></p>
+<p><input type="checkbox" disabled checked><label>a[2] denotes the activation vector of the 2nd layer.</label></p>
+<p><input type="checkbox" disabled checked><label>a<a href="12">2</a> denotes the activation vector of the 2nd layer for the 12th training example.</label></p>
+<p><input type="checkbox" disabled checked><label>a[2]4 is the activation output by the 4th neuron of the 2nd layer</label></p>
+<p><input type="checkbox" disabled><label>X is a matrix in which each row is one training example.</label></p>
+<p><input type="checkbox" disabled><label>a<a href="12">2</a> denotes activation vector of the 12th layer on the 2nd training example.</label></p>
+<p><input type="checkbox" disabled><label>a[2]4 is the activation output of the 2nd layer for the 4th training example</label><br><br><br>1 point<br>2.The tanh activation usually works better than sigmoid activation function for hidden units because the mean of its output is closer to zero, and so it centers the data better for the next layer. True/False?</p>
+<p><input type="radio" disabled checked><label>True</label></p>
+<p><input type="radio" disabled><label>False</label><br><br><br>1 point<br>3.Which of these is a correct vectorized implementation of forward propagation for layer l, where 1≤l≤L?</p>
+<p><input type="radio" disabled><label>Z[l]=W[l]A[l]+b[l]<br>A[l+1]=g<a href="Z[l]">l+1</a></label></p>
+<p><input type="radio" disabled checked><label>Z[l]=W[l]A[l−1]+b[l]<br>A[l]=g<a href="Z[l]">l</a></label></p>
+<p><input type="radio" disabled><label>Z[l]=W[l−1]A[l]+b[l−1]<br>A[l]=g<a href="Z[l]">l</a></label></p>
+<p><input type="radio" disabled><label>Z[l]=W[l]A[l]+b[l]<br>A[l+1]=g<a href="Z[l]">l</a></label><br><br><br>1 point<br>4.You are building a binary classifier for recognizing cucumbers (y=1) vs. watermelons (y=0). Which one of these activation functions would you recommend using for the output layer?</p>
+<p><input type="radio" disabled><label>ReLU</label></p>
+<p><input type="radio" disabled><label>Leaky ReLU</label></p>
+<p><input type="radio" disabled checked><label>sigmoid</label></p>
+<p><input type="radio" disabled><label>tanh</label><br><br><br>1 point<br>5.Consider the following code:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">A = np.random.randn(<span class="number">4</span>,<span class="number">3</span>)</div><div class="line">B = np.sum(A, axis = <span class="number">1</span>, keepdims = <span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
+<p>What will be B.shape? (If you’re not sure, feel free to run this in python to find out).</p>
+<p><input type="radio" disabled><label>(1, 3)</label></p>
+<p><input type="radio" disabled><label>(, 3)</label></p>
+<p><input type="radio" disabled><label>(4, )</label></p>
+<p><input type="radio" disabled checked><label>(4, 1)</label><br><br><br>1 point<br>6.Suppose you have built a neural network. You decide to initialize the weights and biases to be zero. Which of the following statements is true?</p>
+<p><input type="radio" disabled checked><label>Each neuron in the first hidden layer will perform the same computation. So even after multiple iterations of gradient descent each neuron in the layer will be computing the same thing as other neurons.</label></p>
+<p><input type="radio" disabled><label>Each neuron in the first hidden layer will perform the same computation in the first iteration. But after one iteration of gradient descent they will learn to compute different things because we have “broken symmetry”.</label></p>
+<p><input type="radio" disabled><label>Each neuron in the first hidden layer will compute the same thing, but neurons in different layers will compute different things, thus we have accomplished “symmetry breaking” as described in lecture.</label></p>
+<p><input type="radio" disabled><label>The first hidden layer’s neurons will perform different computations from each other even in the first iteration; their parameters will thus keep evolving in their own way.</label><br><br><br>1 point<br>7.Logistic regression’s weights w should be initialized randomly rather than to all zeros, because if you initialize to all zeros, then logistic regression will fail to learn a useful decision boundary because it will fail to “break symmetry”, True/False?</p>
+<p><input type="radio" disabled><label>True</label></p>
+<p><input type="radio" disabled><label checked>False</label><br><br><br>1 point<br>8.You have built a network using the tanh activation for all the hidden units. You initialize the weights to relative large values, using np.random.randn(..,..)*1000. What will happen?</p>
+<p><input type="radio" disabled><label>This will cause the inputs of the tanh to also be very large, causing the units to be “highly activated” and thus speed up learning compared to if the weights had to start from small values.</label></p>
+<p><input type="radio" disabled><label>It doesn’t matter. So long as you initialize the weights randomly gradient descent is not affected by whether the weights are large or small.</label></p>
+<p><input type="radio" disabled checked><label>This will cause the inputs of the tanh to also be very large, thus causing gradients to be close to zero. The optimization algorithm will thus become slow.</label></p>
+<p><input type="radio" disabled><label>This will cause the inputs of the tanh to also be very large, thus causing gradients to also become large. You therefore have to set α to be very small to prevent divergence; this will slow down learning.</label><br><br><br>1 point<br>9.Consider the following 1 hidden layer neural network:</p>
+<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/svogd3rcEeeA3RJRlG3Uqg_76207ca9fa3c209fbf43892870e5338f_1layer.png?expiry=1505779200000&amp;hmac=9yi9CQI82fBzhBGRKrB4cjWsDc1eLIrHg8UJo_WW02A" alt=""><br>Which of the following statements are True? (Check all that apply).</p>
+<p><input type="checkbox" disabled><label>W[1] will have shape (2, 4)</label></p>
+<p><input type="checkbox" disabled checked><label>b[1] will have shape (4, 1)</label></p>
+<p><input type="checkbox" disabled checked><label>W[1] will have shape (4, 2)</label></p>
+<p><input type="checkbox" disabled><label>b[1] will have shape (2, 1)</label></p>
+<p><input type="checkbox" disabled checked><label>W[2] will have shape (1, 4)</label></p>
+<p><input type="checkbox" disabled><label>b[2] will have shape (4, 1)</label></p>
+<p><input type="checkbox" disabled><label>W[2] will have shape (4, 1)</label></p>
+<p><input type="checkbox" disabled checked><label>b[2] will have shape (1, 1)</label><br><br><br>1 point<br>10.In the same network as the previous question, what are the dimensions of Z[1] and A[1]?</p>
+<p><input type="radio" disabled><label>Z[1] and A[1] are (1,4)</label></p>
+<p><input type="radio" disabled checked><label>Z[1] and A[1] are (4,m)</label></p>
+<p><input type="radio" disabled><label>Z[1] and A[1] are (4,1)</label></p>
+<p><input type="radio" disabled><label>Z[1] and A[1] are (4,2)</label><br><br></p>
+<h3 id="Programming-Assignment"><a href="#Programming-Assignment" class="headerlink" title="Programming Assignment"></a>Programming Assignment</h3><h4 id="Planar-data-classification-with-a-hidden-layer2h-30m"><a href="#Planar-data-classification-with-a-hidden-layer2h-30m" class="headerlink" title="Planar data classification with a hidden layer2h 30m"></a>Planar data classification with a hidden layer2h 30m</h4><h4 id="Programming-Assignment-Planar-data-classification-with-a-hidden-layer"><a href="#Programming-Assignment-Planar-data-classification-with-a-hidden-layer" class="headerlink" title="Programming Assignment: Planar data classification with a hidden layer"></a>Programming Assignment: Planar data classification with a hidden layer</h4><h3 id="Heroes-of-Deep-Learning-Optional-2"><a href="#Heroes-of-Deep-Learning-Optional-2" class="headerlink" title="Heroes of Deep Learning (Optional)"></a>Heroes of Deep Learning (Optional)</h3><h4 id="Ian-Goodfellow-interview14-min"><a href="#Ian-Goodfellow-interview14-min" class="headerlink" title="Ian Goodfellow interview14 min"></a>Ian Goodfellow interview14 min</h4><h2 id="Week-4-Deep-Neural-Networks"><a href="#Week-4-Deep-Neural-Networks" class="headerlink" title="Week 4 Deep Neural Networks"></a>Week 4 Deep Neural Networks</h2><div class="note primary"><p>Understand the key computations underlying deep learning, use them to build and train deep neural networks, and apply it to computer vision.</p>
+</div>
+<div class="note primary"><ul>
+<li>See deep neural networks as successive blocks put one after each other</li>
+<li>Build and train a deep L-layer Neural Network</li>
+<li>Analyze matrix and vector dimensions to check neural network implementations.</li>
+<li>Understand how to use a cache to pass information from forward propagation to back propagation.</li>
+<li>Understand the role of hyperparameters in deep learning</li>
+</ul>
+</div>
+<h3 id="Deep-Neural-Network"><a href="#Deep-Neural-Network" class="headerlink" title="Deep Neural Network"></a>Deep Neural Network</h3><h4 id="Deep-L-layer-neural-network5-min"><a href="#Deep-L-layer-neural-network5-min" class="headerlink" title="Deep L-layer neural network5 min"></a>Deep L-layer neural network5 min</h4><h4 id="Forward-Propagation-in-a-Deep-Network7-min"><a href="#Forward-Propagation-in-a-Deep-Network7-min" class="headerlink" title="Forward Propagation in a Deep Network7 min"></a>Forward Propagation in a Deep Network7 min</h4><h4 id="Getting-your-matrix-dimensions-right11-min"><a href="#Getting-your-matrix-dimensions-right11-min" class="headerlink" title="Getting your matrix dimensions right11 min"></a>Getting your matrix dimensions right11 min</h4><h4 id="Why-deep-representations-10-min"><a href="#Why-deep-representations-10-min" class="headerlink" title="Why deep representations?10 min"></a>Why deep representations?10 min</h4><h4 id="Building-blocks-of-deep-neural-networks8-min"><a href="#Building-blocks-of-deep-neural-networks8-min" class="headerlink" title="Building blocks of deep neural networks8 min"></a>Building blocks of deep neural networks8 min</h4><h4 id="Forward-and-Backward-Propagation10-min"><a href="#Forward-and-Backward-Propagation10-min" class="headerlink" title="Forward and Backward Propagation10 min"></a>Forward and Backward Propagation10 min</h4><h4 id="Parameters-vs-Hyperparameters7-min"><a href="#Parameters-vs-Hyperparameters7-min" class="headerlink" title="Parameters vs Hyperparameters7 min"></a>Parameters vs Hyperparameters7 min</h4><h4 id="What-does-this-have-to-do-with-the-brain-3-min"><a href="#What-does-this-have-to-do-with-the-brain-3-min" class="headerlink" title="What does this have to do with the brain?3 min"></a>What does this have to do with the brain?3 min</h4><h3 id="Practice-Questions-3"><a href="#Practice-Questions-3" class="headerlink" title="Practice Questions"></a>Practice Questions</h3><h4 id="Quiz-Key-concepts-on-Deep-Neural-Networks10-questions"><a href="#Quiz-Key-concepts-on-Deep-Neural-Networks10-questions" class="headerlink" title="Quiz: Key concepts on Deep Neural Networks10 questions"></a>Quiz: Key concepts on Deep Neural Networks10 questions</h4><div class="note primary"><p>QUIZ<br>Key concepts on Deep Neural Networks<br>10 questions<br>To Pass80% or higher<br>Attempts3 every 8 hours<br>Deadline<br>November 5, 11:59 PM PST</p>
+</div>
+<p>1 point<br>1.What is the “cache” used for in our implementation of forward propagation and backward propagation?</p>
+<p><input type="radio" disabled><label></label><br>We use it to pass variables computed during backward propagation to the corresponding forward propagation step. It contains useful values for forward propagation to compute activations.</p>
+<p><input type="radio" disabled><label></label><br>It is used to cache the intermediate values of the cost function during training.</p>
+<p><input type="radio" disabled><label></label><br>It is used to keep track of the hyperparameters that we are searching over, to speed up computation.</p>
+<p><input type="radio" disabled checked><label></label><br>We use it to pass variables computed during forward propagation to the corresponding backward propagation step. It contains useful values for backward propagation to compute derivatives.<br><br><br>1 point<br>2.Among the following, which ones are “hyperparameters”? (Check all that apply.)</p>
+<p><input type="checkbox" disabled checked><label></label><br>learning rate α</p>
+<p><input type="checkbox" disabled checked><label></label><br>number of iterations</p>
+<p><input type="checkbox" disabled><label></label><br>bias vectors b[l]</p>
+<p><input type="checkbox" disabled checked><label></label><br>number of layers L in the neural network</p>
+<p><input type="checkbox" disabled><label></label><br>activation values a[l]</p>
+<p><input type="checkbox" disabled><label></label><br>weight matrices W[l]</p>
+<p><input type="checkbox" disabled checked><label></label><br>size of the hidden layers n[l]<br><br><br>1 point<br>3.Which of the following statements is true?</p>
+<p><input type="radio" disabled checked><label></label><br>The deeper layers of a neural network are typically computing more complex features of the input than the earlier layers.</p>
+<p><input type="radio" disabled><label></label><br>The earlier layers of a neural network are typically computing more complex features of the input than the deeper layers.<br><br><br>1 point<br>4.Vectorization allows you to compute forward propagation in an L-layer neural network without an explicit for-loop (or any other explicit iterative loop) over the layers l=1, 2, …,L. True/False?</p>
+<p><input type="radio" disabled><label>True</label></p>
+<p><input type="radio" disabled checked><label>False</label><br><br><br>1 point<br>5.Assume we store the values for n[l] in an array called layers, as follows: layer_dims = [nx, 4,3,2,1]. So layer 1 has four hidden units, layer 2 has 3 hidden units and so on. Which of the following for-loops will allow you to initialize the parameters for the model?</p>
+<p><input type="radio" disabled><label></label><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> range(<span class="number">1</span>, len(layer_dims)/<span class="number">2</span>)):</div><div class="line">  parameter[‘W’ + str(i)] = np.random.randn(layers[i], layers[i<span class="number">-1</span>])) * </div><div class="line">      <span class="number">0.01</span></div><div class="line">  parameter[‘b’ + str(i)] = np.random.randn(layers[i], <span class="number">1</span>) * <span class="number">0.01</span></div></pre></td></tr></table></figure></p>
+<p><input type="radio" disabled><label></label><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> range(<span class="number">1</span>, len(layer_dims)/<span class="number">2</span>)):</div><div class="line">  parameter[‘W’ + str(i)] = np.random.randn(layers[i], layers[i<span class="number">-1</span>])) * </div><div class="line">      <span class="number">0.01</span></div><div class="line">  parameter[‘b’ + str(i)] = np.random.randn(layers[i<span class="number">-1</span>], <span class="number">1</span>) * <span class="number">0.01</span></div></pre></td></tr></table></figure></p>
+<p><input type="radio" disabled><label></label><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> range(<span class="number">1</span>, len(layer_dims))):</div><div class="line">  parameter[‘W’ + str(i)] = np.random.randn(layers[i<span class="number">-1</span>], layers[i])) * </div><div class="line">      <span class="number">0.01</span></div><div class="line">  parameter[‘b’ + str(i)] = np.random.randn(layers[i], <span class="number">1</span>) * <span class="number">0.01</span></div></pre></td></tr></table></figure></p>
+<p><input type="radio" disabled checked><label></label><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> range(<span class="number">1</span>, len(layer_dims))):</div><div class="line">  parameter[‘W’ + str(i)] = np.random.randn(layers[i], layers[i<span class="number">-1</span>])) * </div><div class="line">      <span class="number">0.01</span></div><div class="line">  parameter[‘b’ + str(i)] = np.random.randn(layers[i], <span class="number">1</span>) * <span class="number">0.01</span></div></pre></td></tr></table></figure></p>
+<p><br><br>1 point<br>6.Consider the following neural network.<br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/cwmw1nrfEeeJIwrF5BVsIg_e9a22da9e380c0350d2dfd47dcf34503_Screen-Shot-2017-08-06-at-12.42.46-PM.png?expiry=1506988800000&amp;hmac=2qaEHVE1QmVtNY3jS4Hh9E409Zjp3lkQ7zkBfsub-QQ" alt=""></p>
+<p>How many layers does this network have?</p>
+<p><input type="radio" disabled checked><label></label><br>The number of layers L is 4. The number of hidden layers is 3.</p>
+<p><input type="radio" disabled><label></label><br>The number of layers L is 3. The number of hidden layers is 3.</p>
+<p><input type="radio" disabled><label></label><br>The number of layers L is 4. The number of hidden layers is 4.</p>
+<p><input type="radio" disabled><label></label><br>The number of layers L is 5. The number of hidden layers is 4.<br><br><br>1 point<br>7.During forward propagation, in the forward function for a layer l you need to know what is the activation function in a layer (Sigmoid, tanh, ReLU, etc.). During backpropagation, the corresponding backward function also needs to know what is the activation function for layer l, since the gradient depends on it. True/False?</p>
+<p><input type="radio" disabled checked><label>True</label></p>
+<p><input type="radio" disabled><label>False</label><br><br><br>1 point<br>8.There are certain functions with the following properties:</p>
+<p>(i) To compute the function using a shallow network circuit, you will need a large network (where we measure size by the number of logic gates in the network), but (ii) To compute it using a deep network circuit, you need only an exponentially smaller network. True/False?</p>
+<p><input type="radio" disabled checked><label>True</label></p>
+<p><input type="radio" disabled><label>False</label><br><br><br>1 point<br>9.Consider the following 2 hidden layer neural network:<br><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/8sF12nrfEeeumw4MySoK5g_36df26a0659f76c6566ff4f3706e6ad2_Screen-Shot-2017-08-05-at-12.50.32-PM.png?expiry=1506988800000&amp;hmac=vdsczlNoZ-ORXuBV3w6f4OiuQskiCNYPuIAGQgruldc" alt=""></p>
+<p>Which of the following statements are True? (Check all that apply).</p>
+<p><input type="checkbox" disabled checked><label></label><br>W[1] will have shape (4, 4)</p>
+<p><input type="checkbox" disabled checked><label></label><br>b[1] will have shape (4, 1)</p>
+<p><input type="checkbox" disabled><label></label><br>W[1] will have shape (3, 4)</p>
+<p><input type="checkbox" disabled><label></label><br>b[1] will have shape (3, 1)</p>
+<p><input type="checkbox" disabled checked><label></label><br>W[2] will have shape (3, 4)</p>
+<p><input type="checkbox" disabled><label></label><br>b[2] will have shape (1, 1)</p>
+<p><input type="checkbox" disabled><label></label><br>W[2] will have shape (3, 1)</p>
+<p><input type="checkbox" disabled checked><label></label><br>b[2] will have shape (3, 1)</p>
+<p><input type="checkbox" disabled><label></label><br>W[3] will have shape (3, 1)</p>
+<p><input type="checkbox" disabled checked><label></label><br>b[3] will have shape (1, 1)</p>
+<p><input type="checkbox" disabled checked><label></label><br>W[3] will have shape (1, 3)</p>
+<p><input type="checkbox" disabled><label></label><br>b[3] will have shape (3, 1)<br><br><br>1 point<br>10.Whereas the previous question used a specific network, in the general case what is the dimension of W^{[l]}, the weight matrix associated with layer l?</p>
+<p><input type="radio" disabled><label></label><br>W[l] has shape (n[l−1],n[l])</p>
+<p><input type="radio" disabled><label></label><br>W[l] has shape (n[l],n[l+1])</p>
+<p><input type="radio" disabled><label></label><br>W[l] has shape (n[l+1],n[l])</p>
+<p><input type="radio" disabled checked><label></label><br>W[l] has shape (n[l],n[l−1])<br><br></p>
+<h3 id="Programming-Assignments-1"><a href="#Programming-Assignments-1" class="headerlink" title="Programming Assignments"></a>Programming Assignments</h3><h4 id="Building-your-Deep-Neural-Network-Step-by-Step2h-30m"><a href="#Building-your-Deep-Neural-Network-Step-by-Step2h-30m" class="headerlink" title="Building your Deep Neural Network: Step by Step2h 30m"></a>Building your Deep Neural Network: Step by Step2h 30m</h4><h4 id="Programming-Assignment-Building-your-deep-neural-network-Step-by-Step"><a href="#Programming-Assignment-Building-your-deep-neural-network-Step-by-Step" class="headerlink" title="Programming Assignment: Building your deep neural network: Step by Step"></a>Programming Assignment: Building your deep neural network: Step by Step</h4><h4 id="Deep-Neural-Network-Application1h"><a href="#Deep-Neural-Network-Application1h" class="headerlink" title="Deep Neural Network - Application1h"></a>Deep Neural Network - Application1h</h4><h4 id="Programming-Assignment-Deep-Neural-Network-Application"><a href="#Programming-Assignment-Deep-Neural-Network-Application" class="headerlink" title="Programming Assignment: Deep Neural Network Application"></a>Programming Assignment: Deep Neural Network Application</h4><h1 id="Improving-Deep-Neural-Networks-Hyperparameter-tuning-Regularization-and-Optimization"><a href="#Improving-Deep-Neural-Networks-Hyperparameter-tuning-Regularization-and-Optimization" class="headerlink" title="Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization"></a>Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</h1><div class="note primary"><p>Course can be found <a href="https://www.coursera.org/learn/deep-neural-network" target="_blank" rel="external">here</a></p>
+<p><strong>About this course</strong>: This course will teach you the “magic” of getting deep learning to work well. Rather than the deep learning process being a black box, you will understand what drives performance, and be able to more systematically get good results. You will also learn TensorFlow. </p>
+<p>After 3 weeks, you will: </p>
+<ul>
+<li>Understand industry best-practices for building deep learning applications. </li>
+<li>Be able to effectively use the common neural network “tricks”, including initialization, L2 and dropout regularization, Batch normalization, gradient checking, </li>
+<li>Be able to implement and apply a variety of optimization algorithms, such as mini-batch gradient descent, Momentum, RMSprop and Adam, and check for their convergence. </li>
+<li>Understand new best-practices for the deep learning era of how to set up train/dev/test sets and analyze bias/variance</li>
+<li>Be able to implement a neural network in TensorFlow. </li>
+</ul>
+<p>This is the second course of the Deep Learning Specialization.</p>
+<p><strong>Who is this class for:</strong> This class is for: - Learners that took the first course of the specialization: “Neural Networks and Deep Learning” - Anyone that already understands fully-connected neural networks, and wants to learn the practical aspects of making them work well.</p>
+</div>
+<h2 id="Week-1"><a href="#Week-1" class="headerlink" title="Week 1"></a>Week 1</h2><div class="note primary"><p>primary</p>
+</div>
+<h2 id="Week-2"><a href="#Week-2" class="headerlink" title="Week 2"></a>Week 2</h2><h2 id="Week-3"><a href="#Week-3" class="headerlink" title="Week 3"></a>Week 3</h2><h2 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h2><p># </p>
+<h2 id="Week-1-1"><a href="#Week-1-1" class="headerlink" title="Week 1"></a>Week 1</h2><h2 id="Week-2-1"><a href="#Week-2-1" class="headerlink" title="Week 2"></a>Week 2</h2><h2 id="Week-3-1"><a href="#Week-3-1" class="headerlink" title="Week 3"></a>Week 3</h2><h2 id="Week-4-1"><a href="#Week-4-1" class="headerlink" title="Week 4"></a>Week 4</h2><p># </p>
+<h2 id="Week-1-2"><a href="#Week-1-2" class="headerlink" title="Week 1"></a>Week 1</h2><h2 id="Week-2-2"><a href="#Week-2-2" class="headerlink" title="Week 2"></a>Week 2</h2><h2 id="Week-3-2"><a href="#Week-3-2" class="headerlink" title="Week 3"></a>Week 3</h2><h2 id="Week-4-2"><a href="#Week-4-2" class="headerlink" title="Week 4"></a>Week 4</h2><p># </p>
+<h2 id="Week-1-3"><a href="#Week-1-3" class="headerlink" title="Week 1"></a>Week 1</h2><h2 id="Week-2-3"><a href="#Week-2-3" class="headerlink" title="Week 2"></a>Week 2</h2><h2 id="Week-3-3"><a href="#Week-3-3" class="headerlink" title="Week 3"></a>Week 3</h2><h2 id="Week-4-3"><a href="#Week-4-3" class="headerlink" title="Week 4"></a>Week 4</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Coursera/" rel="tag"># Coursera</a>
+          
+            <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/26/2018校招笔试题解答/" rel="next" title="2018校招算法工程师">
+                <i class="fa fa-chevron-left"></i> 2018校招算法工程师
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/19/Summary Online Courses Seeking for Machine Learning Engineering job/" rel="prev" title="Summary: Online Courses Seeking for Machine Learning Engineering job">
+                Summary: Online Courses Seeking for Machine Learning Engineering job <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  
+    <div class="sidebar-toggle">
+      <div class="sidebar-toggle-line-wrap">
+        <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+        <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      </div>
+    </div>
+  
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          
+            
+          
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="SSQ" />
+          <p class="site-author-name" itemprop="name">SSQ</p>
+           
+              <p class="site-description motion-element" itemprop="description">Notebook for quick search</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SSQ" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Neural-Networks-and-Deep-Learning"><span class="nav-number">1.</span> <span class="nav-text">Neural Networks and Deep Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1-Introduction-to-deep-learning"><span class="nav-number">1.1.</span> <span class="nav-text">Week 1 Introduction to deep learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Welcome-to-the-Deep-Learning-Specialization"><span class="nav-number">1.1.1.</span> <span class="nav-text">Welcome to the Deep Learning Specialization</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Welcome5-min"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Welcome5 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction-to-Deep-Learning"><span class="nav-number">1.1.2.</span> <span class="nav-text">Introduction to Deep Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-is-a-neural-network-7-min"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">What is a neural network?7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Supervised-Learning-with-Neural-Networks8-min"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">Supervised Learning with Neural Networks8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-is-Deep-Learning-taking-off-10-min"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">Why is Deep Learning taking off?10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#About-this-Course2-min"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">About this Course2 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Frequently-Asked-Questions10-min"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">Frequently Asked Questions10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Course-Resources1-min"><span class="nav-number">1.1.2.6.</span> <span class="nav-text">Course Resources1 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How-to-use-Discussion-Forums10-min"><span class="nav-number">1.1.2.7.</span> <span class="nav-text">How to use Discussion Forums10 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Practice-Questions"><span class="nav-number">1.1.3.</span> <span class="nav-text">Practice Questions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Introduction-to-deep-learning10-questions"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">Quiz: Introduction to deep learning10 questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Heroes-of-Deep-Learning-Optional"><span class="nav-number">1.1.4.</span> <span class="nav-text">Heroes of Deep Learning (Optional)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Geoffrey-Hinton-interview40-min"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">Geoffrey Hinton interview40 min</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-2-Neural-Networks-Basics"><span class="nav-number">1.2.</span> <span class="nav-text">Week 2 Neural Networks Basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Logistic-Regression-as-a-Neural-Network"><span class="nav-number">1.2.1.</span> <span class="nav-text">Logistic Regression as a Neural Network</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Binary-Classification8-min"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Binary Classification8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Logistic-Regression5-min"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Logistic Regression5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Logistic-Regression-Cost-Function8-min"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">Logistic Regression Cost Function8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent11-min"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">Gradient Descent11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Derivatives7-min"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">Derivatives7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#More-Derivative-Examples10-min"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">More Derivative Examples10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Computation-graph3-min"><span class="nav-number">1.2.1.7.</span> <span class="nav-text">Computation graph3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Derivatives-with-a-Computation-Graph14-min"><span class="nav-number">1.2.1.8.</span> <span class="nav-text">Derivatives with a Computation Graph14 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Logistic-Regression-Gradient-Descent6-min"><span class="nav-number">1.2.1.9.</span> <span class="nav-text">Logistic Regression Gradient Descent6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-Descent-on-m-Examples8-min"><span class="nav-number">1.2.1.10.</span> <span class="nav-text">Gradient Descent on m Examples8 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-and-Vectorization"><span class="nav-number">1.2.2.</span> <span class="nav-text">Python and Vectorization</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorization8-min"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">Vectorization8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#More-Vectorization-Examples6-min"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">More Vectorization Examples6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorizing-Logistic-Regression7-min"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">Vectorizing Logistic Regression7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorizing-Logistic-Regression’s-Gradient-Output9-min"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">Vectorizing Logistic Regression’s Gradient Output9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Broadcasting-in-Python11-min"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">Broadcasting in Python11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A-note-on-python-numpy-vectors6-min"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">A note on python/numpy vectors6 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quick-tour-of-Jupyter-iPython-Notebooks3-min"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">Quick tour of Jupyter/iPython Notebooks3 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Explanation-of-logistic-regression-cost-function-optional-7-min"><span class="nav-number">1.2.2.8.</span> <span class="nav-text">Explanation of logistic regression cost function (optional)7 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Practice-Questions-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">Practice Questions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Neural-Network-Basics10-questions"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">Quiz: Neural Network Basics10 questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Programming-Assignments"><span class="nav-number">1.2.4.</span> <span class="nav-text">Programming Assignments</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Deep-Learning-Honor-Code2-min"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">Deep Learning Honor Code2 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-FAQ10-min"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">Programming Assignment FAQ10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Python-Basics-with-numpy-optional-1h"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">Python Basics with numpy (optional)1h</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Practice-Programming-Assignment-Python-Basics-with-numpy-optional-1h"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">Practice Programming Assignment: Python Basics with numpy (optional)1h</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Logistic-Regression-with-a-Neural-Network-mindset2h"><span class="nav-number">1.2.4.5.</span> <span class="nav-text">Logistic Regression with a Neural Network mindset2h</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Logistic-Regression-with-a-Neural-Network-mindset"><span class="nav-number">1.2.4.6.</span> <span class="nav-text">Programming Assignment: Logistic Regression with a Neural Network mindset</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Heroes-of-Deep-Learning-Optional-1"><span class="nav-number">1.2.5.</span> <span class="nav-text">Heroes of Deep Learning (Optional)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Pieter-Abbeel-interview16-min"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">Pieter Abbeel interview16 min</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3-Shallow-neural-networks"><span class="nav-number">1.3.</span> <span class="nav-text">Week 3 Shallow neural networks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shallow-Neural-Network"><span class="nav-number">1.3.1.</span> <span class="nav-text">Shallow Neural Network</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Neural-Networks-Overview4-min"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">Neural Networks Overview4 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Neural-Network-Representation5-min"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">Neural Network Representation5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Computing-a-Neural-Network’s-Output9-min"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">Computing a Neural Network’s Output9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vectorizing-across-multiple-examples9-min"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">Vectorizing across multiple examples9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Explanation-for-Vectorized-Implementation7-min"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">Explanation for Vectorized Implementation7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Activation-functions10-min"><span class="nav-number">1.3.1.6.</span> <span class="nav-text">Activation functions10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-do-you-need-non-linear-activation-functions-5-min"><span class="nav-number">1.3.1.7.</span> <span class="nav-text">Why do you need non-linear activation functions?5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Derivatives-of-activation-functions7-min"><span class="nav-number">1.3.1.8.</span> <span class="nav-text">Derivatives of activation functions7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gradient-descent-for-Neural-Networks9-min"><span class="nav-number">1.3.1.9.</span> <span class="nav-text">Gradient descent for Neural Networks9 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backpropagation-intuition-optional-15-min"><span class="nav-number">1.3.1.10.</span> <span class="nav-text">Backpropagation intuition (optional)15 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random-Initialization7-min"><span class="nav-number">1.3.1.11.</span> <span class="nav-text">Random Initialization7 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Practice-Questions-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Practice Questions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Shallow-Neural-Networks10-questions"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">Quiz: Shallow Neural Networks10 questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Programming-Assignment"><span class="nav-number">1.3.3.</span> <span class="nav-text">Programming Assignment</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Planar-data-classification-with-a-hidden-layer2h-30m"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">Planar data classification with a hidden layer2h 30m</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Planar-data-classification-with-a-hidden-layer"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">Programming Assignment: Planar data classification with a hidden layer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Heroes-of-Deep-Learning-Optional-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">Heroes of Deep Learning (Optional)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ian-Goodfellow-interview14-min"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">Ian Goodfellow interview14 min</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-4-Deep-Neural-Networks"><span class="nav-number">1.4.</span> <span class="nav-text">Week 4 Deep Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Deep-Neural-Network"><span class="nav-number">1.4.1.</span> <span class="nav-text">Deep Neural Network</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Deep-L-layer-neural-network5-min"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Deep L-layer neural network5 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Forward-Propagation-in-a-Deep-Network7-min"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">Forward Propagation in a Deep Network7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Getting-your-matrix-dimensions-right11-min"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">Getting your matrix dimensions right11 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-deep-representations-10-min"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">Why deep representations?10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Building-blocks-of-deep-neural-networks8-min"><span class="nav-number">1.4.1.5.</span> <span class="nav-text">Building blocks of deep neural networks8 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Forward-and-Backward-Propagation10-min"><span class="nav-number">1.4.1.6.</span> <span class="nav-text">Forward and Backward Propagation10 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Parameters-vs-Hyperparameters7-min"><span class="nav-number">1.4.1.7.</span> <span class="nav-text">Parameters vs Hyperparameters7 min</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#What-does-this-have-to-do-with-the-brain-3-min"><span class="nav-number">1.4.1.8.</span> <span class="nav-text">What does this have to do with the brain?3 min</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Practice-Questions-3"><span class="nav-number">1.4.2.</span> <span class="nav-text">Practice Questions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Quiz-Key-concepts-on-Deep-Neural-Networks10-questions"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">Quiz: Key concepts on Deep Neural Networks10 questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Programming-Assignments-1"><span class="nav-number">1.4.3.</span> <span class="nav-text">Programming Assignments</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Building-your-Deep-Neural-Network-Step-by-Step2h-30m"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">Building your Deep Neural Network: Step by Step2h 30m</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Building-your-deep-neural-network-Step-by-Step"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">Programming Assignment: Building your deep neural network: Step by Step</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deep-Neural-Network-Application1h"><span class="nav-number">1.4.3.3.</span> <span class="nav-text">Deep Neural Network - Application1h</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Programming-Assignment-Deep-Neural-Network-Application"><span class="nav-number">1.4.3.4.</span> <span class="nav-text">Programming Assignment: Deep Neural Network Application</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Improving-Deep-Neural-Networks-Hyperparameter-tuning-Regularization-and-Optimization"><span class="nav-number">2.</span> <span class="nav-text">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1"><span class="nav-number">2.1.</span> <span class="nav-text">Week 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-2"><span class="nav-number">2.2.</span> <span class="nav-text">Week 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3"><span class="nav-number">2.3.</span> <span class="nav-text">Week 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-4"><span class="nav-number">2.4.</span> <span class="nav-text">Week 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1-1"><span class="nav-number">2.5.</span> <span class="nav-text">Week 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-2-1"><span class="nav-number">2.6.</span> <span class="nav-text">Week 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3-1"><span class="nav-number">2.7.</span> <span class="nav-text">Week 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-4-1"><span class="nav-number">2.8.</span> <span class="nav-text">Week 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1-2"><span class="nav-number">2.9.</span> <span class="nav-text">Week 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-2-2"><span class="nav-number">2.10.</span> <span class="nav-text">Week 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3-2"><span class="nav-number">2.11.</span> <span class="nav-text">Week 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-4-2"><span class="nav-number">2.12.</span> <span class="nav-text">Week 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1-3"><span class="nav-number">2.13.</span> <span class="nav-text">Week 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-2-3"><span class="nav-number">2.14.</span> <span class="nav-text">Week 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3-3"><span class="nav-number">2.15.</span> <span class="nav-text">Week 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-4-3"><span class="nav-number">2.16.</span> <span class="nav-text">Week 4</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SSQ</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://SSQ.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://ssq.github.io/2017/08/28/Coursera Ng Deep Learning Specialization Notebook/';
+          this.page.identifier = '2017/08/28/Coursera Ng Deep Learning Specialization Notebook/';
+          this.page.title = 'Coursera Ng Deep Learning Specialization Notebook';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://SSQ.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("MWlUL7cwf0gV4nd1BczDGmFm-gzGzoHsz", "YwuYEA1xBo0rm9hzIjUwOm2F");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
